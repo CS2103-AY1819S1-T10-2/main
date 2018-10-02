@@ -1,9 +1,9 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Asciidoctor 1.5.6.1"><title>AddressBook Level 4 - User Guide</title><link rel="stylesheet" href="stylesheets/gh-pages.css">
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Asciidoctor 1.5.6.1"><title>HealthBook - User Guide</title><link rel="stylesheet" href="stylesheets/gh-pages.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="header"><h1>AddressBook Level 4 - User Guide</h1></div><div id="content"><div id="preamble">
+<link rel="stylesheet" href="stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="header"><h1>HealthBook - User Guide</h1></div><div id="content"><div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>By: <code>Team SE-EDU</code>      Since: <code>Jun 2016</code>      Licence: <code>MIT</code></p>
+<p>By: <code>Team CS2103-AY1819S1-T10-2</code>      Since: <code>Aug 2018</code>      Licence: <code>NUS</code></p>
 </div>
 </div>
 <div id="toc" class="toc">
@@ -15,18 +15,36 @@
 <ul class="sectlevel2">
 <li><a href="#viewing-help-code-help-code">3.1. Viewing help : <code>help</code></a></li>
 <li><a href="#adding-a-person-code-add-code">3.2. Adding a person: <code>add</code></a></li>
-<li><a href="#listing-all-persons-code-list-code">3.3. Listing all persons : <code>list</code></a></li>
-<li><a href="#editing-a-person-code-edit-code">3.4. Editing a person : <code>edit</code></a></li>
-<li><a href="#locating-persons-by-name-code-find-code">3.5. Locating persons by name: <code>find</code></a></li>
-<li><a href="#deleting-a-person-code-delete-code">3.6. Deleting a person : <code>delete</code></a></li>
-<li><a href="#selecting-a-person-code-select-code">3.7. Selecting a person : <code>select</code></a></li>
-<li><a href="#listing-entered-commands-code-history-code">3.8. Listing entered commands : <code>history</code></a></li>
-<li><a href="#undoing-previous-command-code-undo-code">3.9. Undoing previous command : <code>undo</code></a></li>
-<li><a href="#redoing-the-previously-undone-command-code-redo-code">3.10. Redoing the previously undone command : <code>redo</code></a></li>
-<li><a href="#clearing-all-entries-code-clear-code">3.11. Clearing all entries : <code>clear</code></a></li>
-<li><a href="#exiting-the-program-code-exit-code">3.12. Exiting the program : <code>exit</code></a></li>
-<li><a href="#saving-the-data">3.13. Saving the data</a></li>
-<li><a href="#encrypting-data-files-code-coming-in-v2-0-code">3.14. Encrypting data files <code>[coming in v2.0]</code></a></li>
+<li><a href="#registering-a-patient-code-register-patient-code">3.3. Registering a patient: <code>register-patient</code></a></li>
+<li><a href="#registering-a-doctor-code-register-doctor-code">3.4. Registering a doctor: <code>register-doctor</code></a></li>
+<li><a href="#deleting-a-patient-code-delete-patient-code">3.5. Deleting a patient: <code>delete-patient</code></a></li>
+<li><a href="#deleting-a-doctor-code-delete-doctor-code">3.6. Deleting a doctor: <code>delete-doctor</code></a></li>
+<li><a href="#viewing-a-patient-code-view-patient-code">3.7. Viewing a patient: <code>view-patient</code></a></li>
+<li><a href="#listing-all-patients-and-doctors-code-list-code">3.8. Listing all patients and doctors : <code>list</code></a></li>
+<li><a href="#booking-an-appointment-code-book-appointment-code">3.9. Booking an appointment: <code>book-appointment</code></a></li>
+<li><a href="#editing-an-appointment-code-edit-appointment-code">3.10. Editing an appointment: <code>edit-appointment</code></a></li>
+<li><a href="#deleting-an-appointment-code-delete-appointment-code">3.11. Deleting an appointment <code>delete-appointment</code></a></li>
+<li><a href="#selecting-an-appointment-code-select-appointment-code">3.12. Selecting an appointment <code>select-appointment</code></a></li>
+<li><a href="#adding-prescriptions-to-a-patient-code-add-prescription-code">3.13. Adding prescriptions to a patient: <code>add-prescription</code></a></li>
+<li><a href="#adding-prescriptions-to-a-patient-code-delete-prescription-code">3.14. Adding prescriptions to a patient: <code>delete-prescription</code></a></li>
+<li><a href="#adding-prescriptions-to-a-patient-code-edit-prescription-code">3.15. Adding prescriptions to a patient: <code>edit-prescription</code></a></li>
+<li><a href="#adding-prescriptions-to-a-patient-code-view-prescription-code">3.16. Adding prescriptions to a patient: <code>view-prescription</code></a></li>
+<li><a href="#adding-prescriptions-to-a-patient-code-view-all-prescription-code">3.17. Adding prescriptions to a patient: <code>view-all-prescription</code></a></li>
+<li><a href="#adding-medical-condition-or-allergy-to-patient-code-add-medical-history-code">3.18. Adding medical condition or allergy to patient: <code>add-medical-history</code></a></li>
+<li><a href="#deleting-medical-condition-or-allergy-to-patient-code-delete-medical-history-code">3.19. Deleting medical condition or allergy to patient: <code>delete-medical-history</code></a></li>
+<li><a href="#reminding-patient-on-their-upcoming-appointment-code-remind-patient-code">3.20. Reminding patient on their upcoming appointment: <code>remind-patient</code></a></li>
+<li><a href="#reminding-all-patient-on-their-upcoming-appointment-code-remind-all-patient-code">3.21. Reminding all patient on their upcoming appointment: <code>remind-all-patient</code></a></li>
+<li><a href="#editing-a-person-code-edit-code-to-be-removed">3.22. Editing a person : <code>edit</code> [ to be removed ]</a></li>
+<li><a href="#locating-persons-by-name-code-find-code-to-be-removed">3.23. Locating persons by name: <code>find</code> [ to be removed ]</a></li>
+<li><a href="#deleting-a-person-code-delete-code-to-be-removed">3.24. Deleting a person : <code>delete</code> [ to be removed ]</a></li>
+<li><a href="#selecting-a-person-code-select-code-to-be-removed">3.25. Selecting a person : <code>select</code> [ to be removed ]</a></li>
+<li><a href="#listing-entered-commands-code-history-code">3.26. Listing entered commands : <code>history</code></a></li>
+<li><a href="#undoing-previous-command-code-undo-code">3.27. Undoing previous command : <code>undo</code></a></li>
+<li><a href="#redoing-the-previously-undone-command-code-redo-code">3.28. Redoing the previously undone command : <code>redo</code></a></li>
+<li><a href="#clearing-all-entries-code-clear-code">3.29. Clearing all entries : <code>clear</code></a></li>
+<li><a href="#exiting-the-program-code-exit-code">3.30. Exiting the program : <code>exit</code></a></li>
+<li><a href="#saving-the-data">3.31. Saving the data</a></li>
+<li><a href="#encrypting-data-files-code-coming-in-v2-0-code">3.32. Encrypting data files <code>[coming in v2.0]</code></a></li>
 </ul>
 </li>
 <li><a href="#faq">4. FAQ</a></li>
@@ -38,7 +56,10 @@
 <h2 id="introduction"><a class="link" href="#introduction">1. Introduction</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>AddressBook Level 4 (AB4) is for those who <strong>prefer to use a desktop app for managing contacts</strong>. More importantly, AB4 is <strong>optimized for those who prefer to work with a Command Line Interface</strong> (CLI) while still having the benefits of a Graphical User Interface (GUI). If you can type fast, AB4 can get your contact management tasks done faster than traditional GUI apps. Interested? Jump to the <a href="#quick-start">Section 2, &#8220;Quick Start&#8221;</a> to get started. Enjoy!</p>
+<p>HealthBook is for clinic receptionist who <strong>prefer to use a desktop app for managing doctors and patients information and appointments</strong>.
+HealthBook is <strong>optimized for receptionist who prefer to work with a Command Line Interface</strong> (CLI) while still having the benefits of a Graphical User Interface (GUI).
+If you can type fast, HealthBook can help you maintain a clean and concise information management of your doctors and patients more efficiently compared traditional GUI apps.
+Interested? Jump to the <a href="#quick-start">Section 2, &#8220;Quick Start&#8221;</a> to get started. Enjoy!</p>
 </div>
 </div>
 </div>
@@ -51,10 +72,10 @@
 <p>Ensure you have Java version <code>9</code> or later installed in your Computer.</p>
 </li>
 <li>
-<p>Download the latest <code>addressbook.jar</code> <a href="https://github.com/se-edu/addressbook-level4/releases">here</a>.</p>
+<p>Download the latest <code>healthbook.jar</code> link: <a href="https://github.com/CS2103-AY1819S1-T10-2/main/releases" class="bare">https://github.com/CS2103-AY1819S1-T10-2/main/releases</a>.</p>
 </li>
 <li>
-<p>Copy the file to the folder you want to use as the home folder for your Address Book.</p>
+<p>Copy the file to the folder you want to use as the home folder for your HealthBook.</p>
 </li>
 <li>
 <p>Double-click the file to start the app. The GUI should appear in a few seconds.</p>
@@ -76,7 +97,7 @@ e.g. typing <strong><code>help</code></strong> and pressing <kbd>Enter</kbd> wil
 <p><strong><code>list</code></strong> : lists all contacts</p>
 </li>
 <li>
-<p><strong><code>add</code></strong><code>n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01</code> : adds a contact named <code>John Doe</code> to the Address Book.</p>
+<p><strong><code>add</code></strong><code>n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01</code> : adds a contact named <code>John Doe</code> to the HealthBook.</p>
 </li>
 <li>
 <p><strong><code>delete</code></strong><code>3</code> : deletes the 3rd contact shown in the current list</p>
@@ -129,7 +150,7 @@ e.g. typing <strong><code>help</code></strong> and pressing <kbd>Enter</kbd> wil
 <div class="sect2">
 <h3 id="adding-a-person-code-add-code"><a class="link" href="#adding-a-person-code-add-code">3.2. Adding a person: <code>add</code></a></h3>
 <div class="paragraph">
-<p>Adds a person to the address book<br>
+<p>Adds a person to the HealthBook<br>
 Format: <code>add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [t/TAG]&#8230;&#8203;</code></p>
 </div>
 <div class="admonitionblock tip">
@@ -159,16 +180,442 @@ A person can have any number of tags (including 0)
 </div>
 </div>
 <div class="sect2">
-<h3 id="listing-all-persons-code-list-code"><a class="link" href="#listing-all-persons-code-list-code">3.3. Listing all persons : <code>list</code></a></h3>
+<h3 id="registering-a-patient-code-register-patient-code"><a class="link" href="#registering-a-patient-code-register-patient-code">3.3. Registering a patient: <code>register-patient</code></a></h3>
 <div class="paragraph">
-<p>Shows a list of all persons in the address book.<br>
+<p>Registers a patient to the HealthBook. Patient is automatically tagged as a "Patient".<br>
+Format: <code>register-patient n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS t/TELEGRAM_ID</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>register-patient n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="registering-a-doctor-code-register-doctor-code"><a class="link" href="#registering-a-doctor-code-register-doctor-code">3.4. Registering a doctor: <code>register-doctor</code></a></h3>
+<div class="paragraph">
+<p>Registers a doctor to the HealthBook. Doctor is automatically tagged as a "Doctor".<br>
+Format: <code>register-patient n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>register-doctor n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="deleting-a-patient-code-delete-patient-code"><a class="link" href="#deleting-a-patient-code-delete-patient-code">3.5. Deleting a patient: <code>delete-patient</code></a></h3>
+<div class="paragraph">
+<p>Deletes a patient from the HealthBook by name and phone number for verification.<br>
+Format: <code>delete-patient n/NAME p/PHONE_NUMBER</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>delete-patient n/John Doe p/98765432</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="deleting-a-doctor-code-delete-doctor-code"><a class="link" href="#deleting-a-doctor-code-delete-doctor-code">3.6. Deleting a doctor: <code>delete-doctor</code></a></h3>
+<div class="paragraph">
+<p>Deletes a doctor from the HealthBook by name and phone number for verification.<br>
+Format: <code>delete-doctor n/NAME p/PHONE_NUMBER</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>delete-doctor n/John Doe p/98765432</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="viewing-a-patient-code-view-patient-code"><a class="link" href="#viewing-a-patient-code-view-patient-code">3.7. Viewing a patient: <code>view-patient</code></a></h3>
+<div class="paragraph">
+<p>Views a landing page of a patient one the HealthBook. This will display all information of the patient onto the HealthBook
+including their personal information, medical history, upcoming appointment and their past appointments.<br>
+Format: <code>view-patient n/NAME</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Views the patient and loads the information page of the patient with the specified <code>NAME</code>.</p>
+</li>
+<li>
+<p>The name refers to the name that the patient is registered under.</p>
+</li>
+<li>
+<p>The name must have been registered into the HealthBook.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>view-patient n/John Doe</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="listing-all-patients-and-doctors-code-list-code"><a class="link" href="#listing-all-patients-and-doctors-code-list-code">3.8. Listing all patients and doctors : <code>list</code></a></h3>
+<div class="paragraph">
+<p>Shows a list of all patients and doctors in the HealthBook.<br>
 Format: <code>list</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="editing-a-person-code-edit-code"><a class="link" href="#editing-a-person-code-edit-code">3.4. Editing a person : <code>edit</code></a></h3>
+<h3 id="booking-an-appointment-code-book-appointment-code"><a class="link" href="#booking-an-appointment-code-book-appointment-code">3.9. Booking an appointment: <code>book-appointment</code></a></h3>
 <div class="paragraph">
-<p>Edits an existing person in the address book.<br>
+<p>Book a doctor&#8217;s appointment for the patient. A serial number of this appointment will be generated.<br>
+Format: <code>book-appointment n/PATIENT_NAME doc/DOCTOR_NAME dt/DATE_TIME</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Date and time should be in the format hhmm-dd-mm-yy</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>book-appointment n/John Doe doc/Sally dt/1200-13-01-19</code></p>
+</li>
+<li>
+<p><code>book-appointment n/Jackie Chan doc/Johnny Depp dt/1300-15-02-19</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="editing-an-appointment-code-edit-appointment-code"><a class="link" href="#editing-an-appointment-code-edit-appointment-code">3.10. Editing an appointment: <code>edit-appointment</code></a></h3>
+<div class="paragraph">
+<p>Edit a doctor&#8217;s appointment for the patient by its serial number.<br>
+Format: <code>edit-appointment sn/SERIAL_NUMBER dt/DATE_TIME</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Date and time should be in the format hhmm-dd-mm-yy</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>edit-appointment sn/123456 dt/1300-15-02-19</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="deleting-an-appointment-code-delete-appointment-code"><a class="link" href="#deleting-an-appointment-code-delete-appointment-code">3.11. Deleting an appointment <code>delete-appointment</code></a></h3>
+<div class="paragraph">
+<p>Delete a doctor&#8217;s appointment for the patient by its serial number.<br>
+Format: <code>delete-appointment sn/SERIAL_NUMBER</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>delete-appointment sn/123456</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="selecting-an-appointment-code-select-appointment-code"><a class="link" href="#selecting-an-appointment-code-select-appointment-code">3.12. Selecting an appointment <code>select-appointment</code></a></h3>
+<div class="paragraph">
+<p>Select an appointment to perform various command on it.<br>
+Format: <code>select-appointment sn/SERIAL_NUMBER</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>select-appointment sn/123456</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="adding-prescriptions-to-a-patient-code-add-prescription-code"><a class="link" href="#adding-prescriptions-to-a-patient-code-add-prescription-code">3.13. Adding prescriptions to a patient: <code>add-prescription</code></a></h3>
+<div class="paragraph">
+<p>Adds a prescription to the patient with details on its drug, amount to consume per session and number of times to consume
+in a day.<br>
+Format: <code>add-prescription drug/DRUG_NAME amt/AMOUNT_PER_SESSION count/NUMBER_TO_TAKE_PER_DAY</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>add-prescription drug/Panadol amt/2 count/3</code></p>
+</li>
+</ul>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>User needs to select an appointment before this command can be called.</p>
+</li>
+<li>
+<p>If no appointment is selected, HealthBook will request for an appointment to be selected.</p>
+</li>
+<li>
+<p>There cannot be a duplicate of drug name for that particular appointment.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="adding-prescriptions-to-a-patient-code-delete-prescription-code"><a class="link" href="#adding-prescriptions-to-a-patient-code-delete-prescription-code">3.14. Adding prescriptions to a patient: <code>delete-prescription</code></a></h3>
+<div class="paragraph">
+<p>Delete a prescription to the patient by drug name.<br>
+Format: <code>delete-prescription drug/DRUG_NAME</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>delete-prescription drug/Panadol</code></p>
+</li>
+</ul>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>User needs to select an appointment before this command can be called.</p>
+</li>
+<li>
+<p>If no appointment is selected, HealthBook will request for an appointment to be selected.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="adding-prescriptions-to-a-patient-code-edit-prescription-code"><a class="link" href="#adding-prescriptions-to-a-patient-code-edit-prescription-code">3.15. Adding prescriptions to a patient: <code>edit-prescription</code></a></h3>
+<div class="paragraph">
+<p>Edit a prescription to the patient by drug name.<br>
+Format: <code>edit-prescription drug/DRUG_NAME amt/AMOUNT_PER_SESSION count/NUMBER_TO_TAKE_PER_DAY</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>edit-prescription drug/Panadol amt/3 count/4</code></p>
+</li>
+</ul>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>User needs to select an appointment before this command can be called.</p>
+</li>
+<li>
+<p>If no appointment is selected, HealthBook will request for an appointment to be selected.</p>
+</li>
+<li>
+<p>Prescription should already be added to the appointment before this can be performed.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="adding-prescriptions-to-a-patient-code-view-prescription-code"><a class="link" href="#adding-prescriptions-to-a-patient-code-view-prescription-code">3.16. Adding prescriptions to a patient: <code>view-prescription</code></a></h3>
+<div class="paragraph">
+<p>View a prescription to the patient by drug name. This will display the amount to consume per session as well as
+the number of times to consume per day.<br>
+Format: <code>view-prescription drug/DRUG_NAME</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>view-prescription drug/Panadol</code></p>
+</li>
+</ul>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>User needs to select an appointment before this command can be called.</p>
+</li>
+<li>
+<p>If no appointment is selected, HealthBook will request for an appointment to be selected.</p>
+</li>
+<li>
+<p>Prescription should already be added to the appointment before this can be performed.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="adding-prescriptions-to-a-patient-code-view-all-prescription-code"><a class="link" href="#adding-prescriptions-to-a-patient-code-view-all-prescription-code">3.17. Adding prescriptions to a patient: <code>view-all-prescription</code></a></h3>
+<div class="paragraph">
+<p>View all ongoing prescription for a patient. This will display all drugs prescriptions for the patient.<br>
+Format: <code>view-all-prescription n/NAME</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="adding-medical-condition-or-allergy-to-patient-code-add-medical-history-code"><a class="link" href="#adding-medical-condition-or-allergy-to-patient-code-add-medical-history-code">3.18. Adding medical condition or allergy to patient: <code>add-medical-history</code></a></h3>
+<div class="paragraph">
+<p>Add a condition or allergy to the patient&#8217;s medical history. This will then be displayed on the users information page.<br>
+Format: <code>add-medical-history n/NAME [condition/CONDITION] [allergy/ALLERGY]</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>add-medical-history n/NAME condition/Weak Pulse allergy/Panadol</code></p>
+</li>
+</ul>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Either condition or allergy must be present.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="deleting-medical-condition-or-allergy-to-patient-code-delete-medical-history-code"><a class="link" href="#deleting-medical-condition-or-allergy-to-patient-code-delete-medical-history-code">3.19. Deleting medical condition or allergy to patient: <code>delete-medical-history</code></a></h3>
+<div class="paragraph">
+<p>Delete a condition or allergy to the patient&#8217;s medical history. This will then be removed on the users information page.<br>
+Format: <code>delete-medical-history n/NAME [condition/CONDITION] [allergy/ALLERGY]</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>delete-medical-history n/NAME condition/Weak Pulse allergy/Panadol</code></p>
+</li>
+</ul>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Either condition or allergy must be present.</p>
+</li>
+<li>
+<p>Condition and allergy indicated must be present in the patient&#8217;s records</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="reminding-patient-on-their-upcoming-appointment-code-remind-patient-code"><a class="link" href="#reminding-patient-on-their-upcoming-appointment-code-remind-patient-code">3.20. Reminding patient on their upcoming appointment: <code>remind-patient</code></a></h3>
+<div class="paragraph">
+<p>Remind a patient on their upcoming appointment. This will send a message to the patient via an external platform to inform
+them about their appointment.<br>
+Format: <code>remind-patient n/NAME</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>remind-patient n/John Doe</code><br></p>
+</li>
+<li>
+<p><code>remind-patient n/Sally</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="reminding-all-patient-on-their-upcoming-appointment-code-remind-all-patient-code"><a class="link" href="#reminding-all-patient-on-their-upcoming-appointment-code-remind-all-patient-code">3.21. Reminding all patient on their upcoming appointment: <code>remind-all-patient</code></a></h3>
+<div class="paragraph">
+<p>Remind all patient will upcoming appointment this week. This will send a message to the patient via an external platform to
+inform them about their upcoming appointment.<br>
+Format: <code>remind-all-patient</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="editing-a-person-code-edit-code-to-be-removed"><a class="link" href="#editing-a-person-code-edit-code-to-be-removed">3.22. Editing a person : <code>edit</code> [ to be removed ]</a></h3>
+<div class="paragraph">
+<p>Edits an existing person in the HealthBook.<br>
 Format: <code>edit INDEX [n/NAME] [p/PHONE] [e/EMAIL] [a/ADDRESS] [t/TAG]&#8230;&#8203;</code></p>
 </div>
 <div class="sidebarblock">
@@ -211,7 +658,7 @@ Edits the name of the 2nd person to be <code>Betsy Crower</code> and clears all 
 </div>
 </div>
 <div class="sect2">
-<h3 id="locating-persons-by-name-code-find-code"><a class="link" href="#locating-persons-by-name-code-find-code">3.5. Locating persons by name: <code>find</code></a></h3>
+<h3 id="locating-persons-by-name-code-find-code-to-be-removed"><a class="link" href="#locating-persons-by-name-code-find-code-to-be-removed">3.23. Locating persons by name: <code>find</code> [ to be removed ]</a></h3>
 <div class="paragraph">
 <p>Finds persons whose names contain any of the given keywords.<br>
 Format: <code>find KEYWORD [MORE_KEYWORDS]</code></p>
@@ -256,9 +703,9 @@ Returns any person having names <code>Betsy</code>, <code>Tim</code>, or <code>J
 </div>
 </div>
 <div class="sect2">
-<h3 id="deleting-a-person-code-delete-code"><a class="link" href="#deleting-a-person-code-delete-code">3.6. Deleting a person : <code>delete</code></a></h3>
+<h3 id="deleting-a-person-code-delete-code-to-be-removed"><a class="link" href="#deleting-a-person-code-delete-code-to-be-removed">3.24. Deleting a person : <code>delete</code> [ to be removed ]</a></h3>
 <div class="paragraph">
-<p>Deletes the specified person from the address book.<br>
+<p>Deletes the specified person from the HealthBook.<br>
 Format: <code>delete INDEX</code></p>
 </div>
 <div class="sidebarblock">
@@ -286,7 +733,7 @@ Format: <code>delete INDEX</code></p>
 <li>
 <p><code>list</code><br>
 <code>delete 2</code><br>
-Deletes the 2nd person in the address book.</p>
+Deletes the 2nd person in the HealthBook.</p>
 </li>
 <li>
 <p><code>find Betsy</code><br>
@@ -297,7 +744,7 @@ Deletes the 1st person in the results of the <code>find</code> command.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="selecting-a-person-code-select-code"><a class="link" href="#selecting-a-person-code-select-code">3.7. Selecting a person : <code>select</code></a></h3>
+<h3 id="selecting-a-person-code-select-code-to-be-removed"><a class="link" href="#selecting-a-person-code-select-code-to-be-removed">3.25. Selecting a person : <code>select</code> [ to be removed ]</a></h3>
 <div class="paragraph">
 <p>Selects the person identified by the index number used in the displayed person list.<br>
 Format: <code>select INDEX</code></p>
@@ -327,7 +774,7 @@ Format: <code>select INDEX</code></p>
 <li>
 <p><code>list</code><br>
 <code>select 2</code><br>
-Selects the 2nd person in the address book.</p>
+Selects the 2nd person in the HealthBook.</p>
 </li>
 <li>
 <p><code>find Betsy</code><br>
@@ -338,7 +785,7 @@ Selects the 1st person in the results of the <code>find</code> command.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="listing-entered-commands-code-history-code"><a class="link" href="#listing-entered-commands-code-history-code">3.8. Listing entered commands : <code>history</code></a></h3>
+<h3 id="listing-entered-commands-code-history-code"><a class="link" href="#listing-entered-commands-code-history-code">3.26. Listing entered commands : <code>history</code></a></h3>
 <div class="paragraph">
 <p>Lists all the commands that you have entered in reverse chronological order.<br>
 Format: <code>history</code></p>
@@ -359,9 +806,9 @@ Format: <code>history</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="undoing-previous-command-code-undo-code"><a class="link" href="#undoing-previous-command-code-undo-code">3.9. Undoing previous command : <code>undo</code></a></h3>
+<h3 id="undoing-previous-command-code-undo-code"><a class="link" href="#undoing-previous-command-code-undo-code">3.27. Undoing previous command : <code>undo</code></a></h3>
 <div class="paragraph">
-<p>Restores the address book to the state before the previous <em>undoable</em> command was executed.<br>
+<p>Restores the HealthBook to the state before the previous <em>undoable</em> command was executed.<br>
 Format: <code>undo</code></p>
 </div>
 <div class="admonitionblock note">
@@ -372,7 +819,7 @@ Format: <code>undo</code></p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Undoable commands: those commands that modify the address book&#8217;s content (<code>add</code>, <code>delete</code>, <code>edit</code> and <code>clear</code>).</p>
+<p>Undoable commands: those commands that modify the HealthBook&#8217;s content (<code>add</code>, <code>delete</code>, <code>edit</code> and <code>clear</code>).</p>
 </div>
 </td>
 </tr>
@@ -404,7 +851,7 @@ The <code>undo</code> command fails as there are no undoable commands executed p
 </div>
 </div>
 <div class="sect2">
-<h3 id="redoing-the-previously-undone-command-code-redo-code"><a class="link" href="#redoing-the-previously-undone-command-code-redo-code">3.10. Redoing the previously undone command : <code>redo</code></a></h3>
+<h3 id="redoing-the-previously-undone-command-code-redo-code"><a class="link" href="#redoing-the-previously-undone-command-code-redo-code">3.28. Redoing the previously undone command : <code>redo</code></a></h3>
 <div class="paragraph">
 <p>Reverses the most recent <code>undo</code> command.<br>
 Format: <code>redo</code></p>
@@ -436,28 +883,28 @@ The <code>redo</code> command fails as there are no <code>undo</code> commands e
 </div>
 </div>
 <div class="sect2">
-<h3 id="clearing-all-entries-code-clear-code"><a class="link" href="#clearing-all-entries-code-clear-code">3.11. Clearing all entries : <code>clear</code></a></h3>
+<h3 id="clearing-all-entries-code-clear-code"><a class="link" href="#clearing-all-entries-code-clear-code">3.29. Clearing all entries : <code>clear</code></a></h3>
 <div class="paragraph">
-<p>Clears all entries from the address book.<br>
+<p>Clears all entries from the HealthBook.<br>
 Format: <code>clear</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">3.12. Exiting the program : <code>exit</code></a></h3>
+<h3 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">3.30. Exiting the program : <code>exit</code></a></h3>
 <div class="paragraph">
 <p>Exits the program.<br>
 Format: <code>exit</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="saving-the-data"><a class="link" href="#saving-the-data">3.13. Saving the data</a></h3>
+<h3 id="saving-the-data"><a class="link" href="#saving-the-data">3.31. Saving the data</a></h3>
 <div class="paragraph">
-<p>Address book data are saved in the hard disk automatically after any command that changes the data.<br>
+<p>HealthBook data are saved in the hard disk automatically after any command that changes the data.<br>
 There is no need to save manually.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="encrypting-data-files-code-coming-in-v2-0-code"><a class="link" href="#encrypting-data-files-code-coming-in-v2-0-code">3.14. Encrypting data files <code>[coming in v2.0]</code></a></h3>
+<h3 id="encrypting-data-files-code-coming-in-v2-0-code"><a class="link" href="#encrypting-data-files-code-coming-in-v2-0-code">3.32. Encrypting data files <code>[coming in v2.0]</code></a></h3>
 <div class="paragraph">
 <p><em>{explain how the user can enable/disable data encryption}</em></p>
 </div>
@@ -469,7 +916,7 @@ There is no need to save manually.</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p><strong>Q</strong>: How do I transfer my data to another Computer?<br>
-<strong>A</strong>: Install the app in the other computer and overwrite the empty data file it creates with the file that contains the data of your previous Address Book folder.</p>
+<strong>A</strong>: Install the app in the other computer and overwrite the empty data file it creates with the file that contains the data of your previous HealthBook folder.</p>
 </div>
 </div>
 </div>
@@ -519,4 +966,4 @@ e.g.<code>select 2</code></p>
 </ul>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-09-30 16:49:12 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-10-02 10:42:41 UTC</div></div></div></body></html>
