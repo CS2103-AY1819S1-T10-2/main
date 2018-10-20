@@ -33,8 +33,9 @@
 <li><a href="#register-patient-feature">3.2. Register Patient Feature</a></li>
 <li><a href="#register-doctor-feature">3.3. Register Doctor Feature</a></li>
 <li><a href="#remark-command">3.4. Remark Command</a></li>
-<li><a href="#logging">3.5. Logging</a></li>
-<li><a href="#Implementation-Configuration">3.6. Configuration</a></li>
+<li><a href="#add-medical-history-feature">3.5. Add Medical History Feature</a></li>
+<li><a href="#logging">3.6. Logging</a></li>
+<li><a href="#Implementation-Configuration">3.7. Configuration</a></li>
 </ul>
 </li>
 <li><a href="#documentation">4. Documentation</a>
@@ -741,14 +742,45 @@ accessible via name as this allows the receptionist to edit the remark without l
 </div>
 </div>
 <div class="sect2">
-<h3 id="logging"><a class="link" href="#logging">3.5. Logging</a></h3>
+<h3 id="add-medical-history-feature"><a class="link" href="#add-medical-history-feature">3.5. Add Medical History Feature</a></h3>
+<div class="sect3">
+<h4 id="current-implementation-5"><a class="link" href="#current-implementation-5">3.5.1. Current Implementation</a></h4>
+<div class="paragraph">
+<p>The add medical history feature is facilitated by <code>AddMedicalHistoryCommand</code> and <code>AddMedicalHistoryCommandParser</code>. This
+command is implemented such that it is able to create a <code>MedicalHistory</code> object for a specific <code>Patient</code>.</p>
+</div>
+<div class="paragraph">
+<p>Step 1. The user types in <code>add-medical-history</code> in the command box followed by the parameter <code>n/John Doe al/milk c/sub
+healthy</code></p>
+</div>
+<div class="paragraph">
+<p>Step 2. Upon hitting enter, the <code>MedicalHistory</code> will be created and added to the storage of the system</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="design-consideration"><a class="link" href="#design-consideration">3.5.2. Design Consideration</a></h4>
+<div class="sect4">
+<h5 id="aspect-separate-adding-and-editing"><a class="link" href="#aspect-separate-adding-and-editing">Aspect: Separate adding and editing</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Alternative 1 (Current choice): <code>AddMedicalHistoryCommand</code> is only used for initialization of medical history. The
+editing is implemented as separated commands to facilitate easy modification of medical history.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="logging"><a class="link" href="#logging">3.6. Logging</a></h3>
 <div class="paragraph">
 <p>We are using <code>java.util.logging</code> package for logging. The <code>LogsCenter</code> class is used to manage the logging levels and logging destinations.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>The logging level can be controlled using the <code>logLevel</code> setting in the configuration file (See <a href="#Implementation-Configuration">Section 3.6, &#8220;Configuration&#8221;</a>)</p>
+<p>The logging level can be controlled using the <code>logLevel</code> setting in the configuration file (See <a href="#Implementation-Configuration">Section 3.7, &#8220;Configuration&#8221;</a>)</p>
 </li>
 <li>
 <p>The <code>Logger</code> for a class can be obtained using <code>LogsCenter.getLogger(Class)</code> which will log messages according to the specified logging level</p>
@@ -779,7 +811,7 @@ accessible via name as this allows the receptionist to edit the remark without l
 </div>
 </div>
 <div class="sect2">
-<h3 id="Implementation-Configuration"><a class="link" href="#Implementation-Configuration">3.6. Configuration</a></h3>
+<h3 id="Implementation-Configuration"><a class="link" href="#Implementation-Configuration">3.7. Configuration</a></h3>
 <div class="paragraph">
 <p>Certain properties of the application can be controlled (e.g App name, logging level) through the configuration file (default: <code>config.json</code>).</p>
 </div>
@@ -2292,4 +2324,4 @@ Expected: Similar to previous.</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-10-20 07:47:28 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-10-20 08:11:59 UTC</div></div></div></body></html>
