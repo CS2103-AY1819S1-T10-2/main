@@ -29,9 +29,11 @@
 </li>
 <li><a href="#implementation">3. Implementation</a>
 <ul class="sectlevel2">
-<li><a href="#delete-patient-and-doctor-feature">3.1. Delete patient and doctor feature</a></li>
-<li><a href="#logging">3.2. Logging</a></li>
-<li><a href="#Implementation-Configuration">3.3. Configuration</a></li>
+<li><a href="#delete-patient-and-doctor-feature">3.1. Delete Patient and Doctor Feature</a></li>
+<li><a href="#register-patient-feature">3.2. Register Patient Feature</a></li>
+<li><a href="#register-doctor-feature">3.3. Register Doctor Feature</a></li>
+<li><a href="#logging">3.4. Logging</a></li>
+<li><a href="#Implementation-Configuration">3.5. Configuration</a></li>
 </ul>
 </li>
 <li><a href="#documentation">4. Documentation</a>
@@ -585,7 +587,7 @@ As a more OOP model, we can store a <code>Tag</code> list in <code>Address Book<
 <p>This section describes some noteworthy details on how certain features are implemented.</p>
 </div>
 <div class="sect2">
-<h3 id="delete-patient-and-doctor-feature"><a class="link" href="#delete-patient-and-doctor-feature">3.1. Delete patient and doctor feature</a></h3>
+<h3 id="delete-patient-and-doctor-feature"><a class="link" href="#delete-patient-and-doctor-feature">3.1. Delete Patient and Doctor Feature</a></h3>
 <div class="sect3">
 <h4 id="current-implementation"><a class="link" href="#current-implementation">3.1.1. Current Implementation</a></h4>
 <div class="paragraph">
@@ -639,14 +641,82 @@ instead of deletion by index, deletion by name is used in this implementation.</
 </div>
 </div>
 <div class="sect2">
-<h3 id="logging"><a class="link" href="#logging">3.2. Logging</a></h3>
+<h3 id="register-patient-feature"><a class="link" href="#register-patient-feature">3.2. Register Patient Feature</a></h3>
+<div class="sect3">
+<h4 id="current-implementation-2"><a class="link" href="#current-implementation-2">3.2.1. Current Implementation</a></h4>
+<div class="paragraph">
+<p>The register patient are facilitated by <code>RegisterPatientCommand</code> and <code>RegisterPatientCommandParser</code>. This command extends
+the <code>AddCommand</code> and <code>AddCommandParser</code> such that it is able to create a <code>Patient</code> object. This command
+automatically tags the object created as <code>Patient</code>.</p>
+</div>
+<div class="paragraph">
+<p>Step 1. The user types in <code>register-patient</code> in the command box followed by the parameters <code>n/John Doe p/91234567
+e/test@test.com a/123 Clementi Road</code></p>
+</div>
+<div class="paragraph">
+<p>Step 2. Upon hitting enter, the <code>Patient</code> will be created and added to the storage of the system</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="design-considerations-2"><a class="link" href="#design-considerations-2">3.2.2. Design Considerations</a></h4>
+<div class="sect4">
+<h5 id="aspect-data-structure-of-upcoming-and-past-appointments"><a class="link" href="#aspect-data-structure-of-upcoming-and-past-appointments">Aspect: Data Structure of Upcoming and Past Appointments</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Alternative 1 (Current Choice): Upcoming Appointments stored within a PriorityQueue and Past Appointments stored within an
+ArrayList. This allows the appointments to be added in a non-chronological order. Past appointments can also be iterated
+through easily when required.</p>
+</li>
+<li>
+<p>Alternative 2 (Previous Implementation): Upcoming Appointments stored within a Queue and Past Appointments stored within a
+Stack.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="register-doctor-feature"><a class="link" href="#register-doctor-feature">3.3. Register Doctor Feature</a></h3>
+<div class="sect3">
+<h4 id="current-implementation-3"><a class="link" href="#current-implementation-3">3.3.1. Current Implementation</a></h4>
+<div class="paragraph">
+<p>The register doctor are facilitated by <code>RegisterDoctorCommand</code> and <code>RegisterDoctorCommandParser</code>. This command extends
+the <code>AddCommand</code> and <code>AddCommandParser</code> such that it is able to create a <code>Doctor</code> object. This command automatically tags
+the object created as <code>Doctor</code>.</p>
+</div>
+<div class="paragraph">
+<p>Step 1. The user types in <code>register-doctor</code> in the command box followed by the parameters <code>n/John Doe p/91234567 e/test@test.com a/123 Clementi Road</code></p>
+</div>
+<div class="paragraph">
+<p>Step 2. Upon hitting enter, the <code>Doctor</code> will be created and added to the storage of the system</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="design-considerations-3"><a class="link" href="#design-considerations-3">3.3.2. Design Considerations</a></h4>
+<div class="sect4">
+<h5 id="aspect-presenting-upcoming-appointment-to-doctors"><a class="link" href="#aspect-presenting-upcoming-appointment-to-doctors">Aspect: Presenting Upcoming Appointment to Doctors</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Alternative 1 (Current Choice): Implement Google Calendar to reflect upcoming appointment to the doctor. This allow
+doctors to view information provided by the receptionist without accessing HealthBook directly to check the information.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="logging"><a class="link" href="#logging">3.4. Logging</a></h3>
 <div class="paragraph">
 <p>We are using <code>java.util.logging</code> package for logging. The <code>LogsCenter</code> class is used to manage the logging levels and logging destinations.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>The logging level can be controlled using the <code>logLevel</code> setting in the configuration file (See <a href="#Implementation-Configuration">Section 3.3, &#8220;Configuration&#8221;</a>)</p>
+<p>The logging level can be controlled using the <code>logLevel</code> setting in the configuration file (See <a href="#Implementation-Configuration">Section 3.5, &#8220;Configuration&#8221;</a>)</p>
 </li>
 <li>
 <p>The <code>Logger</code> for a class can be obtained using <code>LogsCenter.getLogger(Class)</code> which will log messages according to the specified logging level</p>
@@ -677,7 +747,7 @@ instead of deletion by index, deletion by name is used in this implementation.</
 </div>
 </div>
 <div class="sect2">
-<h3 id="Implementation-Configuration"><a class="link" href="#Implementation-Configuration">3.3. Configuration</a></h3>
+<h3 id="Implementation-Configuration"><a class="link" href="#Implementation-Configuration">3.5. Configuration</a></h3>
 <div class="paragraph">
 <p>Certain properties of the application can be controlled (e.g App name, logging level) through the configuration file (default: <code>config.json</code>).</p>
 </div>
@@ -2190,4 +2260,4 @@ Expected: Similar to previous.</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-10-19 14:41:36 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-10-20 06:59:52 UTC</div></div></div></body></html>
