@@ -554,7 +554,7 @@ As a more OOP model, we can store a <code>Tag</code> list in <code>Address Book<
 <h3 id="Design-Storage"><a class="link" href="#Design-Storage">2.5. Storage component</a></h3>
 <div class="imageblock">
 <div class="content">
-<img src="images/StorageClassDiagram.png" alt="StorageClassDiagram" width="800">
+<img src="images/StorageComponentClassDiagram.png" alt="StorageComponentClassDiagram" width="800">
 </div>
 <div class="title">Figure 9. Structure of the Storage Component</div>
 </div>
@@ -570,7 +570,7 @@ As a more OOP model, we can store a <code>Tag</code> list in <code>Address Book<
 <p>can save <code>UserPref</code> objects in json format and read it back.</p>
 </li>
 <li>
-<p>can save the Address Book data in xml format and read it back.</p>
+<p>can save the Health Book data in xml format and read it back.</p>
 </li>
 </ul>
 </div>
@@ -649,15 +649,50 @@ instead of deletion by index, deletion by name is used in this implementation.</
 <h4 id="current-implementation-2"><a class="link" href="#current-implementation-2">3.2.1. Current Implementation</a></h4>
 <div class="paragraph">
 <p>The register patient are facilitated by <code>RegisterPatientCommand</code> and <code>RegisterPatientCommandParser</code>. This command extends
-the <code>AddCommand</code> and <code>AddCommandParser</code> such that it is able to create a <code>Patient</code> object. This command
-automatically tags the object created as <code>Patient</code>.</p>
+the <code>AddCommand</code> and <code>AddCommandParser</code> such that it is able to create a <code>Patient</code> object. The Patient object is
+automatically tagged as <code>Patient</code>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/RegisterPatientSequenceDiagram.png" alt="RegisterPatientSequenceDiagram" width="600">
+</div>
+<div class="title">Figure 10. Register Patient Sequence Diagram</div>
+</div>
+<div class="paragraph">
+<p>Patient model contains a PriorityQueue of upcoming appointment and ArrayList of past appointments. We implemented
+the patient model in this way to allow ease of addition of new upcoming appointment to the patient.</p>
 </div>
 <div class="paragraph">
 <p>Step 1. The user types in <code>register-patient</code> in the command box followed by the parameters <code>n/John Doe p/91234567
 e/test@test.com a/123 Clementi Road</code></p>
 </div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Command Exception will be thrown if any of the information is missing or invalid. All fields are mandatory.
+</td>
+</tr>
+</table>
+</div>
 <div class="paragraph">
 <p>Step 2. Upon hitting enter, the <code>Patient</code> will be created and added to the storage of the system</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Patient is saved in the storage as person. However, when we retrieve the patient object from storage, it will be
+created as a patient as determined by their tag.
+</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect3">
@@ -686,25 +721,90 @@ Stack.</p>
 <h4 id="current-implementation-3"><a class="link" href="#current-implementation-3">3.3.1. Current Implementation</a></h4>
 <div class="paragraph">
 <p>The register doctor are facilitated by <code>RegisterDoctorCommand</code> and <code>RegisterDoctorCommandParser</code>. This command extends
-the <code>AddCommand</code> and <code>AddCommandParser</code> such that it is able to create a <code>Doctor</code> object. This command automatically tags
-the object created as <code>Doctor</code>.</p>
+the <code>AddCommand</code> and <code>AddCommandParser</code> such that it is able to create a <code>Doctor</code> object. The Doctor object is
+automatically tagged as <code>Doctor</code>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/RegisterDoctorSequenceDiagram.png" alt="RegisterDoctorSequenceDiagram" width="600">
+</div>
+<div class="title">Figure 11. Register Patient Sequence Diagram</div>
 </div>
 <div class="paragraph">
 <p>Step 1. The user types in <code>register-doctor</code> in the command box followed by the parameters <code>n/John Doe p/91234567 e/test@test.com a/123 Clementi Road</code></p>
 </div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Command Exception will be thrown if any of the information is missing or invalid. All fields are mandatory.
+</td>
+</tr>
+</table>
+</div>
 <div class="paragraph">
-<p>Step 2. Upon hitting enter, the <code>Doctor</code> will be created and added to the storage of the system</p>
+<p>Step 2. Upon hitting enter, a browser will be opened for user to login to google to register their Google Calendar.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/GoogleLoginPage.png" alt="GoogleLoginPage" width="600">
+</div>
+<div class="title">Figure 12. Google Login Page</div>
+</div>
+<div class="paragraph">
+<p>Step 3. Simultaneously, the <code>Doctor</code> will be created and added to the storage of the system. In the case that the user
+does not login to google, subsequent access to their google calendar will be denied. However, doctor object will still
+be created.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Doctor is saved in the storage as person. However, when we retrieve the doctor object from storage, it will be
+created as a doctor as determined by their tag.
+</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect3">
 <h4 id="design-considerations-3"><a class="link" href="#design-considerations-3">3.3.2. Design Considerations</a></h4>
 <div class="sect4">
-<h5 id="aspect-presenting-upcoming-appointment-to-doctors"><a class="link" href="#aspect-presenting-upcoming-appointment-to-doctors">Aspect: Presenting Upcoming Appointment to Doctors</a></h5>
+<h5 id="aspect-presenting-google-calendar-login-to-doctors"><a class="link" href="#aspect-presenting-google-calendar-login-to-doctors">Aspect: Presenting Google Calendar Login to Doctors</a></h5>
 <div class="ulist">
 <ul>
 <li>
-<p>Alternative 1 (Current Choice): Implement Google Calendar to reflect upcoming appointment to the doctor. This allow
-doctors to view information provided by the receptionist without accessing HealthBook directly to check the information.</p>
+<p>Alternative 1 (Current Choice): Implement Google Calendar login with a popped up browser. This allow the data transfer
+for the Google login to be simplified. No additional parsing will be required. In addition, the pop up of the browser
+will capture the users attention, decreasing the chance of user missing this login procedure.</p>
+</li>
+<li>
+<p>Alternative 2 (Alternative Choice): Implement Google Calendar login with the browser panel instead.
+Instead of having an additional browser, we load the login page into the Browser Panel. This will facilitate a seamless
+login for the login but user might miss the login compared to having a popped up browser.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="aspect-saving-doctor-with-respect-to-google-login"><a class="link" href="#aspect-saving-doctor-with-respect-to-google-login">Aspect: Saving Doctor with respect to Google Login</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Alternative 1 (Current Choice): Allow doctor to still be created with or without the Google Login. Since the Google
+Calendar acts as an add-on, it should not interfere with the main function of the HealthBook. As such, we implemented
+register-doctor to have Google Login as optional. However, subsequent calls of Calendar related functions will still
+prompt the user to login.</p>
+</li>
+<li>
+<p>Alternative 2 (Alternative Choice): Doctor object will not be created if Google Login is unsuccessful, instead throw
+an exception. This will make Google Calendar mandatory for all doctors.</p>
 </li>
 </ul>
 </div>
@@ -894,7 +994,7 @@ Alternatively, you can download the AsciiDoc plugin for IntelliJ, which allows y
 <div class="content">
 <img src="images/chrome_save_as_pdf.png" alt="chrome save as pdf" width="300">
 </div>
-<div class="title">Figure 10. Saving documentation as PDF files in Chrome</div>
+<div class="title">Figure 13. Saving documentation as PDF files in Chrome</div>
 </div>
 </div>
 <div class="sect2">
@@ -2341,4 +2441,4 @@ Expected: Similar to previous.</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-10-24 01:55:46 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-10-24 09:31:05 UTC</div></div></div></body></html>
