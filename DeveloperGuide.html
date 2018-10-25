@@ -34,9 +34,10 @@
 <li><a href="#register-doctor-feature">3.3. Register Doctor Feature</a></li>
 <li><a href="#remark-command">3.4. Remark Command</a></li>
 <li><a href="#add-medical-history-feature">3.5. Add Medical History Feature</a></li>
-<li><a href="#filter-patient-and-filter-doctor-feature">3.6. Filter Patient and Filter Doctor Feature</a></li>
-<li><a href="#logging">3.7. Logging</a></li>
-<li><a href="#Implementation-Configuration">3.8. Configuration</a></li>
+<li><a href="#delete-medical-history-feature">3.6. Delete Medical History Feature</a></li>
+<li><a href="#filter-patient-and-filter-doctor-feature">3.7. Filter Patient and Filter Doctor Feature</a></li>
+<li><a href="#logging">3.8. Logging</a></li>
+<li><a href="#Implementation-Configuration">3.9. Configuration</a></li>
 </ul>
 </li>
 <li><a href="#documentation">4. Documentation</a>
@@ -852,26 +853,56 @@ accessible via name as this allows the receptionist to edit the remark without l
 <h4 id="current-implementation-5"><a class="link" href="#current-implementation-5">3.5.1. Current Implementation</a></h4>
 <div class="paragraph">
 <p>The add medical history feature is facilitated by <code>AddMedicalHistoryCommand</code> and <code>AddMedicalHistoryCommandParser</code>. This
-command is implemented such that it is able to create a <code>MedicalHistory</code> object for a specific <code>Patient</code> specified by
-index.</p>
+command is implemented such that it is able to add <code>allergies</code> AND/OR <code>conditions</code> to <code>MedicalHistory</code> object for a specific
+<code>Patient</code> specified by index.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/AddMedicalHistorySequenceDiagram.png" alt="AddMedicalHistorySequenceDiagram" width="600">
+</div>
+<div class="title">Figure 16. Add Medical History Sequence Diagram</div>
 </div>
 <div class="paragraph">
-<p>Step 1. The user types in <code>add-medical-history</code> in the command box followed by the parameter <code>INDEX al/milk c/sub
-healthy</code></p>
+<p>Step 1. The user types in <code>add-medical-history</code> in the command box followed by the parameter <code>INDEX al/penicillin,milk
+c/sub-healthy, hyperglycemia</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+For multiple inputs in the same field, use comma <code>,</code> to separate.
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
-<p>Step 2. Upon hitting enter, the <code>MedicalHistory</code> will be created and added to the storage of the system</p>
+<p>Step 2. Upon hitting enter, the <code>allergies</code> AND <code>conditions</code> of <code>MedicalHistory</code> will get added</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Exception will be thrown if inputs for both field are blank.
+</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect3">
 <h4 id="design-consideration"><a class="link" href="#design-consideration">3.5.2. Design Consideration</a></h4>
 <div class="sect4">
-<h5 id="aspect-separate-adding-and-editing"><a class="link" href="#aspect-separate-adding-and-editing">Aspect: Separate adding and editing</a></h5>
+<h5 id="aspect-support-different-types-of-input"><a class="link" href="#aspect-support-different-types-of-input">Aspect: Support different types of input</a></h5>
 <div class="ulist">
 <ul>
 <li>
-<p>Alternative 1 (Current choice): <code>AddMedicalHistoryCommand</code> is only used for initialization of medical history. The
-editing is implemented as separated commands to facilitate easy modification of medical history.</p>
+<p>Alternative 1 (Current choice): <code>AddMedicalHistoryCommand</code> allow user to fill in one or more allergies and conditions
+(separated by comma). It is also supported to leave EITHER field blank.</p>
 </li>
 </ul>
 </div>
@@ -879,29 +910,98 @@ editing is implemented as separated commands to facilitate easy modification of 
 </div>
 </div>
 <div class="sect2">
-<h3 id="filter-patient-and-filter-doctor-feature"><a class="link" href="#filter-patient-and-filter-doctor-feature">3.6. Filter Patient and Filter Doctor Feature</a></h3>
+<h3 id="delete-medical-history-feature"><a class="link" href="#delete-medical-history-feature">3.6. Delete Medical History Feature</a></h3>
+<div class="sect3">
+<h4 id="current-implementation-6"><a class="link" href="#current-implementation-6">3.6.1. Current Implementation</a></h4>
+<div class="paragraph">
+<p>The delete medical history feature is facilitated by <code>DeleteMedicalHistoryCommand</code> and
+<code>DeleteMedicalHistoryCommandParser</code>. This command is implemented such that it is able to delete <code>allergy</code> AND/OR
+<code>condition</code> from <code>MedicalHistory</code> object for a specific <code>Patient</code> specified by index.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/DeleteMedicalHistorySequenceDiagram.png" alt="DeleteMedicalHistorySequenceDiagram" width="600">
+</div>
+<div class="title">Figure 17. Delete Medical History Sequence Diagram</div>
+</div>
+<div class="paragraph">
+<p>Step 1. The user types in <code>delete-medical-history</code> in the command box followed by the parameter <code>INDEX
+al/penicillin,milk c/sub-healthy, hyperglycemia</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+For multiple inputs in the same field, use comma <code>,</code> to separate.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Step 2. Upon hitting enter, the <code>allergies</code> AND <code>conditions</code> of <code>MedicalHistory</code> will get deleted</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Exception will be thrown if inputs for both field are blank.
+Exception will be thrown if given input is not in the original medical history.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="design-consideration-2"><a class="link" href="#design-consideration-2">3.6.2. Design Consideration</a></h4>
 <div class="sect4">
-<h5 id="current-implementation-6"><a class="link" href="#current-implementation-6">Current Implementation</a></h5>
-<div class="paragraph">
-<p>This feature help to filter all patients/doctors in health book</p>
+<h5 id="aspect-support-different-types-of-input-2"><a class="link" href="#aspect-support-different-types-of-input-2">Aspect: Support different types of input</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Alternative 1 (Current choice): <code>DeleteMedicalHistoryCommand</code> allow user to fill in one or more allergies and
+conditions (separated by comma). It is also supported to leave EITHER field blank.</p>
+</li>
+</ul>
 </div>
-<div class="paragraph">
-<p>Step 1. The user types <code>filter-patient</code>/`filter-doctor`in the command box</p>
-</div>
-<div class="paragraph">
-<p>Step 2. Upon hitting enter, all persons who are tagged as "Patient"/"Doctor" would appear on the panel</p>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="logging"><a class="link" href="#logging">3.7. Logging</a></h3>
+<h3 id="filter-patient-and-filter-doctor-feature"><a class="link" href="#filter-patient-and-filter-doctor-feature">3.7. Filter Patient and Filter Doctor Feature</a></h3>
+<div class="sect4">
+<h5 id="current-implementation-7"><a class="link" href="#current-implementation-7">Current Implementation</a></h5>
+<div class="paragraph">
+<p>This feature help to filter all patients/doctors in health book</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/FilterPatientSequenceDiagram.png" alt="FilterPatientSequenceDiagram" width="600">
+</div>
+<div class="title">Figure 18. Filter Patient Sequence Diagram</div>
+</div>
+<div class="paragraph">
+<p>Step 1. The user types <code>filter-patient</code> or <code>filter-doctor</code> in the command box</p>
+</div>
+<div class="paragraph">
+<p>Step 2. Upon hitting enter, all persons who are tagged as "Patient" or "Doctor" would appear on the panel</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="logging"><a class="link" href="#logging">3.8. Logging</a></h3>
 <div class="paragraph">
 <p>We are using <code>java.util.logging</code> package for logging. The <code>LogsCenter</code> class is used to manage the logging levels and logging destinations.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>The logging level can be controlled using the <code>logLevel</code> setting in the configuration file (See <a href="#Implementation-Configuration">Section 3.8, &#8220;Configuration&#8221;</a>)</p>
+<p>The logging level can be controlled using the <code>logLevel</code> setting in the configuration file (See <a href="#Implementation-Configuration">Section 3.9, &#8220;Configuration&#8221;</a>)</p>
 </li>
 <li>
 <p>The <code>Logger</code> for a class can be obtained using <code>LogsCenter.getLogger(Class)</code> which will log messages according to the specified logging level</p>
@@ -932,7 +1032,7 @@ editing is implemented as separated commands to facilitate easy modification of 
 </div>
 </div>
 <div class="sect2">
-<h3 id="Implementation-Configuration"><a class="link" href="#Implementation-Configuration">3.8. Configuration</a></h3>
+<h3 id="Implementation-Configuration"><a class="link" href="#Implementation-Configuration">3.9. Configuration</a></h3>
 <div class="paragraph">
 <p>Certain properties of the application can be controlled (e.g App name, logging level) through the configuration file (default: <code>config.json</code>).</p>
 </div>
@@ -998,7 +1098,7 @@ Alternatively, you can download the AsciiDoc plugin for IntelliJ, which allows y
 <div class="content">
 <img src="images/chrome_save_as_pdf.png" alt="chrome save as pdf" width="300">
 </div>
-<div class="title">Figure 16. Saving documentation as PDF files in Chrome</div>
+<div class="title">Figure 19. Saving documentation as PDF files in Chrome</div>
 </div>
 </div>
 <div class="sect2">
@@ -2445,4 +2545,4 @@ Expected: Similar to previous.</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-10-24 16:50:31 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-10-25 01:26:01 UTC</div></div></div></body></html>
