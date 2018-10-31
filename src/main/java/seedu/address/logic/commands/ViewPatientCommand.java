@@ -22,7 +22,7 @@ public class ViewPatientCommand extends Command {
     public static final String COMMAND_WORD = "view-patient";
 
     public static final String MESSAGE_USAGE = COMMAND_WORD
-            + ": Views the patient identified by the name.\n"
+            + ": Views the patient identified by the name. \n"
             + "Parameters: "
             + PREFIX_NAME + "NAME \n"
             + "Example: " + COMMAND_WORD + " "
