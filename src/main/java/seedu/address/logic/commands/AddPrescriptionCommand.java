@@ -48,6 +48,7 @@ public class AddPrescriptionCommand extends Command {
     public static final String MESSAGE_SUCCESS = "New Prescription added: %1$s";
     public static final String MESSAGE_DUPLICATE_PRESCRIPTION = "This prescription already exists in the appointment";
     public static final String MESSAGE_APPOINTENT_DOES_NOT_EXIST = "This appointment does not exist";
+    public static final String MESSAGE_PATIENT_ALLERGIC_TO_MEDICINE = "This patient is allergic to %1$s";
 
     private final int id;
     private final Prescription prescriptionToAdd;
@@ -122,6 +123,11 @@ public class AddPrescriptionCommand extends Command {
 
         if (doctorToEdit == null || patientToEdit == null) {
             throw new CommandException(MESSAGE_APPOINTENT_DOES_NOT_EXIST);
+        }
+
+        if (patientToEdit.getMedicalHistory().getAllergies().contains(prescriptionToAdd.getMedicineName().toString())) {
+            throw new CommandException(String.format(MESSAGE_PATIENT_ALLERGIC_TO_MEDICINE,
+                    prescriptionToAdd.getMedicineName()));
         }
 
         //TODO update google calendar

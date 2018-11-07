@@ -30,7 +30,12 @@ public class RegisterDoctorCommandIntegrationTest {
 
     @Test
     public void execute_newDoctor_success() {
-        Doctor validDoctor = new DoctorBuilder().build();
+        Doctor validDoctor = new DoctorBuilder()
+                .withName("Helena")
+                .withPhone("92142122")
+                .withEmail("helena@example.com")
+                .withAddress("20th street")
+                .build();
 
         Model expectedModel = new ModelManager(model.getAddressBook(), new UserPrefs());
         expectedModel.addDoctor(validDoctor);
@@ -43,7 +48,6 @@ public class RegisterDoctorCommandIntegrationTest {
     @Test
     public void execute_duplicateDoctor_throwsCommandException() {
         Doctor validDoctor = new DoctorBuilder().build();
-        model.addDoctor(validDoctor);
         assertCommandFailure(new RegisterDoctorCommand(validDoctor), model, commandHistory,
                 RegisterDoctorCommand.MESSAGE_DUPLICATE_PERSON);
     }

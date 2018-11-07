@@ -12,6 +12,7 @@ import seedu.address.model.doctor.Doctor;
 import seedu.address.model.patient.Patient;
 import seedu.address.model.person.Person;
 import seedu.address.model.person.UniquePersonList;
+import seedu.address.model.tag.Tag;
 
 /**
  * Wraps all data at the address-book level
@@ -145,6 +146,37 @@ public class AddressBook implements ReadOnlyAddressBook {
      * {@code key} must exist in the address book.
      */
     public void removePerson(Person key) {
+        if (key.getTags().contains(new Tag("Patient"))) {
+            for (Appointment patientApp : ((Patient) key).getUpcomingAppointments()) {
+                for (Person person : persons) {
+                    if (person.getTags().contains(new Tag("Doctor"))) {
+                        Doctor doctor = ((Doctor) person);
+                        for (Appointment doctorApp : doctor.getUpcomingAppointments()) {
+                            if (patientApp.getAppointmentId() == doctorApp.getAppointmentId()) {
+                                doctor.deleteAppointment(patientApp);
+                                appointments.remove(patientApp);
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
+        } else {
+            for (Appointment doctorApp : ((Doctor) key).getUpcomingAppointments()) {
+                for (Person person : persons) {
+                    if (person.getTags().contains(new Tag("Patient"))) {
+                        Patient patient = ((Patient) person);
+                        for (Appointment patientApp : patient.getUpcomingAppointments()) {
+                            if (patientApp.getAppointmentId() == doctorApp.getAppointmentId()) {
+                                patient.deleteAppointment(doctorApp);
+                                appointments.remove(doctorApp);
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
+        }
         persons.remove(key);
     }
 

@@ -37,7 +37,7 @@ public class TypicalPatientsAndDoctors {
     public static final Patient BENSON = new PatientBuilder().withName("Benson Meier")
             .withAddress("311, Clementi Ave 2, #02-25")
             .withEmail("johnd@example.com").withPhone("98765432")
-            .withRemark("")
+            .withRemark("Has heart disease")
             .withTags("Patient", "friends")
             .withMedicalHistory("", "having cold").build();
     public static final Patient CARL = new PatientBuilder().withName("Carl Kurz")

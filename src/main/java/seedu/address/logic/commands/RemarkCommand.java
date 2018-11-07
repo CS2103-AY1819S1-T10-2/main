@@ -1,17 +1,19 @@
 package seedu.address.logic.commands;
 
 import static java.util.Objects.requireNonNull;
+import static seedu.address.commons.util.CollectionUtil.requireAllNonNull;
+import static seedu.address.logic.parser.CliSyntax.PREFIX_PATIENT_NAME;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_REMARK;
 import static seedu.address.model.Model.PREDICATE_SHOW_ALL_PERSONS;
 
 import java.util.List;
 
 import seedu.address.calendar.GoogleCalendar;
-import seedu.address.commons.core.Messages;
-import seedu.address.commons.core.index.Index;
 import seedu.address.logic.CommandHistory;
 import seedu.address.logic.commands.exceptions.CommandException;
 import seedu.address.model.Model;
+import seedu.address.model.patient.Patient;
+import seedu.address.model.person.Name;
 import seedu.address.model.person.Person;
 import seedu.address.model.person.Remark;
 
@@ -22,29 +24,31 @@ public class RemarkCommand extends Command {
 
     public static final String COMMAND_WORD = "remark";
 
-    public static final String MESSAGE_USAGE = COMMAND_WORD + ": Edits remark of the person identified "
-            + "by the index number used in the displayed person list. "
+    public static final String MESSAGE_USAGE = COMMAND_WORD + ": Edits remark of the patient. "
             + "Existing values will be overwritten by the input values.\n"
-            + "Parameters: INDEX (must be a positive integer)"
-            + "[" + PREFIX_REMARK + "REMARK] "
-            + "Example: " + COMMAND_WORD + " 1 "
-            + PREFIX_REMARK + "Likes to drink coffee ";
+            + "Parameters: "
+            + PREFIX_PATIENT_NAME + "PATIENT_NAME "
+            + PREFIX_REMARK + "REMARK "
+            + "Example: " + COMMAND_WORD + " "
+            + PREFIX_PATIENT_NAME + "John Doe "
+            + PREFIX_REMARK + "Has chronic heart disease ";
 
     public static final String MESSAGE_ADD_REMARK_SUCCESS = "Added remark to %1$s";
     public static final String MESSAGE_DELETE_REMARK_SUCCESS = "Deleted remark of %1$s";
+    public static final String MESSAGE_INVALID_PATIENT_FAILURE = "This patient does not exist in HealthBook";
 
-    private final Index index;
+    private final Name patientName;
     private final Remark remark;
 
     /**
-     * @param index of the person in the filtered person list to edit remark
+     * @param patientName of the patient in the filtered person list to edit remark
      * @param remark to be updated
      */
 
-    public RemarkCommand(Index index, Remark remark) {
-        requireNonNull(index);
+    public RemarkCommand(Name patientName, Remark remark) {
+        requireAllNonNull(patientName, remark);
 
-        this.index = index;
+        this.patientName = patientName;
         this.remark = remark;
     }
 
@@ -54,24 +58,32 @@ public class RemarkCommand extends Command {
             throws CommandException {
         requireNonNull(model);
         List<Person> lastShownList = model.getFilteredPersonList();
+        Patient patientToEdit = null;
 
-        if (index.getZeroBased() >= lastShownList.size()) {
-            throw new CommandException(Messages.MESSAGE_INVALID_PERSON_DISPLAYED_INDEX);
+        for (Person person : lastShownList) {
+            if (person.getName().equals(patientName) && person instanceof Patient) {
+                patientToEdit = (Patient) person;
+            }
         }
 
-        Person personToEdit = lastShownList.get(index.getZeroBased());
-        Person editedPerson = new Person(personToEdit.getName(), personToEdit.getPhone(), personToEdit.getEmail(),
-                personToEdit.getAddress(), remark, personToEdit.getTags());
+        if (patientToEdit == null) {
+            throw new CommandException(MESSAGE_INVALID_PATIENT_FAILURE);
+        }
 
-        model.updatePerson(personToEdit, editedPerson);
+        Patient editedPatient = new Patient(patientToEdit.getName(), patientToEdit.getPhone(), patientToEdit.getEmail(),
+                patientToEdit.getAddress(), remark, patientToEdit.getTags(),
+                patientToEdit.getTelegramId(), patientToEdit.getUpcomingAppointments(),
+                patientToEdit.getPastAppointments(), patientToEdit.getMedicalHistory());
+
+        model.updatePerson(patientToEdit, editedPatient);
         model.updateFilteredPersonList(PREDICATE_SHOW_ALL_PERSONS);
         model.commitAddressBook();
 
         /**
          * Remark is deleted if input field is empty
          */
-        return !(remark.value.isEmpty()) ? new CommandResult(String.format(MESSAGE_ADD_REMARK_SUCCESS, editedPerson))
-                : new CommandResult(String.format(MESSAGE_DELETE_REMARK_SUCCESS, editedPerson));
+        return !(remark.value.isEmpty()) ? new CommandResult(String.format(MESSAGE_ADD_REMARK_SUCCESS, editedPatient))
+                : new CommandResult(String.format(MESSAGE_DELETE_REMARK_SUCCESS, editedPatient));
     }
 
     @Override
@@ -82,7 +94,7 @@ public class RemarkCommand extends Command {
             return false;
         } else {
             RemarkCommand r = (RemarkCommand) o;
-            return index.equals(r.index) && remark.equals(r.remark);
+            return patientName.equals(r.patientName) && remark.equals(r.remark);
         }
 
     }

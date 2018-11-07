@@ -369,10 +369,11 @@ command is implemented such that it is able to add `allergies` AND/OR `condition
 image::AddMedicalHistorySequenceDiagram.png[width="600"]
 
 Step 1. The user types in `add-medical-history` in the command box followed by the parameter `INDEX al/penicillin,milk
-c/sub-healthy, hyperglycemia`
+c/sub-healthy,hyperglycemia`
 
 [NOTE]
-For multiple inputs in the same field, use comma `,` to separate.
+For multiple inputs in the same field, use comma `,` to separate. Do not append blank after `,`.
+You must provide both prefixes of allergy and condition, but can leave at most one input blank.
 
 Step 2. Upon hitting enter, the `allergies` AND `conditions` of `MedicalHistory` will get added
 
@@ -394,10 +395,12 @@ The delete medical history feature is facilitated by `DeleteMedicalHistoryComman
 image::DeleteMedicalHistorySequenceDiagram.png[width="600"]
 
 Step 1. The user types in `delete-medical-history` in the command box followed by the parameter `INDEX
-al/penicillin,milk c/sub-healthy, hyperglycemia`
+al/penicillin,milk c/sub-healthy,hyperglycemia`
 
 [NOTE]
-For multiple inputs in the same field, use comma `,` to separate.
+For multiple inputs in the same field, use comma `,` to separate. Do not append blank after `,`.
+You must provide both prefixes of allergy and condition, but can leave at most one input blank.
+
 
 Step 2. Upon hitting enter, the `allergies` AND `conditions` of `MedicalHistory` will get deleted
 

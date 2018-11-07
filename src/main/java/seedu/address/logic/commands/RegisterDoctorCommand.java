@@ -38,7 +38,8 @@ public class RegisterDoctorCommand extends Command {
             + PREFIX_ADDRESS + "311, Clementi Ave 2, #02-25 ";
 
     public static final String MESSAGE_SUCCESS = "New doctor registered: %1$s";
-    public static final String MESSAGE_DUPLICATE_PERSON = "This doctor already exists in the HealthBook";
+    public static final String MESSAGE_DUPLICATE_PERSON =
+            "There exists a patient/doctor with this name in the HealthBook";
     public static final String MESSAGE_WRONG_INPUT = "Wrong input provided. Please try again";
     public static final String MESSAGE_SECURTIY_BREACH = "Unable to create doctor due to security breach";
 

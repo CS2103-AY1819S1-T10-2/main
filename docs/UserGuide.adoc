@@ -68,11 +68,11 @@ Examples:
 
 === Registering a doctor: `register-doctor`
 Registers a doctor to the HealthBook. Doctor is automatically tagged as a "Doctor". +
-Format: `register-patient n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS`
+Format: `register-doctor n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS`
 
 Examples:
 
-* `register-doctor n/Mary Jane p/98765432 e/johnd@example.com a/John street, block 123, #01-01`
+* `register-doctor n/Mary Jane p/98765432 e/maryj@example.com a/John street, block 123, #01-01`
 
 === Deleting a patient: `delete-patient`
 Deletes a patient from the HealthBook by name. +
@@ -175,26 +175,26 @@ Examples:
 
 === Adding medical condition or allergy to patient: `add-medical-history`
 Add a condition or allergy to the patient's medical history. This will then be displayed on the users information page. +
-Format: `add-medical-history n/NAME [al/ALLERGIES] [c/CONDITIONS]`
+Format: `add-medical-history n/NAME al/ALLERGIES c/CONDITIONS`
 
 Examples:
 
-* `add-medical-history n/John Doe al/penicillin, milk c/sub-healthy, hyperglycemia`
+* `add-medical-history n/John Doe al/penicillin,milk c/sub-healthy,hyperglycemia`
 
 ****
-* Either condition or allergy must be present.
+* Either condition or allergy must be non-blank value.
 ****
 
 === Deleting medical condition or allergy to patient: `delete-medical-history`
 Delete a condition or allergy to the patient's medical history. This will then be removed on the patient's information page. +
-Format: `delete-medical-history n/NAME [al/ALLERGIES] [c/CONDITIONS]`
+Format: `delete-medical-history n/NAME al/ALLERGIES c/CONDITIONS`
 
 Examples:
 
-* `delete-medical-history n/John Doe al/penicillin, milk c/sub-healthy, hyperglycemia`
+* `delete-medical-history n/John Doe al/penicillin,milk c/sub-healthy,hyperglycemia`
 
 ****
-* Either condition or allergy must be present.
+* Either condition or allergy must be non-blank value.
 * Condition and allergy indicated must be present in the patient's records
 ****
 
@@ -272,6 +272,10 @@ Format: `exit`
 
 HealthBook data are saved in the hard disk automatically after any command that changes the data. +
 There is no need to save manually.
+
+=== Tab to autocomplete commands
+
+In the command box, user can type the first few characters of the command and tab to autocomplete it.
 
 === Remind patient on their upcoming appointment `[coming soon in v2.0]`
 Remind a patient on their upcoming appointment. This will send a message to the patient via an external platform to inform

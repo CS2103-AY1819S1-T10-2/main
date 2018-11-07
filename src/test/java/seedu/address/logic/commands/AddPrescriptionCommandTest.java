@@ -43,7 +43,9 @@ public class AddPrescriptionCommandTest {
     @Test
     public void execute_allFieldsSpecified_success() {
         Appointment firstAppointment = model.getFilteredAppointmentList().get(0);
-        Prescription toAdd = new PrescriptionBuilder().withAppointmentId(firstAppointment.getAppointmentId()).build();
+        Prescription toAdd = new PrescriptionBuilder()
+                .withAppointmentId(firstAppointment.getAppointmentId())
+                .withMedicineName(VALID_MEDICINE_NAME_VICODIN).build();
 
         Appointment editedAppointment = new AppointmentBuilder(firstAppointment).build();
         editedAppointment.getPrescriptions().add(toAdd);
@@ -89,10 +91,11 @@ public class AddPrescriptionCommandTest {
     @Test
     public void execute_duplicatePrescriptionUnfilteredList_failure() {
         Appointment appointmentInList = model.getAddressBook().getAppointmentList().get(0);
-        Prescription toAdd = new PrescriptionBuilder().withAppointmentId(appointmentInList.getAppointmentId()).build();
-        appointmentInList.addPrescription(toAdd);
-        AddPrescriptionCommand addPrescriptionCommand = new AddPrescriptionCommand(toAdd.getId(), toAdd);
+        Prescription toAdd = new PrescriptionBuilder()
+                .withAppointmentId(appointmentInList.getAppointmentId())
+                .withMedicineName(appointmentInList.getPrescriptions().get(0).getMedicineName().toString()).build();
 
+        AddPrescriptionCommand addPrescriptionCommand = new AddPrescriptionCommand(toAdd.getId(), toAdd);
         assertCommandFailure(addPrescriptionCommand, model, commandHistory,
                 addPrescriptionCommand.MESSAGE_DUPLICATE_PRESCRIPTION);
     }
@@ -107,6 +110,19 @@ public class AddPrescriptionCommandTest {
 
         assertCommandFailure(addPrescriptionCommand, model, commandHistory,
                 addPrescriptionCommand.MESSAGE_APPOINTENT_DOES_NOT_EXIST);
+    }
+
+    @Test
+    public void execute_patientAllergicToMedicine_failure() {
+        Appointment firstAppointment = model.getFilteredAppointmentList().get(0);
+        Prescription prescriptionToAdd = new PrescriptionBuilder()
+                .withAppointmentId(firstAppointment.getAppointmentId()).build();
+        AddPrescriptionCommand addPrescriptionCommand = new AddPrescriptionCommand(firstAppointment.getAppointmentId(),
+                prescriptionToAdd);
+
+        assertCommandFailure(addPrescriptionCommand, model, commandHistory,
+                String.format(addPrescriptionCommand.MESSAGE_PATIENT_ALLERGIC_TO_MEDICINE,
+                        prescriptionToAdd.getMedicineName()));
     }
 
 
