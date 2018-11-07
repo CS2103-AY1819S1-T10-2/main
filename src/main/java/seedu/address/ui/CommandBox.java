@@ -29,7 +29,7 @@ public class CommandBox extends UiPart<Region> {
     private final Logger logger = LogsCenter.getLogger(CommandBox.class);
     private final Logic logic;
     private final List<String> commands = new ArrayList<>(Arrays.asList(
-            "add", "clear", "delete-patient", "delete-doctor", "edit", "exit",
+            "clear", "delete-patient", "delete-doctor", "edit", "exit",
             "find", "help", "history", "list", "redo", "register-patient", "register-doctor",
             "select", "undo", "add-appointment", "edit-appointment", "delete-appointment", "remark",
             "add-medical-history", "filter-patient", "filter-doctor", "delete-medical-history",
