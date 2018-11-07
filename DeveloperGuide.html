@@ -854,7 +854,7 @@ accessible via name as this allows the receptionist to edit the remark without l
 <div class="paragraph">
 <p>The add medical history feature is facilitated by <code>AddMedicalHistoryCommand</code> and <code>AddMedicalHistoryCommandParser</code>. This
 command is implemented such that it is able to add <code>allergies</code> AND/OR <code>conditions</code> to <code>MedicalHistory</code> object for a specific
-<code>Patient</code> specified by index.</p>
+<code>Patient</code> specified by name.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -863,7 +863,7 @@ command is implemented such that it is able to add <code>allergies</code> AND/OR
 <div class="title">Figure 16. Add Medical History Sequence Diagram</div>
 </div>
 <div class="paragraph">
-<p>Step 1. The user types in <code>add-medical-history</code> in the command box followed by the parameter <code>INDEX al/penicillin,milk
+<p>Step 1. The user types in <code>add-medical-history</code> in the command box followed by the parameter <code>n/John Doe al/penicillin,milk
 c/sub-healthy,hyperglycemia</code></p>
 </div>
 <div class="admonitionblock note">
@@ -874,13 +874,13 @@ c/sub-healthy,hyperglycemia</code></p>
 </td>
 <td class="content">
 For multiple inputs in the same field, use comma <code>,</code> to separate. Do not append blank after <code>,</code>.
-You must provide both prefixes of allergy and condition, but can leave at most one input blank.
+You can only omit either ALLERGY parameter or CONDITION parameter.
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>Step 2. Upon hitting enter, the <code>allergies</code> AND <code>conditions</code> of <code>MedicalHistory</code> will get added</p>
+<p>Step 2. Upon hitting enter, the <code>allergies</code> AND/OR <code>conditions</code> of <code>MedicalHistory</code> will get added</p>
 </div>
 <div class="admonitionblock warning">
 <table>
@@ -917,7 +917,7 @@ Exception will be thrown if inputs for both field are blank.
 <div class="paragraph">
 <p>The delete medical history feature is facilitated by <code>DeleteMedicalHistoryCommand</code> and
 <code>DeleteMedicalHistoryCommandParser</code>. This command is implemented such that it is able to delete <code>allergy</code> AND/OR
-<code>condition</code> from <code>MedicalHistory</code> object for a specific <code>Patient</code> specified by index.</p>
+<code>condition</code> from <code>MedicalHistory</code> object for a specific <code>Patient</code> specified by name.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -926,7 +926,7 @@ Exception will be thrown if inputs for both field are blank.
 <div class="title">Figure 17. Delete Medical History Sequence Diagram</div>
 </div>
 <div class="paragraph">
-<p>Step 1. The user types in <code>delete-medical-history</code> in the command box followed by the parameter <code>INDEX
+<p>Step 1. The user types in <code>delete-medical-history</code> in the command box followed by the parameter <code>n/John Doe
 al/penicillin,milk c/sub-healthy,hyperglycemia</code></p>
 </div>
 <div class="admonitionblock note">
@@ -937,13 +937,13 @@ al/penicillin,milk c/sub-healthy,hyperglycemia</code></p>
 </td>
 <td class="content">
 For multiple inputs in the same field, use comma <code>,</code> to separate. Do not append blank after <code>,</code>.
-You must provide both prefixes of allergy and condition, but can leave at most one input blank.
+You can only omit either ALLERGY parameter or CONDITION parameter.
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>Step 2. Upon hitting enter, the <code>allergies</code> AND <code>conditions</code> of <code>MedicalHistory</code> will get deleted</p>
+<p>Step 2. Upon hitting enter, the <code>allergies</code> AND/OR <code>conditions</code> of <code>MedicalHistory</code> will get deleted</p>
 </div>
 <div class="admonitionblock warning">
 <table>
@@ -2547,4 +2547,4 @@ Expected: Similar to previous.</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-07 16:15:55 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-07 17:52:02 UTC</div></div></div></body></html>
