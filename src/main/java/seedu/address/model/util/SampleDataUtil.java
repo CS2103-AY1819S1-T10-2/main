@@ -44,13 +44,7 @@ public class SampleDataUtil {
     public static ReadOnlyAddressBook getSampleAddressBook() {
         AddressBook sampleAb = new AddressBook();
         for (Person samplePerson : getSamplePersons()) {
-            if (samplePerson instanceof Patient) {
-                sampleAb.addPatient((Patient) samplePerson);
-            } else if (samplePerson instanceof Doctor) {
-                sampleAb.addDoctor((Doctor) samplePerson);
-            } else {
-                sampleAb.addPerson(samplePerson);
-            }
+            sampleAb.addPerson(samplePerson);
         }
         return sampleAb;
     }
