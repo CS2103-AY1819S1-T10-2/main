@@ -8,13 +8,11 @@ import static seedu.address.logic.commands.CommandTestUtil.VALID_APPOINTMENT_ID_
 import static seedu.address.logic.commands.CommandTestUtil.VALID_CONSUMPTION_PER_DAY_PARACETAMOL;
 import static seedu.address.logic.commands.CommandTestUtil.VALID_DOSAGE_PARACETAMOL;
 import static seedu.address.logic.commands.CommandTestUtil.VALID_MEDICINE_NAME_PARACETAMOL;
-import static seedu.address.logic.commands.CommandTestUtil.VALID_NAME_AMY;
 import static seedu.address.logic.commands.CommandTestUtil.VALID_REMARK_AMY;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_CONSUMPTION_PER_DAY;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_DOSAGE;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_MEDICINE_NAME;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_NAME;
-import static seedu.address.logic.parser.CliSyntax.PREFIX_PATIENT_NAME;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_REMARK;
 import static seedu.address.testutil.TypicalIndexes.INDEX_FIRST_PERSON;
 import static seedu.address.testutil.TypicalPatientsAndDoctors.ALICE;
@@ -51,7 +49,6 @@ import seedu.address.model.appointment.ConsumptionPerDay;
 import seedu.address.model.appointment.Dosage;
 import seedu.address.model.appointment.MedicineName;
 import seedu.address.model.appointment.Prescription;
-import seedu.address.model.person.Name;
 import seedu.address.model.person.NameContainsKeywordsPredicate;
 import seedu.address.model.person.Person;
 import seedu.address.model.person.Remark;
@@ -142,10 +139,9 @@ public class AddressBookParserTest {
     @Test
     public void parseCommand_remarkCommandWord_returnsRemarkCommand() throws Exception {
         final Remark remark = new Remark(VALID_REMARK_AMY);
-        final Name name = new Name(VALID_NAME_AMY);
         RemarkCommand command = (RemarkCommand) parser.parseCommand(RemarkCommand.COMMAND_WORD
-                + " " + PREFIX_PATIENT_NAME + name.toString() + " " + PREFIX_REMARK + remark.toString());
-        assertEquals(new RemarkCommand(name, remark), command);
+                + " " + INDEX_FIRST_PERSON.getOneBased() + " " + PREFIX_REMARK + remark.value);
+        assertEquals(new RemarkCommand(INDEX_FIRST_PERSON, new Remark(VALID_REMARK_AMY)), command);
     }
 
     @Test
