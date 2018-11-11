@@ -1,0 +1,3186 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Asciidoctor 1.5.6.1"><title>Elroy Haw - Project Portfolio</title><link rel="stylesheet" href="../stylesheets/gh-pages.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="../stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="seedu-header"><nav class="navbar navbar-lg navbar-light bg-lighter"><div class="container"><a class="navbar-brand" href="https://se-edu.github.io/"><img src="../images/SeEduLogo.png" alt="SE-EDU"></a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level1">AB-1</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level2">AB-2</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level3">AB-3</a></li><li class="nav-item"><a class="nav-link active" href="../index.html">AB-4</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/collate">Collate</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/se-book">Book</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/learningresources">Resources</a></li></ul></div></nav></div><div id="site-header"><nav class="navbar navbar-light bg-light"><div class="container"><a class="navbar-brand" href="../index.html">AddressBook-Level4</a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="../UserGuide.html">User Guide</a></li><li class="nav-item"><a class="nav-link" href="../DeveloperGuide.html">Developer Guide</a></li><li class="nav-item"><a class="nav-link" href="../LearningOutcomes.html">LOs</a></li><li class="nav-item"><a class="nav-link active" href="../AboutUs.html">About Us</a></li><li class="nav-item"><a class="nav-link" href="../ContactUs.html">Contact Us</a></li><li class="navitem"><a class="nav-link" href="https://github.com/se-edu/addressbook-level4"><span class="fa fa-github fa-lg" aria-hidden="true"></span>&nbsp;View on GitHub</a></li></ul></div></nav></div><div id="header"><h1>Elroy Haw - Project Portfolio</h1></div><div id="content"><div class="sect1">
+<h2 id="project-healthbook"><a class="link" href="#project-healthbook">PROJECT: HealthBook</a></h2>
+<div class="sectionbody">
+<hr>
+</div>
+</div>
+<div class="sect1">
+<h2 id="overview"><a class="link" href="#overview">Overview</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>HealthBook is for clinic receptionist who <strong>prefer to use a desktop app for managing doctors and patients information and appointments</strong>.
+It is <strong>optimized for receptionist who prefer to work with a Command Line Interface</strong> (CLI) while still having the benefits of a Graphical User Interface (GUI).</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="summary-of-contributions"><a class="link" href="#summary-of-contributions">Summary of contributions</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Major enhancement</strong>: added <strong>the ability to add and delete appointments</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>What it does: This allows the user to add new appointments and remove existing appointments that are done in the HealthBook.</p>
+</li>
+<li>
+<p>Justification: This feature enables the user to keep track of the upcoming and past appointments in the HealthBook, and updates the doctors' calendars at the same time.</p>
+</li>
+<li>
+<p>Highlights: This enhancement is the primary purpose of the HealthBook. It required an in-depth analysis of design alternatives. The implementation too was challenging as it required integration with Google calendar commands.</p>
+</li>
+<li>
+<p>Credits: <a href="http://github.com/giamjuxian">giamjuxian</a> for the Google calendar integration</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Minor enhancement</strong>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Added autocomplete commands on tab feature</p>
+</li>
+<li>
+<p>Added commands to view patients/doctors</p>
+</li>
+<li>
+<p>Added commands to delete patients/doctors</p>
+</li>
+<li>
+<p>Updated UI and events after every command call</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Code contributed</strong>: <a href="https://nus-cs2103-ay1819s1.github.io/cs2103-dashboard/#=undefined&amp;search=elroyhaw">Functional code</a></p>
+</li>
+<li>
+<p><strong>Other contributions</strong>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Project management:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Setting up AppVeyor, Travis, Coveralls and Netlify for the project</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Implementation of new features:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Added <code>add-appointment</code> and <code>delete-appointment</code>  commands (Pull requests <a href="https://github.com/CS2103-AY1819S1-T10-2/main/pull/29">#29</a>)</p>
+</li>
+<li>
+<p>Added <code>delete-patient</code> and <code>delete-doctor</code> commands (Pull requests <a href="https://github.com/CS2103-AY1819S1-T10-2/main/pull/8">#8</a>)</p>
+</li>
+<li>
+<p>Added <code>view-patient</code> and <code>view-doctor</code> commands (Pull requests <a href="https://github.com/CS2103-AY1819S1-T10-2/main/pull/50">#50</a>, <a href="https://github.com/CS2103-AY1819S1-T10-2/main/pull/72">#72</a>)</p>
+</li>
+<li>
+<p>Wrote test cases for new commands (Pull requests <a href="https://github.com/CS2103-AY1819S1-T10-2/main/pull/47">#47</a>, <a href="https://github.com/CS2103-AY1819S1-T10-2/main/pull/60">#60</a>,
+<a href="https://github.com/CS2103-AY1819S1-T10-2/main/pull/77">#77</a>, <a href="https://github.com/CS2103-AY1819S1-T10-2/main/pull/78">#78</a>,
+<a href="https://github.com/CS2103-AY1819S1-T10-2/main/pull/126">#126</a>)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Enhancements to existing features:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Updated the GUI information panel (Pull requests <a href="https://github.com/CS2103-AY1819S1-T10-2/main/pull/39">#39</a>, <a href="https://github.com/CS2103-AY1819S1-T10-2/main/pull/51">#51</a>)</p>
+</li>
+<li>
+<p>Updated the GUI to autocomplete commands on tab (Pull requests <a href="https://github.com/CS2103-AY1819S1-T10-2/main/pull/7">#7</a>)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Documentation:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Updated User Guide (Pull requests <a href="https://github.com/CS2103-AY1819S1-T10-2/main/pull/80">#80</a>)</p>
+</li>
+<li>
+<p>Updated Developer Guide (Pull requests <a href="https://github.com/CS2103-AY1819S1-T10-2/main/pull/47">#47</a>)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Community:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Reported bugs and suggestions for other teams in the class (examples:  <a href="https://github.com/CS2103-AY1819S1-T09-4/main/issues/112">1</a>, <a href="https://github.com/CS2103-AY1819S1-T09-4/main/issues/110">2</a>)</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="contributions-to-the-user-guide"><a class="link" href="#contributions-to-the-user-guide">Contributions to the User Guide</a></h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Given below are sections I contributed to the User Guide. They showcase my ability to write documentation targeting end-users.</em></p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect2">
+<h3 id="deleting-a-patient-code-delete-patient-code"><a class="link" href="#deleting-a-patient-code-delete-patient-code">Deleting a patient: <code>delete-patient</code></a></h3>
+<div class="paragraph">
+<p>Deletes a patient from the HealthBook by name and phone.<br>
+Format: <code>delete-patient n/NAME [p/PHONE]</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Parameter <code>p/PHONE</code> is only needed when there are duplicate names in HealthBook, so phone number is needed to differentiate them.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>delete-patient n/Jane Doe</code></p>
+</li>
+<li>
+<p><code>delete-patient n/John Doe p/98264293</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="deleting-a-doctor-code-delete-doctor-code"><a class="link" href="#deleting-a-doctor-code-delete-doctor-code">Deleting a doctor: <code>delete-doctor</code></a></h3>
+<div class="paragraph">
+<p>Deletes a doctor from the HealthBook by name and phone.<br>
+Format: <code>delete-doctor n/NAME [p/PHONE]</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Parameter <code>p/PHONE</code> is only needed when there are duplicate names in HealthBook, so phone number is needed to differentiate them.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>delete-doctor n/Amanda Jane</code></p>
+</li>
+<li>
+<p><code>delete-doctor n/Mary Jane p/94726274</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="viewing-a-patient-code-view-patient-code"><a class="link" href="#viewing-a-patient-code-view-patient-code">Viewing a patient: <code>view-patient</code></a></h3>
+<div class="paragraph">
+<p>Views a landing page of a patient on the HealthBook. This will display all information of the patient onto the HealthBook
+including their medical history, upcoming appointment and their past appointments.<br>
+Format: <code>view-patient n/NAME [p/PHONE]</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Parameter <code>p/PHONE</code> is only needed when there are duplicate names in HealthBook, so phone number is needed to differentiate them.
+</td>
+</tr>
+</table>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Views the patient and loads the information page of the patient with the specified <code>NAME</code> and/or <code>PHONE</code>.</p>
+</li>
+<li>
+<p>The name/phone refers to the name/phone that the patient is registered under.</p>
+</li>
+<li>
+<p>The name/phone must have been registered into the HealthBook.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>view-patient n/John Doe</code></p>
+</li>
+<li>
+<p><code>view-patient n/Jane Doe p/93726273</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="viewing-a-doctor-code-view-doctor-code"><a class="link" href="#viewing-a-doctor-code-view-doctor-code">Viewing a doctor: <code>view-doctor</code></a></h3>
+<div class="paragraph">
+<p>Views a landing page of a doctor on the HealthBook. This will display the doctor&#8217;s upcoming appointments.<br>
+Format: <code>view-doctor n/NAME [p/PHONE]</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Parameter <code>p/PHONE</code> is only needed when there are duplicate names in HealthBook, so phone number is needed to differentiate them.
+</td>
+</tr>
+</table>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Views the doctor&#8217;s upcoming appointments with the specified <code>NAME</code> and/or <code>PHONE</code>.</p>
+</li>
+<li>
+<p>The name/phone refers to the name/phone that the doctor is registered under.</p>
+</li>
+<li>
+<p>The name/phone must have been registered into the HealthBook.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>view-doctor n/Amanda Jane p/93726272</code></p>
+</li>
+<li>
+<p><code>view-doctor n/Mary Jane</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="listing-all-patients-and-doctors-code-list-code"><a class="link" href="#listing-all-patients-and-doctors-code-list-code">Listing all patients and doctors : <code>list</code></a></h3>
+<div class="paragraph">
+<p>Shows a list of all patients and doctors in the HealthBook.<br>
+Format: <code>list</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="filtering-patients-from-list-code-filter-patient-code"><a class="link" href="#filtering-patients-from-list-code-filter-patient-code">Filtering patients from list : <code>filter-patient</code></a></h3>
+<div class="paragraph">
+<p>Shows a list of all patients in the Healthbook.<br>
+Format: <code>filter-patient</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="filtering-doctors-from-list-code-filter-doctor-code"><a class="link" href="#filtering-doctors-from-list-code-filter-doctor-code">Filtering doctors from list : <code>filter-doctor</code></a></h3>
+<div class="paragraph">
+<p>Shows a list of all doctors in the Healthbook.<br>
+Format: <code>filter-doctor</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="booking-an-appointment-code-add-appointment-code"><a class="link" href="#booking-an-appointment-code-add-appointment-code">Booking an appointment: <code>add-appointment</code></a></h3>
+<div class="paragraph">
+<p>Book a doctor&#8217;s appointment for the patient. An ID of this appointment will be generated.<br>
+Format: <code>add-appointment np/PATIENT_NAME [pp/PATIENT_PHONE] nd/DOCTOR_NAME [pd/DOCTOR_PHONE] d/DATE_TIME</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Parameter <code>p/PHONE</code> is only needed when there are duplicate names in HealthBook, so phone number is needed to differentiate them.
+</td>
+</tr>
+</table>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Date and time should be in the format <code>yyyy-MM-dd HH:mm</code></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>add-appointment np/Jane Doe pp/92937272 nd/Amanda Jane pd/94827284 d/2018-12-12 13:00</code></p>
+</li>
+<li>
+<p><code>add-appointment np/John Doe nd/Mary Jane d/2018-10-17 15:00</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="deleting-an-appointment-code-delete-appointment-code"><a class="link" href="#deleting-an-appointment-code-delete-appointment-code">Deleting an appointment <code>delete-appointment</code></a></h3>
+<div class="paragraph">
+<p>Delete a doctor&#8217;s appointment for the patient by its ID.<br>
+Format: <code>delete-appointment APPOINTMENT_ID</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>delete-appointment 10001</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="completing-an-appointment-code-complete-appointment-code"><a class="link" href="#completing-an-appointment-code-complete-appointment-code">Completing an appointment <code>complete-appointment</code></a></h3>
+<div class="paragraph">
+<p>Complete an appointment.<br>
+Format: <code>complete-appointment APPOINTMENT_ID</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>complete-appointment 10001</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="adding-prescriptions-to-a-patient-s-appointment-code-add-prescription-code"><a class="link" href="#adding-prescriptions-to-a-patient-s-appointment-code-add-prescription-code">Adding prescriptions to a patient&#8217;s appointment: <code>add-prescription</code></a></h3>
+<div class="paragraph">
+<p>Adds a prescription to the patient&#8217;s appointment with details of medicine name, dosage and number of times to consume
+in a day.<br>
+Format: <code>add-prescription APPOINTMENT_ID pn/MEDICINE_NAME pd/DOSAGE pc/CONSUMPTION_PER_DAY</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>add-prescription 10001 pn/Paracetamol pd/2 pc/3</code></p>
+</li>
+</ul>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Each prescription is tied to an appointment.</p>
+</li>
+<li>
+<p>There cannot be a duplicate of drug name for that particular appointment.</p>
+</li>
+<li>
+<p>Drug that patient is allergic to cannot be added</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="deleting-prescriptions-of-a-patient-s-appointment-code-delete-prescription-code"><a class="link" href="#deleting-prescriptions-of-a-patient-s-appointment-code-delete-prescription-code">Deleting prescriptions of a patient&#8217;s appointment: <code>delete-prescription</code></a></h3>
+<div class="paragraph">
+<p>Delete a prescription of the patient&#8217;s appointment by appointment ID and medicine name.<br>
+Format: <code>delete-prescription APPOINTMENT_ID pn/MEDICINE_NAME</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>delete-prescription 10001 pn/Paracetamol</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="adding-medical-condition-or-allergy-to-patient-code-add-medical-history-code"><a class="link" href="#adding-medical-condition-or-allergy-to-patient-code-add-medical-history-code">Adding medical condition or allergy to patient: <code>add-medical-history</code></a></h3>
+<div class="paragraph">
+<p>Add a condition or allergy to the patient&#8217;s medical history. This will then be displayed on the users information page.<br>
+Format: <code>add-medical-history n/NAME [al/ALLERGIES] [c/CONDITIONS]</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Allergies and conditions should only contain alphanumeric characters and spaces, and they should not be blank.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>add-medical-history n/John Doe al/penicillin,milk c/subhealthy,hyperglycemia</code></p>
+</li>
+<li>
+<p><code>add-medical-history n/John Doe al/penicillin,milk</code></p>
+</li>
+<li>
+<p><code>add-medical-history n/John Doe c/subhealthy</code></p>
+</li>
+</ul>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Either allergy or condition must be provided.</p>
+</li>
+<li>
+<p>Duplicated allergy or condition is not allowed.</p>
+</li>
+<li>
+<p>Allergy and condition is NOT case sensitive (<code>EGG</code> and <code>egg</code> is treated as the same).</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="deleting-medical-condition-or-allergy-to-patient-code-delete-medical-history-code"><a class="link" href="#deleting-medical-condition-or-allergy-to-patient-code-delete-medical-history-code">Deleting medical condition or allergy to patient: <code>delete-medical-history</code></a></h3>
+<div class="paragraph">
+<p>Delete a condition or allergy to the patient&#8217;s medical history. This will then be removed on the patient&#8217;s information page.<br>
+Format: <code>delete-medical-history n/NAME [al/ALLERGIES] [c/CONDITIONS]</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>delete-medical-history n/John Doe al/penicillin,milk c/subhealthy,hyperglycemia</code></p>
+</li>
+<li>
+<p><code>delete-medical-history n/John Doe al/penicillin,milk</code></p>
+</li>
+<li>
+<p><code>delete-medical-history n/John Doe c/subhealthy</code></p>
+</li>
+</ul>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Either allergy or condition must be provided.</p>
+</li>
+<li>
+<p>Input allergy or condition must exist in the healthbook.</p>
+</li>
+<li>
+<p>Allergy and condition is NOT case sensitive (<code>EGG</code> and <code>egg</code> is treated as the same).</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="adding-remark-to-patient-code-remark-code"><a class="link" href="#adding-remark-to-patient-code-remark-code">Adding remark to patient : <code>remark</code></a></h3>
+<div class="paragraph">
+<p>Adds a remark to the patient/doctor&#8217;s information. Input will override current remark. If input is empty, previous remark will be deleted.<br>
+Format: <code>remark n/NAME [p/PHONE] r/REMARK</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Parameter <code>p/PHONE</code> is only needed when there are duplicate names in HealthBook, so phone number is needed to differentiate them.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>remark n/John Doe r/Has chronic heart disease</code></p>
+</li>
+<li>
+<p><code>remark n/Amanda Jane p/84739294 r/</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="listing-entered-commands-code-history-code"><a class="link" href="#listing-entered-commands-code-history-code">Listing entered commands : <code>history</code></a></h3>
+<div class="paragraph">
+<p>Lists all the commands that you have entered in reverse chronological order.<br>
+Format: <code>history</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Pressing the <kbd>&uarr;</kbd> and <kbd>&darr;</kbd> arrows will display the previous and next input respectively in the command box.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="clearing-all-entries-code-clear-code"><a class="link" href="#clearing-all-entries-code-clear-code">Clearing all entries : <code>clear</code></a></h3>
+<div class="paragraph">
+<p>Clears all entries from the HealthBook.<br>
+Format: <code>clear</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">Exiting the program : <code>exit</code></a></h3>
+<div class="paragraph">
+<p>Exits the program.<br>
+Format: <code>exit</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="saving-the-data"><a class="link" href="#saving-the-data">Saving the data</a></h3>
+<div class="paragraph">
+<p>HealthBook data are saved in the hard disk automatically after any command that changes the data.<br>
+There is no need to save manually.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="tab-to-autocomplete-commands"><a class="link" href="#tab-to-autocomplete-commands">Tab to autocomplete commands</a></h3>
+<div class="paragraph">
+<p>In the command box, user can type the first few characters of the command and tab to autocomplete it.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="remind-patient-on-their-upcoming-appointment-code-coming-soon-in-v2-0-code"><a class="link" href="#remind-patient-on-their-upcoming-appointment-code-coming-soon-in-v2-0-code">Remind patient on their upcoming appointment <code>[coming soon in v2.0]</code></a></h3>
+<div class="paragraph">
+<p>Remind a patient on their upcoming appointment. This will send a message to the patient via an external platform to inform
+them about their appointment.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="remind-all-patient-on-their-upcoming-appointment-code-coming-soon-in-v2-0-code"><a class="link" href="#remind-all-patient-on-their-upcoming-appointment-code-coming-soon-in-v2-0-code">Remind all patient on their upcoming appointment <code>[coming soon in v2.0]</code></a></h3>
+<div class="paragraph">
+<p>Remind all patient will upcoming appointment this week. This will send a message to the patient via an external platform to
+inform them about their upcoming appointment.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="faq"><a class="link" href="#faq">FAQ</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Q</strong>: How do I transfer my data to another Computer?<br>
+<strong>A</strong>: Install the app in the other computer and overwrite the empty data file it creates with the file that contains the data of your previous HealthBook folder.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="command-summary"><a class="link" href="#command-summary">Command Summary</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Register patient</strong> <code>register-patient n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS</code><br>
+e.g. <code>register-patient n/John Doe p/22224444 e/jamesho@example.com a/123, Clementi Rd, 1234665</code></p>
+</li>
+<li>
+<p><strong>Register doctor</strong> <code>register-patient n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS</code><br>
+e.g. <code>register-doctor n/Mary Jane p/12224444 e/maryjane@example.com a/12, Clementi Rd, 1234665</code></p>
+</li>
+<li>
+<p><strong>Delete patient</strong> : <code>delete-patient n/NAME [p/PHONE]</code><br>
+e.g. <code>delete-patient n/John Doe p/84729292</code></p>
+</li>
+<li>
+<p><strong>Delete doctor</strong> : <code>delete-doctor n/NAME [p/PHONE]</code><br>
+e.g. <code>delete-doctor n/Mary Jane</code></p>
+</li>
+<li>
+<p><strong>View patient</strong> : <code>view-patient n/NAME [p/PHONE]</code><br>
+e.g. <code>view-patient n/John Doe p/84729292</code></p>
+</li>
+<li>
+<p><strong>View doctor</strong> : <code>view-doctor n/NAME [p/PHONE]</code><br>
+e.g. <code>view-doctor n/Mary Jane</code></p>
+</li>
+<li>
+<p><strong>List</strong> : <code>list</code></p>
+</li>
+<li>
+<p><strong>Filter patients</strong> : <code>filter-patient</code></p>
+</li>
+<li>
+<p><strong>Filter doctors</strong> : <code>filter-doctor</code></p>
+</li>
+<li>
+<p><strong>Book appointment</strong> : <code>add-appointment np/PATIENT_NAME [pp/PATIENT_PHONE] nd/DOCTOR_NAME [pd/PATIENT_PHONE] d/DATE_TIME</code><br>
+e.g. <code>add-appointment np/John Doe nd/Mary Jane pd/93736272 d/2018-10-17 15:00</code></p>
+</li>
+<li>
+<p><strong>Delete appointment</strong> : <code>delete-appointment APPOINTMENT_ID</code><br>
+e.g. <code>delete-appointment 10001</code></p>
+</li>
+<li>
+<p><strong>Complete appointment</strong> : <code>complete-appointment APPOINTMENT_ID</code><br>
+e.g. <code>complete-appointment 10001</code></p>
+</li>
+<li>
+<p><strong>Add prescriptions</strong> : <code>add-prescription APPOINTMENT_ID pn/MEDICINE_NAME pd/DOSAGE pc/CONSUMPTION_PER_DAY</code><br>
+e.g. <code>add-prescription 10001 pn/Paracetamol pd/2 pc/3</code></p>
+</li>
+<li>
+<p><strong>Delete prescriptions</strong> : <code>delete-prescription APPOINTMENT_ID pn/MEDICINE_NAME</code><br>
+e.g. <code>delete-prescription 10001 pn/Paracetamol</code></p>
+</li>
+<li>
+<p><strong>Add allergies or conditions</strong> : <code>add-medical-history n/NAME [al/ALLERGIES] [c/CONDITIONS]</code>
+e.g. <code>add-medical-history n/John Doe al/penicillin,milk c/subhealthy,hyperglycemia</code></p>
+</li>
+<li>
+<p><strong>Delete allergies or conditions</strong> : <code>delete-medical-history n/NAME [al/ALLERGIES] [c/CONDITIONS]</code>
+e.g. <code>delete-medical-history n/John Doe al/penicillin,milk c/subhealthy,hyperglycemia</code></p>
+</li>
+<li>
+<p><strong>Remark</strong> : <code>remark n/NAME [p/PHONE] r/REMARK</code><br>
+e.g <code>remark n/John Doe p/84729292 r/Has chronic heart disease</code></p>
+</li>
+<li>
+<p><strong>History</strong> : <code>history</code></p>
+</li>
+<li>
+<p><strong>Clear</strong> : <code>clear</code></p>
+</li>
+<li>
+<p><strong>Exit</strong> : <code>exit</code>
+=== Deleting a doctor: <code>delete-doctor</code>
+Deletes a doctor from the HealthBook by name and phone.<br>
+Format: <code>delete-doctor n/NAME [p/PHONE]</code></p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Parameter <code>p/PHONE</code> is only needed when there are duplicate names in HealthBook, so phone number is needed to differentiate them.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>delete-doctor n/Amanda Jane</code></p>
+</li>
+<li>
+<p><code>delete-doctor n/Mary Jane p/94726274</code></p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="viewing-a-patient-code-view-patient-code-2"><a class="link" href="#viewing-a-patient-code-view-patient-code-2">Viewing a patient: <code>view-patient</code></a></h3>
+<div class="paragraph">
+<p>Views a landing page of a patient on the HealthBook. This will display all information of the patient onto the HealthBook
+including their medical history, upcoming appointment and their past appointments.<br>
+Format: <code>view-patient n/NAME [p/PHONE]</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Parameter <code>p/PHONE</code> is only needed when there are duplicate names in HealthBook, so phone number is needed to differentiate them.
+</td>
+</tr>
+</table>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Views the patient and loads the information page of the patient with the specified <code>NAME</code> and/or <code>PHONE</code>.</p>
+</li>
+<li>
+<p>The name/phone refers to the name/phone that the patient is registered under.</p>
+</li>
+<li>
+<p>The name/phone must have been registered into the HealthBook.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>view-patient n/John Doe</code></p>
+</li>
+<li>
+<p><code>view-patient n/Jane Doe p/93726273</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="viewing-a-doctor-code-view-doctor-code-2"><a class="link" href="#viewing-a-doctor-code-view-doctor-code-2">Viewing a doctor: <code>view-doctor</code></a></h3>
+<div class="paragraph">
+<p>Views a landing page of a doctor on the HealthBook. This will display the doctor&#8217;s upcoming appointments.<br>
+Format: <code>view-doctor n/NAME [p/PHONE]</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Parameter <code>p/PHONE</code> is only needed when there are duplicate names in HealthBook, so phone number is needed to differentiate them.
+</td>
+</tr>
+</table>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Views the doctor&#8217;s upcoming appointments with the specified <code>NAME</code> and/or <code>PHONE</code>.</p>
+</li>
+<li>
+<p>The name/phone refers to the name/phone that the doctor is registered under.</p>
+</li>
+<li>
+<p>The name/phone must have been registered into the HealthBook.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>view-doctor n/Amanda Jane p/93726272</code></p>
+</li>
+<li>
+<p><code>view-doctor n/Mary Jane</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="listing-all-patients-and-doctors-code-list-code-2"><a class="link" href="#listing-all-patients-and-doctors-code-list-code-2">Listing all patients and doctors : <code>list</code></a></h3>
+<div class="paragraph">
+<p>Shows a list of all patients and doctors in the HealthBook.<br>
+Format: <code>list</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="filtering-patients-from-list-code-filter-patient-code-2"><a class="link" href="#filtering-patients-from-list-code-filter-patient-code-2">Filtering patients from list : <code>filter-patient</code></a></h3>
+<div class="paragraph">
+<p>Shows a list of all patients in the Healthbook.<br>
+Format: <code>filter-patient</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="filtering-doctors-from-list-code-filter-doctor-code-2"><a class="link" href="#filtering-doctors-from-list-code-filter-doctor-code-2">Filtering doctors from list : <code>filter-doctor</code></a></h3>
+<div class="paragraph">
+<p>Shows a list of all doctors in the Healthbook.<br>
+Format: <code>filter-doctor</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="booking-an-appointment-code-add-appointment-code-2"><a class="link" href="#booking-an-appointment-code-add-appointment-code-2">Booking an appointment: <code>add-appointment</code></a></h3>
+<div class="paragraph">
+<p>Book a doctor&#8217;s appointment for the patient. An ID of this appointment will be generated.<br>
+Format: <code>add-appointment np/PATIENT_NAME [pp/PATIENT_PHONE] nd/DOCTOR_NAME [pd/DOCTOR_PHONE] d/DATE_TIME</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Parameter <code>p/PHONE</code> is only needed when there are duplicate names in HealthBook, so phone number is needed to differentiate them.
+</td>
+</tr>
+</table>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Date and time should be in the format <code>yyyy-MM-dd HH:mm</code></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>add-appointment np/Jane Doe pp/92937272 nd/Amanda Jane pd/94827284 d/2018-12-12 13:00</code></p>
+</li>
+<li>
+<p><code>add-appointment np/John Doe nd/Mary Jane d/2018-10-17 15:00</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="deleting-an-appointment-code-delete-appointment-code-2"><a class="link" href="#deleting-an-appointment-code-delete-appointment-code-2">Deleting an appointment <code>delete-appointment</code></a></h3>
+<div class="paragraph">
+<p>Delete a doctor&#8217;s appointment for the patient by its ID.<br>
+Format: <code>delete-appointment APPOINTMENT_ID</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>delete-appointment 10001</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="completing-an-appointment-code-complete-appointment-code-2"><a class="link" href="#completing-an-appointment-code-complete-appointment-code-2">Completing an appointment <code>complete-appointment</code></a></h3>
+<div class="paragraph">
+<p>Complete an appointment.<br>
+Format: <code>complete-appointment APPOINTMENT_ID</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>complete-appointment 10001</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="adding-prescriptions-to-a-patient-s-appointment-code-add-prescription-code-2"><a class="link" href="#adding-prescriptions-to-a-patient-s-appointment-code-add-prescription-code-2">Adding prescriptions to a patient&#8217;s appointment: <code>add-prescription</code></a></h3>
+<div class="paragraph">
+<p>Adds a prescription to the patient&#8217;s appointment with details of medicine name, dosage and number of times to consume
+in a day.<br>
+Format: <code>add-prescription APPOINTMENT_ID pn/MEDICINE_NAME pd/DOSAGE pc/CONSUMPTION_PER_DAY</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>add-prescription 10001 pn/Paracetamol pd/2 pc/3</code></p>
+</li>
+</ul>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Each prescription is tied to an appointment.</p>
+</li>
+<li>
+<p>There cannot be a duplicate of drug name for that particular appointment.</p>
+</li>
+<li>
+<p>Drug that patient is allergic to cannot be added</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="deleting-prescriptions-of-a-patient-s-appointment-code-delete-prescription-code-2"><a class="link" href="#deleting-prescriptions-of-a-patient-s-appointment-code-delete-prescription-code-2">Deleting prescriptions of a patient&#8217;s appointment: <code>delete-prescription</code></a></h3>
+<div class="paragraph">
+<p>Delete a prescription of the patient&#8217;s appointment by appointment ID and medicine name.<br>
+Format: <code>delete-prescription APPOINTMENT_ID pn/MEDICINE_NAME</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>delete-prescription 10001 pn/Paracetamol</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="adding-medical-condition-or-allergy-to-patient-code-add-medical-history-code-2"><a class="link" href="#adding-medical-condition-or-allergy-to-patient-code-add-medical-history-code-2">Adding medical condition or allergy to patient: <code>add-medical-history</code></a></h3>
+<div class="paragraph">
+<p>Add a condition or allergy to the patient&#8217;s medical history. This will then be displayed on the users information page.<br>
+Format: <code>add-medical-history n/NAME [al/ALLERGIES] [c/CONDITIONS]</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Allergies and conditions should only contain alphanumeric characters and spaces, and they should not be blank.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>add-medical-history n/John Doe al/penicillin,milk c/subhealthy,hyperglycemia</code></p>
+</li>
+<li>
+<p><code>add-medical-history n/John Doe al/penicillin,milk</code></p>
+</li>
+<li>
+<p><code>add-medical-history n/John Doe c/subhealthy</code></p>
+</li>
+</ul>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Either allergy or condition must be provided.</p>
+</li>
+<li>
+<p>Duplicated allergy or condition is not allowed.</p>
+</li>
+<li>
+<p>Allergy and condition is NOT case sensitive (<code>EGG</code> and <code>egg</code> is treated as the same).</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="deleting-medical-condition-or-allergy-to-patient-code-delete-medical-history-code-2"><a class="link" href="#deleting-medical-condition-or-allergy-to-patient-code-delete-medical-history-code-2">Deleting medical condition or allergy to patient: <code>delete-medical-history</code></a></h3>
+<div class="paragraph">
+<p>Delete a condition or allergy to the patient&#8217;s medical history. This will then be removed on the patient&#8217;s information page.<br>
+Format: <code>delete-medical-history n/NAME [al/ALLERGIES] [c/CONDITIONS]</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>delete-medical-history n/John Doe al/penicillin,milk c/subhealthy,hyperglycemia</code></p>
+</li>
+<li>
+<p><code>delete-medical-history n/John Doe al/penicillin,milk</code></p>
+</li>
+<li>
+<p><code>delete-medical-history n/John Doe c/subhealthy</code></p>
+</li>
+</ul>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Either allergy or condition must be provided.</p>
+</li>
+<li>
+<p>Input allergy or condition must exist in the healthbook.</p>
+</li>
+<li>
+<p>Allergy and condition is NOT case sensitive (<code>EGG</code> and <code>egg</code> is treated as the same).</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="adding-remark-to-patient-code-remark-code-2"><a class="link" href="#adding-remark-to-patient-code-remark-code-2">Adding remark to patient : <code>remark</code></a></h3>
+<div class="paragraph">
+<p>Adds a remark to the patient/doctor&#8217;s information. Input will override current remark. If input is empty, previous remark will be deleted.<br>
+Format: <code>remark n/NAME [p/PHONE] r/REMARK</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Parameter <code>p/PHONE</code> is only needed when there are duplicate names in HealthBook, so phone number is needed to differentiate them.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>remark n/John Doe r/Has chronic heart disease</code></p>
+</li>
+<li>
+<p><code>remark n/Amanda Jane p/84739294 r/</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="listing-entered-commands-code-history-code-2"><a class="link" href="#listing-entered-commands-code-history-code-2">Listing entered commands : <code>history</code></a></h3>
+<div class="paragraph">
+<p>Lists all the commands that you have entered in reverse chronological order.<br>
+Format: <code>history</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Pressing the <kbd>&uarr;</kbd> and <kbd>&darr;</kbd> arrows will display the previous and next input respectively in the command box.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="clearing-all-entries-code-clear-code-2"><a class="link" href="#clearing-all-entries-code-clear-code-2">Clearing all entries : <code>clear</code></a></h3>
+<div class="paragraph">
+<p>Clears all entries from the HealthBook.<br>
+Format: <code>clear</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="exiting-the-program-code-exit-code-2"><a class="link" href="#exiting-the-program-code-exit-code-2">Exiting the program : <code>exit</code></a></h3>
+<div class="paragraph">
+<p>Exits the program.<br>
+Format: <code>exit</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="saving-the-data-2"><a class="link" href="#saving-the-data-2">Saving the data</a></h3>
+<div class="paragraph">
+<p>HealthBook data are saved in the hard disk automatically after any command that changes the data.<br>
+There is no need to save manually.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="tab-to-autocomplete-commands-2"><a class="link" href="#tab-to-autocomplete-commands-2">Tab to autocomplete commands</a></h3>
+<div class="paragraph">
+<p>In the command box, user can type the first few characters of the command and tab to autocomplete it.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="remind-patient-on-their-upcoming-appointment-code-coming-soon-in-v2-0-code-2"><a class="link" href="#remind-patient-on-their-upcoming-appointment-code-coming-soon-in-v2-0-code-2">Remind patient on their upcoming appointment <code>[coming soon in v2.0]</code></a></h3>
+<div class="paragraph">
+<p>Remind a patient on their upcoming appointment. This will send a message to the patient via an external platform to inform
+them about their appointment.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="remind-all-patient-on-their-upcoming-appointment-code-coming-soon-in-v2-0-code-2"><a class="link" href="#remind-all-patient-on-their-upcoming-appointment-code-coming-soon-in-v2-0-code-2">Remind all patient on their upcoming appointment <code>[coming soon in v2.0]</code></a></h3>
+<div class="paragraph">
+<p>Remind all patient will upcoming appointment this week. This will send a message to the patient via an external platform to
+inform them about their upcoming appointment.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="faq-2"><a class="link" href="#faq-2">FAQ</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Q</strong>: How do I transfer my data to another Computer?<br>
+<strong>A</strong>: Install the app in the other computer and overwrite the empty data file it creates with the file that contains the data of your previous HealthBook folder.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="command-summary-2"><a class="link" href="#command-summary-2">Command Summary</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Register patient</strong> <code>register-patient n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS</code><br>
+e.g. <code>register-patient n/John Doe p/22224444 e/jamesho@example.com a/123, Clementi Rd, 1234665</code></p>
+</li>
+<li>
+<p><strong>Register doctor</strong> <code>register-patient n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS</code><br>
+e.g. <code>register-doctor n/Mary Jane p/12224444 e/maryjane@example.com a/12, Clementi Rd, 1234665</code></p>
+</li>
+<li>
+<p><strong>Delete patient</strong> : <code>delete-patient n/NAME [p/PHONE]</code><br>
+e.g. <code>delete-patient n/John Doe p/84729292</code></p>
+</li>
+<li>
+<p><strong>Delete doctor</strong> : <code>delete-doctor n/NAME [p/PHONE]</code><br>
+e.g. <code>delete-doctor n/Mary Jane</code></p>
+</li>
+<li>
+<p><strong>View patient</strong> : <code>view-patient n/NAME [p/PHONE]</code><br>
+e.g. <code>view-patient n/John Doe p/84729292</code></p>
+</li>
+<li>
+<p><strong>View doctor</strong> : <code>view-doctor n/NAME [p/PHONE]</code><br>
+e.g. <code>view-doctor n/Mary Jane</code></p>
+</li>
+<li>
+<p><strong>List</strong> : <code>list</code></p>
+</li>
+<li>
+<p><strong>Filter patients</strong> : <code>filter-patient</code></p>
+</li>
+<li>
+<p><strong>Filter doctors</strong> : <code>filter-doctor</code></p>
+</li>
+<li>
+<p><strong>Book appointment</strong> : <code>add-appointment np/PATIENT_NAME [pp/PATIENT_PHONE] nd/DOCTOR_NAME [pd/PATIENT_PHONE] d/DATE_TIME</code><br>
+e.g. <code>add-appointment np/John Doe nd/Mary Jane pd/93736272 d/2018-10-17 15:00</code></p>
+</li>
+<li>
+<p><strong>Delete appointment</strong> : <code>delete-appointment APPOINTMENT_ID</code><br>
+e.g. <code>delete-appointment 10001</code></p>
+</li>
+<li>
+<p><strong>Complete appointment</strong> : <code>complete-appointment APPOINTMENT_ID</code><br>
+e.g. <code>complete-appointment 10001</code></p>
+</li>
+<li>
+<p><strong>Add prescriptions</strong> : <code>add-prescription APPOINTMENT_ID pn/MEDICINE_NAME pd/DOSAGE pc/CONSUMPTION_PER_DAY</code><br>
+e.g. <code>add-prescription 10001 pn/Paracetamol pd/2 pc/3</code></p>
+</li>
+<li>
+<p><strong>Delete prescriptions</strong> : <code>delete-prescription APPOINTMENT_ID pn/MEDICINE_NAME</code><br>
+e.g. <code>delete-prescription 10001 pn/Paracetamol</code></p>
+</li>
+<li>
+<p><strong>Add allergies or conditions</strong> : <code>add-medical-history n/NAME [al/ALLERGIES] [c/CONDITIONS]</code>
+e.g. <code>add-medical-history n/John Doe al/penicillin,milk c/subhealthy,hyperglycemia</code></p>
+</li>
+<li>
+<p><strong>Delete allergies or conditions</strong> : <code>delete-medical-history n/NAME [al/ALLERGIES] [c/CONDITIONS]</code>
+e.g. <code>delete-medical-history n/John Doe al/penicillin,milk c/subhealthy,hyperglycemia</code></p>
+</li>
+<li>
+<p><strong>Remark</strong> : <code>remark n/NAME [p/PHONE] r/REMARK</code><br>
+e.g <code>remark n/John Doe p/84729292 r/Has chronic heart disease</code></p>
+</li>
+<li>
+<p><strong>History</strong> : <code>history</code></p>
+</li>
+<li>
+<p><strong>Clear</strong> : <code>clear</code></p>
+</li>
+<li>
+<p><strong>Exit</strong> : <code>exit</code>
+=== Viewing a patient: <code>view-patient</code>
+Views a landing page of a patient on the HealthBook. This will display all information of the patient onto the HealthBook
+including their medical history, upcoming appointment and their past appointments.<br>
+Format: <code>view-patient n/NAME [p/PHONE]</code></p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Parameter <code>p/PHONE</code> is only needed when there are duplicate names in HealthBook, so phone number is needed to differentiate them.
+</td>
+</tr>
+</table>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Views the patient and loads the information page of the patient with the specified <code>NAME</code> and/or <code>PHONE</code>.</p>
+</li>
+<li>
+<p>The name/phone refers to the name/phone that the patient is registered under.</p>
+</li>
+<li>
+<p>The name/phone must have been registered into the HealthBook.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>view-patient n/John Doe</code></p>
+</li>
+<li>
+<p><code>view-patient n/Jane Doe p/93726273</code></p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="viewing-a-doctor-code-view-doctor-code-3"><a class="link" href="#viewing-a-doctor-code-view-doctor-code-3">Viewing a doctor: <code>view-doctor</code></a></h3>
+<div class="paragraph">
+<p>Views a landing page of a doctor on the HealthBook. This will display the doctor&#8217;s upcoming appointments.<br>
+Format: <code>view-doctor n/NAME [p/PHONE]</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Parameter <code>p/PHONE</code> is only needed when there are duplicate names in HealthBook, so phone number is needed to differentiate them.
+</td>
+</tr>
+</table>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Views the doctor&#8217;s upcoming appointments with the specified <code>NAME</code> and/or <code>PHONE</code>.</p>
+</li>
+<li>
+<p>The name/phone refers to the name/phone that the doctor is registered under.</p>
+</li>
+<li>
+<p>The name/phone must have been registered into the HealthBook.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>view-doctor n/Amanda Jane p/93726272</code></p>
+</li>
+<li>
+<p><code>view-doctor n/Mary Jane</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="listing-all-patients-and-doctors-code-list-code-3"><a class="link" href="#listing-all-patients-and-doctors-code-list-code-3">Listing all patients and doctors : <code>list</code></a></h3>
+<div class="paragraph">
+<p>Shows a list of all patients and doctors in the HealthBook.<br>
+Format: <code>list</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="filtering-patients-from-list-code-filter-patient-code-3"><a class="link" href="#filtering-patients-from-list-code-filter-patient-code-3">Filtering patients from list : <code>filter-patient</code></a></h3>
+<div class="paragraph">
+<p>Shows a list of all patients in the Healthbook.<br>
+Format: <code>filter-patient</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="filtering-doctors-from-list-code-filter-doctor-code-3"><a class="link" href="#filtering-doctors-from-list-code-filter-doctor-code-3">Filtering doctors from list : <code>filter-doctor</code></a></h3>
+<div class="paragraph">
+<p>Shows a list of all doctors in the Healthbook.<br>
+Format: <code>filter-doctor</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="booking-an-appointment-code-add-appointment-code-3"><a class="link" href="#booking-an-appointment-code-add-appointment-code-3">Booking an appointment: <code>add-appointment</code></a></h3>
+<div class="paragraph">
+<p>Book a doctor&#8217;s appointment for the patient. An ID of this appointment will be generated.<br>
+Format: <code>add-appointment np/PATIENT_NAME [pp/PATIENT_PHONE] nd/DOCTOR_NAME [pd/DOCTOR_PHONE] d/DATE_TIME</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Parameter <code>p/PHONE</code> is only needed when there are duplicate names in HealthBook, so phone number is needed to differentiate them.
+</td>
+</tr>
+</table>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Date and time should be in the format <code>yyyy-MM-dd HH:mm</code></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>add-appointment np/Jane Doe pp/92937272 nd/Amanda Jane pd/94827284 d/2018-12-12 13:00</code></p>
+</li>
+<li>
+<p><code>add-appointment np/John Doe nd/Mary Jane d/2018-10-17 15:00</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="deleting-an-appointment-code-delete-appointment-code-3"><a class="link" href="#deleting-an-appointment-code-delete-appointment-code-3">Deleting an appointment <code>delete-appointment</code></a></h3>
+<div class="paragraph">
+<p>Delete a doctor&#8217;s appointment for the patient by its ID.<br>
+Format: <code>delete-appointment APPOINTMENT_ID</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>delete-appointment 10001</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="completing-an-appointment-code-complete-appointment-code-3"><a class="link" href="#completing-an-appointment-code-complete-appointment-code-3">Completing an appointment <code>complete-appointment</code></a></h3>
+<div class="paragraph">
+<p>Complete an appointment.<br>
+Format: <code>complete-appointment APPOINTMENT_ID</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>complete-appointment 10001</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="adding-prescriptions-to-a-patient-s-appointment-code-add-prescription-code-3"><a class="link" href="#adding-prescriptions-to-a-patient-s-appointment-code-add-prescription-code-3">Adding prescriptions to a patient&#8217;s appointment: <code>add-prescription</code></a></h3>
+<div class="paragraph">
+<p>Adds a prescription to the patient&#8217;s appointment with details of medicine name, dosage and number of times to consume
+in a day.<br>
+Format: <code>add-prescription APPOINTMENT_ID pn/MEDICINE_NAME pd/DOSAGE pc/CONSUMPTION_PER_DAY</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>add-prescription 10001 pn/Paracetamol pd/2 pc/3</code></p>
+</li>
+</ul>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Each prescription is tied to an appointment.</p>
+</li>
+<li>
+<p>There cannot be a duplicate of drug name for that particular appointment.</p>
+</li>
+<li>
+<p>Drug that patient is allergic to cannot be added</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="deleting-prescriptions-of-a-patient-s-appointment-code-delete-prescription-code-3"><a class="link" href="#deleting-prescriptions-of-a-patient-s-appointment-code-delete-prescription-code-3">Deleting prescriptions of a patient&#8217;s appointment: <code>delete-prescription</code></a></h3>
+<div class="paragraph">
+<p>Delete a prescription of the patient&#8217;s appointment by appointment ID and medicine name.<br>
+Format: <code>delete-prescription APPOINTMENT_ID pn/MEDICINE_NAME</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>delete-prescription 10001 pn/Paracetamol</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="adding-medical-condition-or-allergy-to-patient-code-add-medical-history-code-3"><a class="link" href="#adding-medical-condition-or-allergy-to-patient-code-add-medical-history-code-3">Adding medical condition or allergy to patient: <code>add-medical-history</code></a></h3>
+<div class="paragraph">
+<p>Add a condition or allergy to the patient&#8217;s medical history. This will then be displayed on the users information page.<br>
+Format: <code>add-medical-history n/NAME [al/ALLERGIES] [c/CONDITIONS]</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Allergies and conditions should only contain alphanumeric characters and spaces, and they should not be blank.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>add-medical-history n/John Doe al/penicillin,milk c/subhealthy,hyperglycemia</code></p>
+</li>
+<li>
+<p><code>add-medical-history n/John Doe al/penicillin,milk</code></p>
+</li>
+<li>
+<p><code>add-medical-history n/John Doe c/subhealthy</code></p>
+</li>
+</ul>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Either allergy or condition must be provided.</p>
+</li>
+<li>
+<p>Duplicated allergy or condition is not allowed.</p>
+</li>
+<li>
+<p>Allergy and condition is NOT case sensitive (<code>EGG</code> and <code>egg</code> is treated as the same).</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="deleting-medical-condition-or-allergy-to-patient-code-delete-medical-history-code-3"><a class="link" href="#deleting-medical-condition-or-allergy-to-patient-code-delete-medical-history-code-3">Deleting medical condition or allergy to patient: <code>delete-medical-history</code></a></h3>
+<div class="paragraph">
+<p>Delete a condition or allergy to the patient&#8217;s medical history. This will then be removed on the patient&#8217;s information page.<br>
+Format: <code>delete-medical-history n/NAME [al/ALLERGIES] [c/CONDITIONS]</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>delete-medical-history n/John Doe al/penicillin,milk c/subhealthy,hyperglycemia</code></p>
+</li>
+<li>
+<p><code>delete-medical-history n/John Doe al/penicillin,milk</code></p>
+</li>
+<li>
+<p><code>delete-medical-history n/John Doe c/subhealthy</code></p>
+</li>
+</ul>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Either allergy or condition must be provided.</p>
+</li>
+<li>
+<p>Input allergy or condition must exist in the healthbook.</p>
+</li>
+<li>
+<p>Allergy and condition is NOT case sensitive (<code>EGG</code> and <code>egg</code> is treated as the same).</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="adding-remark-to-patient-code-remark-code-3"><a class="link" href="#adding-remark-to-patient-code-remark-code-3">Adding remark to patient : <code>remark</code></a></h3>
+<div class="paragraph">
+<p>Adds a remark to the patient/doctor&#8217;s information. Input will override current remark. If input is empty, previous remark will be deleted.<br>
+Format: <code>remark n/NAME [p/PHONE] r/REMARK</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Parameter <code>p/PHONE</code> is only needed when there are duplicate names in HealthBook, so phone number is needed to differentiate them.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>remark n/John Doe r/Has chronic heart disease</code></p>
+</li>
+<li>
+<p><code>remark n/Amanda Jane p/84739294 r/</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="listing-entered-commands-code-history-code-3"><a class="link" href="#listing-entered-commands-code-history-code-3">Listing entered commands : <code>history</code></a></h3>
+<div class="paragraph">
+<p>Lists all the commands that you have entered in reverse chronological order.<br>
+Format: <code>history</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Pressing the <kbd>&uarr;</kbd> and <kbd>&darr;</kbd> arrows will display the previous and next input respectively in the command box.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="clearing-all-entries-code-clear-code-3"><a class="link" href="#clearing-all-entries-code-clear-code-3">Clearing all entries : <code>clear</code></a></h3>
+<div class="paragraph">
+<p>Clears all entries from the HealthBook.<br>
+Format: <code>clear</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="exiting-the-program-code-exit-code-3"><a class="link" href="#exiting-the-program-code-exit-code-3">Exiting the program : <code>exit</code></a></h3>
+<div class="paragraph">
+<p>Exits the program.<br>
+Format: <code>exit</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="saving-the-data-3"><a class="link" href="#saving-the-data-3">Saving the data</a></h3>
+<div class="paragraph">
+<p>HealthBook data are saved in the hard disk automatically after any command that changes the data.<br>
+There is no need to save manually.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="tab-to-autocomplete-commands-3"><a class="link" href="#tab-to-autocomplete-commands-3">Tab to autocomplete commands</a></h3>
+<div class="paragraph">
+<p>In the command box, user can type the first few characters of the command and tab to autocomplete it.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="remind-patient-on-their-upcoming-appointment-code-coming-soon-in-v2-0-code-3"><a class="link" href="#remind-patient-on-their-upcoming-appointment-code-coming-soon-in-v2-0-code-3">Remind patient on their upcoming appointment <code>[coming soon in v2.0]</code></a></h3>
+<div class="paragraph">
+<p>Remind a patient on their upcoming appointment. This will send a message to the patient via an external platform to inform
+them about their appointment.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="remind-all-patient-on-their-upcoming-appointment-code-coming-soon-in-v2-0-code-3"><a class="link" href="#remind-all-patient-on-their-upcoming-appointment-code-coming-soon-in-v2-0-code-3">Remind all patient on their upcoming appointment <code>[coming soon in v2.0]</code></a></h3>
+<div class="paragraph">
+<p>Remind all patient will upcoming appointment this week. This will send a message to the patient via an external platform to
+inform them about their upcoming appointment.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="faq-3"><a class="link" href="#faq-3">FAQ</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Q</strong>: How do I transfer my data to another Computer?<br>
+<strong>A</strong>: Install the app in the other computer and overwrite the empty data file it creates with the file that contains the data of your previous HealthBook folder.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="command-summary-3"><a class="link" href="#command-summary-3">Command Summary</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Register patient</strong> <code>register-patient n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS</code><br>
+e.g. <code>register-patient n/John Doe p/22224444 e/jamesho@example.com a/123, Clementi Rd, 1234665</code></p>
+</li>
+<li>
+<p><strong>Register doctor</strong> <code>register-patient n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS</code><br>
+e.g. <code>register-doctor n/Mary Jane p/12224444 e/maryjane@example.com a/12, Clementi Rd, 1234665</code></p>
+</li>
+<li>
+<p><strong>Delete patient</strong> : <code>delete-patient n/NAME [p/PHONE]</code><br>
+e.g. <code>delete-patient n/John Doe p/84729292</code></p>
+</li>
+<li>
+<p><strong>Delete doctor</strong> : <code>delete-doctor n/NAME [p/PHONE]</code><br>
+e.g. <code>delete-doctor n/Mary Jane</code></p>
+</li>
+<li>
+<p><strong>View patient</strong> : <code>view-patient n/NAME [p/PHONE]</code><br>
+e.g. <code>view-patient n/John Doe p/84729292</code></p>
+</li>
+<li>
+<p><strong>View doctor</strong> : <code>view-doctor n/NAME [p/PHONE]</code><br>
+e.g. <code>view-doctor n/Mary Jane</code></p>
+</li>
+<li>
+<p><strong>List</strong> : <code>list</code></p>
+</li>
+<li>
+<p><strong>Filter patients</strong> : <code>filter-patient</code></p>
+</li>
+<li>
+<p><strong>Filter doctors</strong> : <code>filter-doctor</code></p>
+</li>
+<li>
+<p><strong>Book appointment</strong> : <code>add-appointment np/PATIENT_NAME [pp/PATIENT_PHONE] nd/DOCTOR_NAME [pd/PATIENT_PHONE] d/DATE_TIME</code><br>
+e.g. <code>add-appointment np/John Doe nd/Mary Jane pd/93736272 d/2018-10-17 15:00</code></p>
+</li>
+<li>
+<p><strong>Delete appointment</strong> : <code>delete-appointment APPOINTMENT_ID</code><br>
+e.g. <code>delete-appointment 10001</code></p>
+</li>
+<li>
+<p><strong>Complete appointment</strong> : <code>complete-appointment APPOINTMENT_ID</code><br>
+e.g. <code>complete-appointment 10001</code></p>
+</li>
+<li>
+<p><strong>Add prescriptions</strong> : <code>add-prescription APPOINTMENT_ID pn/MEDICINE_NAME pd/DOSAGE pc/CONSUMPTION_PER_DAY</code><br>
+e.g. <code>add-prescription 10001 pn/Paracetamol pd/2 pc/3</code></p>
+</li>
+<li>
+<p><strong>Delete prescriptions</strong> : <code>delete-prescription APPOINTMENT_ID pn/MEDICINE_NAME</code><br>
+e.g. <code>delete-prescription 10001 pn/Paracetamol</code></p>
+</li>
+<li>
+<p><strong>Add allergies or conditions</strong> : <code>add-medical-history n/NAME [al/ALLERGIES] [c/CONDITIONS]</code>
+e.g. <code>add-medical-history n/John Doe al/penicillin,milk c/subhealthy,hyperglycemia</code></p>
+</li>
+<li>
+<p><strong>Delete allergies or conditions</strong> : <code>delete-medical-history n/NAME [al/ALLERGIES] [c/CONDITIONS]</code>
+e.g. <code>delete-medical-history n/John Doe al/penicillin,milk c/subhealthy,hyperglycemia</code></p>
+</li>
+<li>
+<p><strong>Remark</strong> : <code>remark n/NAME [p/PHONE] r/REMARK</code><br>
+e.g <code>remark n/John Doe p/84729292 r/Has chronic heart disease</code></p>
+</li>
+<li>
+<p><strong>History</strong> : <code>history</code></p>
+</li>
+<li>
+<p><strong>Clear</strong> : <code>clear</code></p>
+</li>
+<li>
+<p><strong>Exit</strong> : <code>exit</code>
+=== Viewing a doctor: <code>view-doctor</code>
+Views a landing page of a doctor on the HealthBook. This will display the doctor&#8217;s upcoming appointments.<br>
+Format: <code>view-doctor n/NAME [p/PHONE]</code></p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Parameter <code>p/PHONE</code> is only needed when there are duplicate names in HealthBook, so phone number is needed to differentiate them.
+</td>
+</tr>
+</table>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Views the doctor&#8217;s upcoming appointments with the specified <code>NAME</code> and/or <code>PHONE</code>.</p>
+</li>
+<li>
+<p>The name/phone refers to the name/phone that the doctor is registered under.</p>
+</li>
+<li>
+<p>The name/phone must have been registered into the HealthBook.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>view-doctor n/Amanda Jane p/93726272</code></p>
+</li>
+<li>
+<p><code>view-doctor n/Mary Jane</code></p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="listing-all-patients-and-doctors-code-list-code-4"><a class="link" href="#listing-all-patients-and-doctors-code-list-code-4">Listing all patients and doctors : <code>list</code></a></h3>
+<div class="paragraph">
+<p>Shows a list of all patients and doctors in the HealthBook.<br>
+Format: <code>list</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="filtering-patients-from-list-code-filter-patient-code-4"><a class="link" href="#filtering-patients-from-list-code-filter-patient-code-4">Filtering patients from list : <code>filter-patient</code></a></h3>
+<div class="paragraph">
+<p>Shows a list of all patients in the Healthbook.<br>
+Format: <code>filter-patient</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="filtering-doctors-from-list-code-filter-doctor-code-4"><a class="link" href="#filtering-doctors-from-list-code-filter-doctor-code-4">Filtering doctors from list : <code>filter-doctor</code></a></h3>
+<div class="paragraph">
+<p>Shows a list of all doctors in the Healthbook.<br>
+Format: <code>filter-doctor</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="booking-an-appointment-code-add-appointment-code-4"><a class="link" href="#booking-an-appointment-code-add-appointment-code-4">Booking an appointment: <code>add-appointment</code></a></h3>
+<div class="paragraph">
+<p>Book a doctor&#8217;s appointment for the patient. An ID of this appointment will be generated.<br>
+Format: <code>add-appointment np/PATIENT_NAME [pp/PATIENT_PHONE] nd/DOCTOR_NAME [pd/DOCTOR_PHONE] d/DATE_TIME</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Parameter <code>p/PHONE</code> is only needed when there are duplicate names in HealthBook, so phone number is needed to differentiate them.
+</td>
+</tr>
+</table>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Date and time should be in the format <code>yyyy-MM-dd HH:mm</code></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>add-appointment np/Jane Doe pp/92937272 nd/Amanda Jane pd/94827284 d/2018-12-12 13:00</code></p>
+</li>
+<li>
+<p><code>add-appointment np/John Doe nd/Mary Jane d/2018-10-17 15:00</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="deleting-an-appointment-code-delete-appointment-code-4"><a class="link" href="#deleting-an-appointment-code-delete-appointment-code-4">Deleting an appointment <code>delete-appointment</code></a></h3>
+<div class="paragraph">
+<p>Delete a doctor&#8217;s appointment for the patient by its ID.<br>
+Format: <code>delete-appointment APPOINTMENT_ID</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>delete-appointment 10001</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="completing-an-appointment-code-complete-appointment-code-4"><a class="link" href="#completing-an-appointment-code-complete-appointment-code-4">Completing an appointment <code>complete-appointment</code></a></h3>
+<div class="paragraph">
+<p>Complete an appointment.<br>
+Format: <code>complete-appointment APPOINTMENT_ID</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>complete-appointment 10001</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="adding-prescriptions-to-a-patient-s-appointment-code-add-prescription-code-4"><a class="link" href="#adding-prescriptions-to-a-patient-s-appointment-code-add-prescription-code-4">Adding prescriptions to a patient&#8217;s appointment: <code>add-prescription</code></a></h3>
+<div class="paragraph">
+<p>Adds a prescription to the patient&#8217;s appointment with details of medicine name, dosage and number of times to consume
+in a day.<br>
+Format: <code>add-prescription APPOINTMENT_ID pn/MEDICINE_NAME pd/DOSAGE pc/CONSUMPTION_PER_DAY</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>add-prescription 10001 pn/Paracetamol pd/2 pc/3</code></p>
+</li>
+</ul>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Each prescription is tied to an appointment.</p>
+</li>
+<li>
+<p>There cannot be a duplicate of drug name for that particular appointment.</p>
+</li>
+<li>
+<p>Drug that patient is allergic to cannot be added</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="deleting-prescriptions-of-a-patient-s-appointment-code-delete-prescription-code-4"><a class="link" href="#deleting-prescriptions-of-a-patient-s-appointment-code-delete-prescription-code-4">Deleting prescriptions of a patient&#8217;s appointment: <code>delete-prescription</code></a></h3>
+<div class="paragraph">
+<p>Delete a prescription of the patient&#8217;s appointment by appointment ID and medicine name.<br>
+Format: <code>delete-prescription APPOINTMENT_ID pn/MEDICINE_NAME</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>delete-prescription 10001 pn/Paracetamol</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="adding-medical-condition-or-allergy-to-patient-code-add-medical-history-code-4"><a class="link" href="#adding-medical-condition-or-allergy-to-patient-code-add-medical-history-code-4">Adding medical condition or allergy to patient: <code>add-medical-history</code></a></h3>
+<div class="paragraph">
+<p>Add a condition or allergy to the patient&#8217;s medical history. This will then be displayed on the users information page.<br>
+Format: <code>add-medical-history n/NAME [al/ALLERGIES] [c/CONDITIONS]</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Allergies and conditions should only contain alphanumeric characters and spaces, and they should not be blank.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>add-medical-history n/John Doe al/penicillin,milk c/subhealthy,hyperglycemia</code></p>
+</li>
+<li>
+<p><code>add-medical-history n/John Doe al/penicillin,milk</code></p>
+</li>
+<li>
+<p><code>add-medical-history n/John Doe c/subhealthy</code></p>
+</li>
+</ul>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Either allergy or condition must be provided.</p>
+</li>
+<li>
+<p>Duplicated allergy or condition is not allowed.</p>
+</li>
+<li>
+<p>Allergy and condition is NOT case sensitive (<code>EGG</code> and <code>egg</code> is treated as the same).</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="deleting-medical-condition-or-allergy-to-patient-code-delete-medical-history-code-4"><a class="link" href="#deleting-medical-condition-or-allergy-to-patient-code-delete-medical-history-code-4">Deleting medical condition or allergy to patient: <code>delete-medical-history</code></a></h3>
+<div class="paragraph">
+<p>Delete a condition or allergy to the patient&#8217;s medical history. This will then be removed on the patient&#8217;s information page.<br>
+Format: <code>delete-medical-history n/NAME [al/ALLERGIES] [c/CONDITIONS]</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>delete-medical-history n/John Doe al/penicillin,milk c/subhealthy,hyperglycemia</code></p>
+</li>
+<li>
+<p><code>delete-medical-history n/John Doe al/penicillin,milk</code></p>
+</li>
+<li>
+<p><code>delete-medical-history n/John Doe c/subhealthy</code></p>
+</li>
+</ul>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Either allergy or condition must be provided.</p>
+</li>
+<li>
+<p>Input allergy or condition must exist in the healthbook.</p>
+</li>
+<li>
+<p>Allergy and condition is NOT case sensitive (<code>EGG</code> and <code>egg</code> is treated as the same).</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="adding-remark-to-patient-code-remark-code-4"><a class="link" href="#adding-remark-to-patient-code-remark-code-4">Adding remark to patient : <code>remark</code></a></h3>
+<div class="paragraph">
+<p>Adds a remark to the patient/doctor&#8217;s information. Input will override current remark. If input is empty, previous remark will be deleted.<br>
+Format: <code>remark n/NAME [p/PHONE] r/REMARK</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Parameter <code>p/PHONE</code> is only needed when there are duplicate names in HealthBook, so phone number is needed to differentiate them.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>remark n/John Doe r/Has chronic heart disease</code></p>
+</li>
+<li>
+<p><code>remark n/Amanda Jane p/84739294 r/</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="listing-entered-commands-code-history-code-4"><a class="link" href="#listing-entered-commands-code-history-code-4">Listing entered commands : <code>history</code></a></h3>
+<div class="paragraph">
+<p>Lists all the commands that you have entered in reverse chronological order.<br>
+Format: <code>history</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Pressing the <kbd>&uarr;</kbd> and <kbd>&darr;</kbd> arrows will display the previous and next input respectively in the command box.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="clearing-all-entries-code-clear-code-4"><a class="link" href="#clearing-all-entries-code-clear-code-4">Clearing all entries : <code>clear</code></a></h3>
+<div class="paragraph">
+<p>Clears all entries from the HealthBook.<br>
+Format: <code>clear</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="exiting-the-program-code-exit-code-4"><a class="link" href="#exiting-the-program-code-exit-code-4">Exiting the program : <code>exit</code></a></h3>
+<div class="paragraph">
+<p>Exits the program.<br>
+Format: <code>exit</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="saving-the-data-4"><a class="link" href="#saving-the-data-4">Saving the data</a></h3>
+<div class="paragraph">
+<p>HealthBook data are saved in the hard disk automatically after any command that changes the data.<br>
+There is no need to save manually.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="tab-to-autocomplete-commands-4"><a class="link" href="#tab-to-autocomplete-commands-4">Tab to autocomplete commands</a></h3>
+<div class="paragraph">
+<p>In the command box, user can type the first few characters of the command and tab to autocomplete it.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="remind-patient-on-their-upcoming-appointment-code-coming-soon-in-v2-0-code-4"><a class="link" href="#remind-patient-on-their-upcoming-appointment-code-coming-soon-in-v2-0-code-4">Remind patient on their upcoming appointment <code>[coming soon in v2.0]</code></a></h3>
+<div class="paragraph">
+<p>Remind a patient on their upcoming appointment. This will send a message to the patient via an external platform to inform
+them about their appointment.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="remind-all-patient-on-their-upcoming-appointment-code-coming-soon-in-v2-0-code-4"><a class="link" href="#remind-all-patient-on-their-upcoming-appointment-code-coming-soon-in-v2-0-code-4">Remind all patient on their upcoming appointment <code>[coming soon in v2.0]</code></a></h3>
+<div class="paragraph">
+<p>Remind all patient will upcoming appointment this week. This will send a message to the patient via an external platform to
+inform them about their upcoming appointment.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="faq-4"><a class="link" href="#faq-4">FAQ</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Q</strong>: How do I transfer my data to another Computer?<br>
+<strong>A</strong>: Install the app in the other computer and overwrite the empty data file it creates with the file that contains the data of your previous HealthBook folder.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="command-summary-4"><a class="link" href="#command-summary-4">Command Summary</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Register patient</strong> <code>register-patient n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS</code><br>
+e.g. <code>register-patient n/John Doe p/22224444 e/jamesho@example.com a/123, Clementi Rd, 1234665</code></p>
+</li>
+<li>
+<p><strong>Register doctor</strong> <code>register-patient n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS</code><br>
+e.g. <code>register-doctor n/Mary Jane p/12224444 e/maryjane@example.com a/12, Clementi Rd, 1234665</code></p>
+</li>
+<li>
+<p><strong>Delete patient</strong> : <code>delete-patient n/NAME [p/PHONE]</code><br>
+e.g. <code>delete-patient n/John Doe p/84729292</code></p>
+</li>
+<li>
+<p><strong>Delete doctor</strong> : <code>delete-doctor n/NAME [p/PHONE]</code><br>
+e.g. <code>delete-doctor n/Mary Jane</code></p>
+</li>
+<li>
+<p><strong>View patient</strong> : <code>view-patient n/NAME [p/PHONE]</code><br>
+e.g. <code>view-patient n/John Doe p/84729292</code></p>
+</li>
+<li>
+<p><strong>View doctor</strong> : <code>view-doctor n/NAME [p/PHONE]</code><br>
+e.g. <code>view-doctor n/Mary Jane</code></p>
+</li>
+<li>
+<p><strong>List</strong> : <code>list</code></p>
+</li>
+<li>
+<p><strong>Filter patients</strong> : <code>filter-patient</code></p>
+</li>
+<li>
+<p><strong>Filter doctors</strong> : <code>filter-doctor</code></p>
+</li>
+<li>
+<p><strong>Book appointment</strong> : <code>add-appointment np/PATIENT_NAME [pp/PATIENT_PHONE] nd/DOCTOR_NAME [pd/PATIENT_PHONE] d/DATE_TIME</code><br>
+e.g. <code>add-appointment np/John Doe nd/Mary Jane pd/93736272 d/2018-10-17 15:00</code></p>
+</li>
+<li>
+<p><strong>Delete appointment</strong> : <code>delete-appointment APPOINTMENT_ID</code><br>
+e.g. <code>delete-appointment 10001</code></p>
+</li>
+<li>
+<p><strong>Complete appointment</strong> : <code>complete-appointment APPOINTMENT_ID</code><br>
+e.g. <code>complete-appointment 10001</code></p>
+</li>
+<li>
+<p><strong>Add prescriptions</strong> : <code>add-prescription APPOINTMENT_ID pn/MEDICINE_NAME pd/DOSAGE pc/CONSUMPTION_PER_DAY</code><br>
+e.g. <code>add-prescription 10001 pn/Paracetamol pd/2 pc/3</code></p>
+</li>
+<li>
+<p><strong>Delete prescriptions</strong> : <code>delete-prescription APPOINTMENT_ID pn/MEDICINE_NAME</code><br>
+e.g. <code>delete-prescription 10001 pn/Paracetamol</code></p>
+</li>
+<li>
+<p><strong>Add allergies or conditions</strong> : <code>add-medical-history n/NAME [al/ALLERGIES] [c/CONDITIONS]</code>
+e.g. <code>add-medical-history n/John Doe al/penicillin,milk c/subhealthy,hyperglycemia</code></p>
+</li>
+<li>
+<p><strong>Delete allergies or conditions</strong> : <code>delete-medical-history n/NAME [al/ALLERGIES] [c/CONDITIONS]</code>
+e.g. <code>delete-medical-history n/John Doe al/penicillin,milk c/subhealthy,hyperglycemia</code></p>
+</li>
+<li>
+<p><strong>Remark</strong> : <code>remark n/NAME [p/PHONE] r/REMARK</code><br>
+e.g <code>remark n/John Doe p/84729292 r/Has chronic heart disease</code></p>
+</li>
+<li>
+<p><strong>History</strong> : <code>history</code></p>
+</li>
+<li>
+<p><strong>Clear</strong> : <code>clear</code></p>
+</li>
+<li>
+<p><strong>Exit</strong> : <code>exit</code>
+=== Booking an appointment: <code>add-appointment</code>
+Book a doctor&#8217;s appointment for the patient. An ID of this appointment will be generated.<br>
+Format: <code>add-appointment np/PATIENT_NAME [pp/PATIENT_PHONE] nd/DOCTOR_NAME [pd/DOCTOR_PHONE] d/DATE_TIME</code></p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Parameter <code>p/PHONE</code> is only needed when there are duplicate names in HealthBook, so phone number is needed to differentiate them.
+</td>
+</tr>
+</table>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Date and time should be in the format <code>yyyy-MM-dd HH:mm</code></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>add-appointment np/Jane Doe pp/92937272 nd/Amanda Jane pd/94827284 d/2018-12-12 13:00</code></p>
+</li>
+<li>
+<p><code>add-appointment np/John Doe nd/Mary Jane d/2018-10-17 15:00</code></p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="deleting-an-appointment-code-delete-appointment-code-5"><a class="link" href="#deleting-an-appointment-code-delete-appointment-code-5">Deleting an appointment <code>delete-appointment</code></a></h3>
+<div class="paragraph">
+<p>Delete a doctor&#8217;s appointment for the patient by its ID.<br>
+Format: <code>delete-appointment APPOINTMENT_ID</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>delete-appointment 10001</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="completing-an-appointment-code-complete-appointment-code-5"><a class="link" href="#completing-an-appointment-code-complete-appointment-code-5">Completing an appointment <code>complete-appointment</code></a></h3>
+<div class="paragraph">
+<p>Complete an appointment.<br>
+Format: <code>complete-appointment APPOINTMENT_ID</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>complete-appointment 10001</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="adding-prescriptions-to-a-patient-s-appointment-code-add-prescription-code-5"><a class="link" href="#adding-prescriptions-to-a-patient-s-appointment-code-add-prescription-code-5">Adding prescriptions to a patient&#8217;s appointment: <code>add-prescription</code></a></h3>
+<div class="paragraph">
+<p>Adds a prescription to the patient&#8217;s appointment with details of medicine name, dosage and number of times to consume
+in a day.<br>
+Format: <code>add-prescription APPOINTMENT_ID pn/MEDICINE_NAME pd/DOSAGE pc/CONSUMPTION_PER_DAY</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>add-prescription 10001 pn/Paracetamol pd/2 pc/3</code></p>
+</li>
+</ul>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Each prescription is tied to an appointment.</p>
+</li>
+<li>
+<p>There cannot be a duplicate of drug name for that particular appointment.</p>
+</li>
+<li>
+<p>Drug that patient is allergic to cannot be added</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="deleting-prescriptions-of-a-patient-s-appointment-code-delete-prescription-code-5"><a class="link" href="#deleting-prescriptions-of-a-patient-s-appointment-code-delete-prescription-code-5">Deleting prescriptions of a patient&#8217;s appointment: <code>delete-prescription</code></a></h3>
+<div class="paragraph">
+<p>Delete a prescription of the patient&#8217;s appointment by appointment ID and medicine name.<br>
+Format: <code>delete-prescription APPOINTMENT_ID pn/MEDICINE_NAME</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>delete-prescription 10001 pn/Paracetamol</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="adding-medical-condition-or-allergy-to-patient-code-add-medical-history-code-5"><a class="link" href="#adding-medical-condition-or-allergy-to-patient-code-add-medical-history-code-5">Adding medical condition or allergy to patient: <code>add-medical-history</code></a></h3>
+<div class="paragraph">
+<p>Add a condition or allergy to the patient&#8217;s medical history. This will then be displayed on the users information page.<br>
+Format: <code>add-medical-history n/NAME [al/ALLERGIES] [c/CONDITIONS]</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Allergies and conditions should only contain alphanumeric characters and spaces, and they should not be blank.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>add-medical-history n/John Doe al/penicillin,milk c/subhealthy,hyperglycemia</code></p>
+</li>
+<li>
+<p><code>add-medical-history n/John Doe al/penicillin,milk</code></p>
+</li>
+<li>
+<p><code>add-medical-history n/John Doe c/subhealthy</code></p>
+</li>
+</ul>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Either allergy or condition must be provided.</p>
+</li>
+<li>
+<p>Duplicated allergy or condition is not allowed.</p>
+</li>
+<li>
+<p>Allergy and condition is NOT case sensitive (<code>EGG</code> and <code>egg</code> is treated as the same).</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="deleting-medical-condition-or-allergy-to-patient-code-delete-medical-history-code-5"><a class="link" href="#deleting-medical-condition-or-allergy-to-patient-code-delete-medical-history-code-5">Deleting medical condition or allergy to patient: <code>delete-medical-history</code></a></h3>
+<div class="paragraph">
+<p>Delete a condition or allergy to the patient&#8217;s medical history. This will then be removed on the patient&#8217;s information page.<br>
+Format: <code>delete-medical-history n/NAME [al/ALLERGIES] [c/CONDITIONS]</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>delete-medical-history n/John Doe al/penicillin,milk c/subhealthy,hyperglycemia</code></p>
+</li>
+<li>
+<p><code>delete-medical-history n/John Doe al/penicillin,milk</code></p>
+</li>
+<li>
+<p><code>delete-medical-history n/John Doe c/subhealthy</code></p>
+</li>
+</ul>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Either allergy or condition must be provided.</p>
+</li>
+<li>
+<p>Input allergy or condition must exist in the healthbook.</p>
+</li>
+<li>
+<p>Allergy and condition is NOT case sensitive (<code>EGG</code> and <code>egg</code> is treated as the same).</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="adding-remark-to-patient-code-remark-code-5"><a class="link" href="#adding-remark-to-patient-code-remark-code-5">Adding remark to patient : <code>remark</code></a></h3>
+<div class="paragraph">
+<p>Adds a remark to the patient/doctor&#8217;s information. Input will override current remark. If input is empty, previous remark will be deleted.<br>
+Format: <code>remark n/NAME [p/PHONE] r/REMARK</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Parameter <code>p/PHONE</code> is only needed when there are duplicate names in HealthBook, so phone number is needed to differentiate them.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>remark n/John Doe r/Has chronic heart disease</code></p>
+</li>
+<li>
+<p><code>remark n/Amanda Jane p/84739294 r/</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="listing-entered-commands-code-history-code-5"><a class="link" href="#listing-entered-commands-code-history-code-5">Listing entered commands : <code>history</code></a></h3>
+<div class="paragraph">
+<p>Lists all the commands that you have entered in reverse chronological order.<br>
+Format: <code>history</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Pressing the <kbd>&uarr;</kbd> and <kbd>&darr;</kbd> arrows will display the previous and next input respectively in the command box.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="clearing-all-entries-code-clear-code-5"><a class="link" href="#clearing-all-entries-code-clear-code-5">Clearing all entries : <code>clear</code></a></h3>
+<div class="paragraph">
+<p>Clears all entries from the HealthBook.<br>
+Format: <code>clear</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="exiting-the-program-code-exit-code-5"><a class="link" href="#exiting-the-program-code-exit-code-5">Exiting the program : <code>exit</code></a></h3>
+<div class="paragraph">
+<p>Exits the program.<br>
+Format: <code>exit</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="saving-the-data-5"><a class="link" href="#saving-the-data-5">Saving the data</a></h3>
+<div class="paragraph">
+<p>HealthBook data are saved in the hard disk automatically after any command that changes the data.<br>
+There is no need to save manually.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="tab-to-autocomplete-commands-5"><a class="link" href="#tab-to-autocomplete-commands-5">Tab to autocomplete commands</a></h3>
+<div class="paragraph">
+<p>In the command box, user can type the first few characters of the command and tab to autocomplete it.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="remind-patient-on-their-upcoming-appointment-code-coming-soon-in-v2-0-code-5"><a class="link" href="#remind-patient-on-their-upcoming-appointment-code-coming-soon-in-v2-0-code-5">Remind patient on their upcoming appointment <code>[coming soon in v2.0]</code></a></h3>
+<div class="paragraph">
+<p>Remind a patient on their upcoming appointment. This will send a message to the patient via an external platform to inform
+them about their appointment.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="remind-all-patient-on-their-upcoming-appointment-code-coming-soon-in-v2-0-code-5"><a class="link" href="#remind-all-patient-on-their-upcoming-appointment-code-coming-soon-in-v2-0-code-5">Remind all patient on their upcoming appointment <code>[coming soon in v2.0]</code></a></h3>
+<div class="paragraph">
+<p>Remind all patient will upcoming appointment this week. This will send a message to the patient via an external platform to
+inform them about their upcoming appointment.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="faq-5"><a class="link" href="#faq-5">FAQ</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Q</strong>: How do I transfer my data to another Computer?<br>
+<strong>A</strong>: Install the app in the other computer and overwrite the empty data file it creates with the file that contains the data of your previous HealthBook folder.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="command-summary-5"><a class="link" href="#command-summary-5">Command Summary</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Register patient</strong> <code>register-patient n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS</code><br>
+e.g. <code>register-patient n/John Doe p/22224444 e/jamesho@example.com a/123, Clementi Rd, 1234665</code></p>
+</li>
+<li>
+<p><strong>Register doctor</strong> <code>register-patient n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS</code><br>
+e.g. <code>register-doctor n/Mary Jane p/12224444 e/maryjane@example.com a/12, Clementi Rd, 1234665</code></p>
+</li>
+<li>
+<p><strong>Delete patient</strong> : <code>delete-patient n/NAME [p/PHONE]</code><br>
+e.g. <code>delete-patient n/John Doe p/84729292</code></p>
+</li>
+<li>
+<p><strong>Delete doctor</strong> : <code>delete-doctor n/NAME [p/PHONE]</code><br>
+e.g. <code>delete-doctor n/Mary Jane</code></p>
+</li>
+<li>
+<p><strong>View patient</strong> : <code>view-patient n/NAME [p/PHONE]</code><br>
+e.g. <code>view-patient n/John Doe p/84729292</code></p>
+</li>
+<li>
+<p><strong>View doctor</strong> : <code>view-doctor n/NAME [p/PHONE]</code><br>
+e.g. <code>view-doctor n/Mary Jane</code></p>
+</li>
+<li>
+<p><strong>List</strong> : <code>list</code></p>
+</li>
+<li>
+<p><strong>Filter patients</strong> : <code>filter-patient</code></p>
+</li>
+<li>
+<p><strong>Filter doctors</strong> : <code>filter-doctor</code></p>
+</li>
+<li>
+<p><strong>Book appointment</strong> : <code>add-appointment np/PATIENT_NAME [pp/PATIENT_PHONE] nd/DOCTOR_NAME [pd/PATIENT_PHONE] d/DATE_TIME</code><br>
+e.g. <code>add-appointment np/John Doe nd/Mary Jane pd/93736272 d/2018-10-17 15:00</code></p>
+</li>
+<li>
+<p><strong>Delete appointment</strong> : <code>delete-appointment APPOINTMENT_ID</code><br>
+e.g. <code>delete-appointment 10001</code></p>
+</li>
+<li>
+<p><strong>Complete appointment</strong> : <code>complete-appointment APPOINTMENT_ID</code><br>
+e.g. <code>complete-appointment 10001</code></p>
+</li>
+<li>
+<p><strong>Add prescriptions</strong> : <code>add-prescription APPOINTMENT_ID pn/MEDICINE_NAME pd/DOSAGE pc/CONSUMPTION_PER_DAY</code><br>
+e.g. <code>add-prescription 10001 pn/Paracetamol pd/2 pc/3</code></p>
+</li>
+<li>
+<p><strong>Delete prescriptions</strong> : <code>delete-prescription APPOINTMENT_ID pn/MEDICINE_NAME</code><br>
+e.g. <code>delete-prescription 10001 pn/Paracetamol</code></p>
+</li>
+<li>
+<p><strong>Add allergies or conditions</strong> : <code>add-medical-history n/NAME [al/ALLERGIES] [c/CONDITIONS]</code>
+e.g. <code>add-medical-history n/John Doe al/penicillin,milk c/subhealthy,hyperglycemia</code></p>
+</li>
+<li>
+<p><strong>Delete allergies or conditions</strong> : <code>delete-medical-history n/NAME [al/ALLERGIES] [c/CONDITIONS]</code>
+e.g. <code>delete-medical-history n/John Doe al/penicillin,milk c/subhealthy,hyperglycemia</code></p>
+</li>
+<li>
+<p><strong>Remark</strong> : <code>remark n/NAME [p/PHONE] r/REMARK</code><br>
+e.g <code>remark n/John Doe p/84729292 r/Has chronic heart disease</code></p>
+</li>
+<li>
+<p><strong>History</strong> : <code>history</code></p>
+</li>
+<li>
+<p><strong>Clear</strong> : <code>clear</code></p>
+</li>
+<li>
+<p><strong>Exit</strong> : <code>exit</code>
+=== Deleting an appointment <code>delete-appointment</code>
+Delete a doctor&#8217;s appointment for the patient by its ID.<br>
+Format: <code>delete-appointment APPOINTMENT_ID</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>delete-appointment 10001</code></p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="completing-an-appointment-code-complete-appointment-code-6"><a class="link" href="#completing-an-appointment-code-complete-appointment-code-6">Completing an appointment <code>complete-appointment</code></a></h3>
+<div class="paragraph">
+<p>Complete an appointment.<br>
+Format: <code>complete-appointment APPOINTMENT_ID</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>complete-appointment 10001</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="adding-prescriptions-to-a-patient-s-appointment-code-add-prescription-code-6"><a class="link" href="#adding-prescriptions-to-a-patient-s-appointment-code-add-prescription-code-6">Adding prescriptions to a patient&#8217;s appointment: <code>add-prescription</code></a></h3>
+<div class="paragraph">
+<p>Adds a prescription to the patient&#8217;s appointment with details of medicine name, dosage and number of times to consume
+in a day.<br>
+Format: <code>add-prescription APPOINTMENT_ID pn/MEDICINE_NAME pd/DOSAGE pc/CONSUMPTION_PER_DAY</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>add-prescription 10001 pn/Paracetamol pd/2 pc/3</code></p>
+</li>
+</ul>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Each prescription is tied to an appointment.</p>
+</li>
+<li>
+<p>There cannot be a duplicate of drug name for that particular appointment.</p>
+</li>
+<li>
+<p>Drug that patient is allergic to cannot be added</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="deleting-prescriptions-of-a-patient-s-appointment-code-delete-prescription-code-6"><a class="link" href="#deleting-prescriptions-of-a-patient-s-appointment-code-delete-prescription-code-6">Deleting prescriptions of a patient&#8217;s appointment: <code>delete-prescription</code></a></h3>
+<div class="paragraph">
+<p>Delete a prescription of the patient&#8217;s appointment by appointment ID and medicine name.<br>
+Format: <code>delete-prescription APPOINTMENT_ID pn/MEDICINE_NAME</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>delete-prescription 10001 pn/Paracetamol</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="adding-medical-condition-or-allergy-to-patient-code-add-medical-history-code-6"><a class="link" href="#adding-medical-condition-or-allergy-to-patient-code-add-medical-history-code-6">Adding medical condition or allergy to patient: <code>add-medical-history</code></a></h3>
+<div class="paragraph">
+<p>Add a condition or allergy to the patient&#8217;s medical history. This will then be displayed on the users information page.<br>
+Format: <code>add-medical-history n/NAME [al/ALLERGIES] [c/CONDITIONS]</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Allergies and conditions should only contain alphanumeric characters and spaces, and they should not be blank.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>add-medical-history n/John Doe al/penicillin,milk c/subhealthy,hyperglycemia</code></p>
+</li>
+<li>
+<p><code>add-medical-history n/John Doe al/penicillin,milk</code></p>
+</li>
+<li>
+<p><code>add-medical-history n/John Doe c/subhealthy</code></p>
+</li>
+</ul>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Either allergy or condition must be provided.</p>
+</li>
+<li>
+<p>Duplicated allergy or condition is not allowed.</p>
+</li>
+<li>
+<p>Allergy and condition is NOT case sensitive (<code>EGG</code> and <code>egg</code> is treated as the same).</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="deleting-medical-condition-or-allergy-to-patient-code-delete-medical-history-code-6"><a class="link" href="#deleting-medical-condition-or-allergy-to-patient-code-delete-medical-history-code-6">Deleting medical condition or allergy to patient: <code>delete-medical-history</code></a></h3>
+<div class="paragraph">
+<p>Delete a condition or allergy to the patient&#8217;s medical history. This will then be removed on the patient&#8217;s information page.<br>
+Format: <code>delete-medical-history n/NAME [al/ALLERGIES] [c/CONDITIONS]</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>delete-medical-history n/John Doe al/penicillin,milk c/subhealthy,hyperglycemia</code></p>
+</li>
+<li>
+<p><code>delete-medical-history n/John Doe al/penicillin,milk</code></p>
+</li>
+<li>
+<p><code>delete-medical-history n/John Doe c/subhealthy</code></p>
+</li>
+</ul>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Either allergy or condition must be provided.</p>
+</li>
+<li>
+<p>Input allergy or condition must exist in the healthbook.</p>
+</li>
+<li>
+<p>Allergy and condition is NOT case sensitive (<code>EGG</code> and <code>egg</code> is treated as the same).</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="adding-remark-to-patient-code-remark-code-6"><a class="link" href="#adding-remark-to-patient-code-remark-code-6">Adding remark to patient : <code>remark</code></a></h3>
+<div class="paragraph">
+<p>Adds a remark to the patient/doctor&#8217;s information. Input will override current remark. If input is empty, previous remark will be deleted.<br>
+Format: <code>remark n/NAME [p/PHONE] r/REMARK</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Parameter <code>p/PHONE</code> is only needed when there are duplicate names in HealthBook, so phone number is needed to differentiate them.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>remark n/John Doe r/Has chronic heart disease</code></p>
+</li>
+<li>
+<p><code>remark n/Amanda Jane p/84739294 r/</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="listing-entered-commands-code-history-code-6"><a class="link" href="#listing-entered-commands-code-history-code-6">Listing entered commands : <code>history</code></a></h3>
+<div class="paragraph">
+<p>Lists all the commands that you have entered in reverse chronological order.<br>
+Format: <code>history</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Pressing the <kbd>&uarr;</kbd> and <kbd>&darr;</kbd> arrows will display the previous and next input respectively in the command box.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="clearing-all-entries-code-clear-code-6"><a class="link" href="#clearing-all-entries-code-clear-code-6">Clearing all entries : <code>clear</code></a></h3>
+<div class="paragraph">
+<p>Clears all entries from the HealthBook.<br>
+Format: <code>clear</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="exiting-the-program-code-exit-code-6"><a class="link" href="#exiting-the-program-code-exit-code-6">Exiting the program : <code>exit</code></a></h3>
+<div class="paragraph">
+<p>Exits the program.<br>
+Format: <code>exit</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="saving-the-data-6"><a class="link" href="#saving-the-data-6">Saving the data</a></h3>
+<div class="paragraph">
+<p>HealthBook data are saved in the hard disk automatically after any command that changes the data.<br>
+There is no need to save manually.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="tab-to-autocomplete-commands-6"><a class="link" href="#tab-to-autocomplete-commands-6">Tab to autocomplete commands</a></h3>
+<div class="paragraph">
+<p>In the command box, user can type the first few characters of the command and tab to autocomplete it.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="remind-patient-on-their-upcoming-appointment-code-coming-soon-in-v2-0-code-6"><a class="link" href="#remind-patient-on-their-upcoming-appointment-code-coming-soon-in-v2-0-code-6">Remind patient on their upcoming appointment <code>[coming soon in v2.0]</code></a></h3>
+<div class="paragraph">
+<p>Remind a patient on their upcoming appointment. This will send a message to the patient via an external platform to inform
+them about their appointment.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="remind-all-patient-on-their-upcoming-appointment-code-coming-soon-in-v2-0-code-6"><a class="link" href="#remind-all-patient-on-their-upcoming-appointment-code-coming-soon-in-v2-0-code-6">Remind all patient on their upcoming appointment <code>[coming soon in v2.0]</code></a></h3>
+<div class="paragraph">
+<p>Remind all patient will upcoming appointment this week. This will send a message to the patient via an external platform to
+inform them about their upcoming appointment.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="faq-6"><a class="link" href="#faq-6">FAQ</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Q</strong>: How do I transfer my data to another Computer?<br>
+<strong>A</strong>: Install the app in the other computer and overwrite the empty data file it creates with the file that contains the data of your previous HealthBook folder.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="command-summary-6"><a class="link" href="#command-summary-6">Command Summary</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Register patient</strong> <code>register-patient n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS</code><br>
+e.g. <code>register-patient n/John Doe p/22224444 e/jamesho@example.com a/123, Clementi Rd, 1234665</code></p>
+</li>
+<li>
+<p><strong>Register doctor</strong> <code>register-patient n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS</code><br>
+e.g. <code>register-doctor n/Mary Jane p/12224444 e/maryjane@example.com a/12, Clementi Rd, 1234665</code></p>
+</li>
+<li>
+<p><strong>Delete patient</strong> : <code>delete-patient n/NAME [p/PHONE]</code><br>
+e.g. <code>delete-patient n/John Doe p/84729292</code></p>
+</li>
+<li>
+<p><strong>Delete doctor</strong> : <code>delete-doctor n/NAME [p/PHONE]</code><br>
+e.g. <code>delete-doctor n/Mary Jane</code></p>
+</li>
+<li>
+<p><strong>View patient</strong> : <code>view-patient n/NAME [p/PHONE]</code><br>
+e.g. <code>view-patient n/John Doe p/84729292</code></p>
+</li>
+<li>
+<p><strong>View doctor</strong> : <code>view-doctor n/NAME [p/PHONE]</code><br>
+e.g. <code>view-doctor n/Mary Jane</code></p>
+</li>
+<li>
+<p><strong>List</strong> : <code>list</code></p>
+</li>
+<li>
+<p><strong>Filter patients</strong> : <code>filter-patient</code></p>
+</li>
+<li>
+<p><strong>Filter doctors</strong> : <code>filter-doctor</code></p>
+</li>
+<li>
+<p><strong>Book appointment</strong> : <code>add-appointment np/PATIENT_NAME [pp/PATIENT_PHONE] nd/DOCTOR_NAME [pd/PATIENT_PHONE] d/DATE_TIME</code><br>
+e.g. <code>add-appointment np/John Doe nd/Mary Jane pd/93736272 d/2018-10-17 15:00</code></p>
+</li>
+<li>
+<p><strong>Delete appointment</strong> : <code>delete-appointment APPOINTMENT_ID</code><br>
+e.g. <code>delete-appointment 10001</code></p>
+</li>
+<li>
+<p><strong>Complete appointment</strong> : <code>complete-appointment APPOINTMENT_ID</code><br>
+e.g. <code>complete-appointment 10001</code></p>
+</li>
+<li>
+<p><strong>Add prescriptions</strong> : <code>add-prescription APPOINTMENT_ID pn/MEDICINE_NAME pd/DOSAGE pc/CONSUMPTION_PER_DAY</code><br>
+e.g. <code>add-prescription 10001 pn/Paracetamol pd/2 pc/3</code></p>
+</li>
+<li>
+<p><strong>Delete prescriptions</strong> : <code>delete-prescription APPOINTMENT_ID pn/MEDICINE_NAME</code><br>
+e.g. <code>delete-prescription 10001 pn/Paracetamol</code></p>
+</li>
+<li>
+<p><strong>Add allergies or conditions</strong> : <code>add-medical-history n/NAME [al/ALLERGIES] [c/CONDITIONS]</code>
+e.g. <code>add-medical-history n/John Doe al/penicillin,milk c/subhealthy,hyperglycemia</code></p>
+</li>
+<li>
+<p><strong>Delete allergies or conditions</strong> : <code>delete-medical-history n/NAME [al/ALLERGIES] [c/CONDITIONS]</code>
+e.g. <code>delete-medical-history n/John Doe al/penicillin,milk c/subhealthy,hyperglycemia</code></p>
+</li>
+<li>
+<p><strong>Remark</strong> : <code>remark n/NAME [p/PHONE] r/REMARK</code><br>
+e.g <code>remark n/John Doe p/84729292 r/Has chronic heart disease</code></p>
+</li>
+<li>
+<p><strong>History</strong> : <code>history</code></p>
+</li>
+<li>
+<p><strong>Clear</strong> : <code>clear</code></p>
+</li>
+<li>
+<p><strong>Exit</strong> : <code>exit</code>
+=== Tab to autocomplete commands</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>In the command box, user can type the first few characters of the command and tab to autocomplete it.</p>
+</div>
+<div class="sect2">
+<h3 id="remind-patient-on-their-upcoming-appointment-code-coming-soon-in-v2-0-code-7"><a class="link" href="#remind-patient-on-their-upcoming-appointment-code-coming-soon-in-v2-0-code-7">Remind patient on their upcoming appointment <code>[coming soon in v2.0]</code></a></h3>
+<div class="paragraph">
+<p>Remind a patient on their upcoming appointment. This will send a message to the patient via an external platform to inform
+them about their appointment.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="remind-all-patient-on-their-upcoming-appointment-code-coming-soon-in-v2-0-code-7"><a class="link" href="#remind-all-patient-on-their-upcoming-appointment-code-coming-soon-in-v2-0-code-7">Remind all patient on their upcoming appointment <code>[coming soon in v2.0]</code></a></h3>
+<div class="paragraph">
+<p>Remind all patient will upcoming appointment this week. This will send a message to the patient via an external platform to
+inform them about their upcoming appointment.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="faq-7"><a class="link" href="#faq-7">FAQ</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Q</strong>: How do I transfer my data to another Computer?<br>
+<strong>A</strong>: Install the app in the other computer and overwrite the empty data file it creates with the file that contains the data of your previous HealthBook folder.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="command-summary-7"><a class="link" href="#command-summary-7">Command Summary</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Register patient</strong> <code>register-patient n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS</code><br>
+e.g. <code>register-patient n/John Doe p/22224444 e/jamesho@example.com a/123, Clementi Rd, 1234665</code></p>
+</li>
+<li>
+<p><strong>Register doctor</strong> <code>register-patient n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS</code><br>
+e.g. <code>register-doctor n/Mary Jane p/12224444 e/maryjane@example.com a/12, Clementi Rd, 1234665</code></p>
+</li>
+<li>
+<p><strong>Delete patient</strong> : <code>delete-patient n/NAME [p/PHONE]</code><br>
+e.g. <code>delete-patient n/John Doe p/84729292</code></p>
+</li>
+<li>
+<p><strong>Delete doctor</strong> : <code>delete-doctor n/NAME [p/PHONE]</code><br>
+e.g. <code>delete-doctor n/Mary Jane</code></p>
+</li>
+<li>
+<p><strong>View patient</strong> : <code>view-patient n/NAME [p/PHONE]</code><br>
+e.g. <code>view-patient n/John Doe p/84729292</code></p>
+</li>
+<li>
+<p><strong>View doctor</strong> : <code>view-doctor n/NAME [p/PHONE]</code><br>
+e.g. <code>view-doctor n/Mary Jane</code></p>
+</li>
+<li>
+<p><strong>List</strong> : <code>list</code></p>
+</li>
+<li>
+<p><strong>Filter patients</strong> : <code>filter-patient</code></p>
+</li>
+<li>
+<p><strong>Filter doctors</strong> : <code>filter-doctor</code></p>
+</li>
+<li>
+<p><strong>Book appointment</strong> : <code>add-appointment np/PATIENT_NAME [pp/PATIENT_PHONE] nd/DOCTOR_NAME [pd/PATIENT_PHONE] d/DATE_TIME</code><br>
+e.g. <code>add-appointment np/John Doe nd/Mary Jane pd/93736272 d/2018-10-17 15:00</code></p>
+</li>
+<li>
+<p><strong>Delete appointment</strong> : <code>delete-appointment APPOINTMENT_ID</code><br>
+e.g. <code>delete-appointment 10001</code></p>
+</li>
+<li>
+<p><strong>Complete appointment</strong> : <code>complete-appointment APPOINTMENT_ID</code><br>
+e.g. <code>complete-appointment 10001</code></p>
+</li>
+<li>
+<p><strong>Add prescriptions</strong> : <code>add-prescription APPOINTMENT_ID pn/MEDICINE_NAME pd/DOSAGE pc/CONSUMPTION_PER_DAY</code><br>
+e.g. <code>add-prescription 10001 pn/Paracetamol pd/2 pc/3</code></p>
+</li>
+<li>
+<p><strong>Delete prescriptions</strong> : <code>delete-prescription APPOINTMENT_ID pn/MEDICINE_NAME</code><br>
+e.g. <code>delete-prescription 10001 pn/Paracetamol</code></p>
+</li>
+<li>
+<p><strong>Add allergies or conditions</strong> : <code>add-medical-history n/NAME [al/ALLERGIES] [c/CONDITIONS]</code>
+e.g. <code>add-medical-history n/John Doe al/penicillin,milk c/subhealthy,hyperglycemia</code></p>
+</li>
+<li>
+<p><strong>Delete allergies or conditions</strong> : <code>delete-medical-history n/NAME [al/ALLERGIES] [c/CONDITIONS]</code>
+e.g. <code>delete-medical-history n/John Doe al/penicillin,milk c/subhealthy,hyperglycemia</code></p>
+</li>
+<li>
+<p><strong>Remark</strong> : <code>remark n/NAME [p/PHONE] r/REMARK</code><br>
+e.g <code>remark n/John Doe p/84729292 r/Has chronic heart disease</code></p>
+</li>
+<li>
+<p><strong>History</strong> : <code>history</code></p>
+</li>
+<li>
+<p><strong>Clear</strong> : <code>clear</code></p>
+</li>
+<li>
+<p><strong>Exit</strong> : <code>exit</code></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="contributions-to-the-developer-guide"><a class="link" href="#contributions-to-the-developer-guide">Contributions to the Developer Guide</a></h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Given below are sections I contributed to the Developer Guide. They showcase my ability to write technical documentation and the technical depth of my contributions to the project.</em></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-11 06:15:19 UTC</div></div></div></body></html>
