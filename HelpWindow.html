@@ -503,19 +503,31 @@ Format: <code>delete-prescription APPOINTMENT_ID pn/MEDICINE_NAME</code></p>
 <p>Add a condition or allergy to the patient&#8217;s medical history. This will then be displayed on the users information page.<br>
 Format: <code>add-medical-history n/NAME [al/ALLERGIES] [c/CONDITIONS]</code></p>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Allergies and conditions should only contain alphanumeric characters and spaces, and they should not be blank.
+</td>
+</tr>
+</table>
+</div>
 <div class="paragraph">
 <p>Examples:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>add-medical-history n/John Doe al/penicillin,milk c/sub-healthy,hyperglycemia</code></p>
+<p><code>add-medical-history n/John Doe al/penicillin,milk c/subhealthy,hyperglycemia</code></p>
 </li>
 <li>
 <p><code>add-medical-history n/John Doe al/penicillin,milk</code></p>
 </li>
 <li>
-<p><code>add-medical-history n/John Doe c/sub-healthy</code></p>
+<p><code>add-medical-history n/John Doe c/subhealthy</code></p>
 </li>
 </ul>
 </div>
@@ -524,10 +536,13 @@ Format: <code>add-medical-history n/NAME [al/ALLERGIES] [c/CONDITIONS]</code></p
 <div class="ulist">
 <ul>
 <li>
-<p>Either condition or allergy must be provided.</p>
+<p>Either allergy or condition must be provided.</p>
 </li>
 <li>
 <p>Duplicated allergy or condition is not allowed.</p>
+</li>
+<li>
+<p>Allergy and condition is NOT case sensitive (<code>EGG</code> and <code>egg</code> is treated as the same).</p>
 </li>
 </ul>
 </div>
@@ -546,13 +561,13 @@ Format: <code>delete-medical-history n/NAME [al/ALLERGIES] [c/CONDITIONS]</code>
 <div class="ulist">
 <ul>
 <li>
-<p><code>delete-medical-history n/John Doe al/penicillin,milk c/sub-healthy,hyperglycemia</code></p>
+<p><code>delete-medical-history n/John Doe al/penicillin,milk c/subhealthy,hyperglycemia</code></p>
 </li>
 <li>
 <p><code>delete-medical-history n/John Doe al/penicillin,milk</code></p>
 </li>
 <li>
-<p><code>delete-medical-history n/John Doe c/sub-healthy</code></p>
+<p><code>delete-medical-history n/John Doe c/subhealthy</code></p>
 </li>
 </ul>
 </div>
@@ -565,6 +580,9 @@ Format: <code>delete-medical-history n/NAME [al/ALLERGIES] [c/CONDITIONS]</code>
 </li>
 <li>
 <p>Input allergy or condition must exist in the healthbook.</p>
+</li>
+<li>
+<p>Allergy and condition is NOT case sensitive (<code>EGG</code> and <code>egg</code> is treated as the same).</p>
 </li>
 </ul>
 </div>
@@ -736,11 +754,11 @@ e.g. <code>delete-prescription 10001 pn/Paracetamol</code></p>
 </li>
 <li>
 <p><strong>Add allergies or conditions</strong> : <code>add-medical-history n/NAME [al/ALLERGIES] [c/CONDITIONS]</code>
-e.g. <code>add-medical-history n/John Doe al/penicillin,milk c/sub-healthy,hyperglycemia</code></p>
+e.g. <code>add-medical-history n/John Doe al/penicillin,milk c/subhealthy,hyperglycemia</code></p>
 </li>
 <li>
 <p><strong>Delete allergies or conditions</strong> : <code>delete-medical-history n/NAME [al/ALLERGIES] [c/CONDITIONS]</code>
-e.g. <code>delete-medical-history n/John Doe al/penicillin,milk c/sub-healthy,hyperglycemia</code></p>
+e.g. <code>delete-medical-history n/John Doe al/penicillin,milk c/subhealthy,hyperglycemia</code></p>
 </li>
 <li>
 <p><strong>Remark</strong> : <code>remark n/NAME [p/PHONE] r/REMARK</code><br>
@@ -758,4 +776,4 @@ e.g <code>remark n/John Doe p/84729292 r/Has chronic heart disease</code></p>
 </ul>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-11 03:37:44 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-11 04:13:57 UTC</div></div></div></body></html>

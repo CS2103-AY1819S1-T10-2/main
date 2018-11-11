@@ -866,7 +866,7 @@ command is implemented such that it is able to add <code>allergies</code> AND/OR
 </div>
 <div class="paragraph">
 <p>Step 1. The user types in <code>add-medical-history</code> in the command box followed by the parameter <code>n/John Doe al/penicillin,milk
-c/sub-healthy,hyperglycemia</code></p>
+c/subhealthy,hyperglycemia</code></p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -877,6 +877,7 @@ c/sub-healthy,hyperglycemia</code></p>
 <td class="content">
 For multiple inputs in the same field, use comma <code>,</code> to separate. Do not append blank after <code>,</code>.
 You can only omit either ALLERGY parameter or CONDITION parameter.
+Allergies and conditions should only contain alphanumeric characters and spaces, and they should not be blank.
 </td>
 </tr>
 </table>
@@ -900,12 +901,15 @@ Exception will be thrown if inputs for both field are blank.
 <div class="sect3">
 <h4 id="design-consideration"><a class="link" href="#design-consideration">3.5.2. Design Consideration</a></h4>
 <div class="sect4">
-<h5 id="aspect-support-different-types-of-input"><a class="link" href="#aspect-support-different-types-of-input">Aspect: Support different types of input</a></h5>
+<h5 id="aspect-the-way-to-model-medicalhistory"><a class="link" href="#aspect-the-way-to-model-medicalhistory">Aspect: The way to model MedicalHistory</a></h5>
 <div class="ulist">
 <ul>
 <li>
-<p>Alternative 1 (Current choice): <code>AddMedicalHistoryCommand</code> allow user to fill in one or more allergies and conditions
-(separated by comma). It is also supported to leave EITHER field blank.</p>
+<p>Alternative 1 (Current choice): Model <code>Allergy</code> and <code>Condition</code> as classes.
+<code>AddMedicalHistoryCommand</code> contains ArrayLists of <code>Allergy</code> and <code>Condition</code>.</p>
+</li>
+<li>
+<p>Alternative 2 : Treat allergy and condition as Strings. <code>AddMedicalHistoryCommand</code> contains two ArrayLists of String.</p>
 </li>
 </ul>
 </div>
@@ -929,7 +933,7 @@ Exception will be thrown if inputs for both field are blank.
 </div>
 <div class="paragraph">
 <p>Step 1. The user types in <code>delete-medical-history</code> in the command box followed by the parameter <code>n/John Doe
-al/penicillin,milk c/sub-healthy,hyperglycemia</code></p>
+al/penicillin,milk c/subhealthy,hyperglycemia</code></p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -960,16 +964,16 @@ Exception will be thrown if given input is not in the original medical history.
 </tr>
 </table>
 </div>
-</div>
-<div class="sect3">
-<h4 id="design-consideration-2"><a class="link" href="#design-consideration-2">3.6.2. Design Consideration</a></h4>
 <div class="sect4">
-<h5 id="aspect-support-different-types-of-input-2"><a class="link" href="#aspect-support-different-types-of-input-2">Aspect: Support different types of input</a></h5>
+<h5 id="aspect-the-way-to-model-medicalhistory-2"><a class="link" href="#aspect-the-way-to-model-medicalhistory-2">Aspect: The way to model MedicalHistory</a></h5>
 <div class="ulist">
 <ul>
 <li>
-<p>Alternative 1 (Current choice): <code>DeleteMedicalHistoryCommand</code> allow user to fill in one or more allergies and
-conditions (separated by comma). It is also supported to leave EITHER field blank.</p>
+<p>Alternative 1 (Current choice): Model <code>Allergy</code> and <code>Condition</code> as classes.
+<code>AddMedicalHistoryCommand</code> contains ArrayLists of <code>Allergy</code> and <code>Condition</code>.</p>
+</li>
+<li>
+<p>Alternative 2 : Treat allergy and condition as Strings. <code>AddMedicalHistoryCommand</code> contains two ArrayLists of String.</p>
 </li>
 </ul>
 </div>
@@ -2606,4 +2610,4 @@ Expected: Similar to previous.</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-11 03:37:44 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-11 04:13:57 UTC</div></div></div></body></html>
