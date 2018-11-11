@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="seedu-header"><nav class="navbar navbar-lg navbar-light bg-lighter"><div class="container"><a class="navbar-brand" href="https://se-edu.github.io/"><img src="images/SeEduLogo.png" alt="SE-EDU"></a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level1">AB-1</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level2">AB-2</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level3">AB-3</a></li><li class="nav-item"><a class="nav-link active" href="index.html">AB-4</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/collate">Collate</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/se-book">Book</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/learningresources">Resources</a></li></ul></div></nav></div><div id="site-header"><nav class="navbar navbar-light bg-light"><div class="container"><a class="navbar-brand" href="index.html">AddressBook-Level4</a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="UserGuide.html">User Guide</a></li><li class="nav-item"><a class="nav-link active" href="DeveloperGuide.html">Developer Guide</a></li><li class="nav-item"><a class="nav-link" href="LearningOutcomes.html">LOs</a></li><li class="nav-item"><a class="nav-link" href="AboutUs.html">About Us</a></li><li class="nav-item"><a class="nav-link" href="ContactUs.html">Contact Us</a></li><li class="navitem"><a class="nav-link" href="https://github.com/se-edu/addressbook-level4"><span class="fa fa-github fa-lg" aria-hidden="true"></span>&nbsp;View on GitHub</a></li></ul></div></nav></div><div id="header"><h1>HealthBook - Developer Guide</h1></div><div id="content"><div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>By: <code>Team CS2103-AY1819S1-T10-2</code>      Since: <code>Aug 2018</code>      Licence: <code>MIT</code></p>
+<p>By: <code>Team CS2103-AY1819S1-T10-2</code>      Since: <code>Aug 2018</code>      Licence: <code>MIT</code></p>
 </div>
 </div>
 <div id="toc" class="toc">
@@ -29,17 +29,21 @@
 </li>
 <li><a href="#implementation">3. Implementation</a>
 <ul class="sectlevel2">
-<li><a href="#delete-patient-and-doctor-feature">3.1. Delete Patient and Doctor Feature</a></li>
-<li><a href="#register-patient-feature">3.2. Register Patient Feature</a></li>
-<li><a href="#register-doctor-feature">3.3. Register Doctor Feature</a></li>
-<li><a href="#remark-feature">3.4. Remark Feature</a></li>
-<li><a href="#add-medical-history-feature">3.5. Add Medical History Feature</a></li>
-<li><a href="#delete-medical-history-feature">3.6. Delete Medical History Feature</a></li>
-<li><a href="#filter-patient-and-filter-doctor-feature">3.7. Filter Patient and Filter Doctor Feature</a></li>
-<li><a href="#add-prescription-feature">3.8. Add Prescription Feature</a></li>
-<li><a href="#delete-prescription-feature">3.9. Delete Prescription Feature</a></li>
-<li><a href="#logging">3.10. Logging</a></li>
-<li><a href="#Implementation-Configuration">3.11. Configuration</a></li>
+<li><a href="#register-patient-feature">3.1. Register Patient Feature</a></li>
+<li><a href="#register-doctor-feature">3.2. Register Doctor Feature</a></li>
+<li><a href="#delete-patient-and-doctor-feature">3.3. Delete Patient and Doctor Feature</a></li>
+<li><a href="#view-patient-and-doctor-feature">3.4. View Patient and Doctor Feature</a></li>
+<li><a href="#filter-patient-and-filter-doctor-feature">3.5. Filter Patient and Filter Doctor Feature</a></li>
+<li><a href="#add-appointment-feature">3.6. Add Appointment Feature</a></li>
+<li><a href="#delete-appointment-feature">3.7. Delete Appointment Feature</a></li>
+<li><a href="#complete-appointment-feature">3.8. Complete Appointment Feature</a></li>
+<li><a href="#add-prescription-feature">3.9. Add Prescription Feature</a></li>
+<li><a href="#delete-prescription-feature">3.10. Delete Prescription Feature</a></li>
+<li><a href="#add-medical-history-feature">3.11. Add Medical History Feature</a></li>
+<li><a href="#delete-medical-history-feature">3.12. Delete Medical History Feature</a></li>
+<li><a href="#remark-feature">3.13. Remark Feature</a></li>
+<li><a href="#logging">3.14. Logging</a></li>
+<li><a href="#Implementation-Configuration">3.15. Configuration</a></li>
 </ul>
 </li>
 <li><a href="#documentation">4. Documentation</a>
@@ -233,10 +237,10 @@ This will generate all resources required by the application and tests.</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Configure the <a href="#Docs-SiteWideDocSettings">site-wide documentation settings</a> in <a href="https://github.com/CS2103-AY1819S1-T10-2/main/build.gradle"><code>build.gradle</code></a>, such as the <code>site-name</code>, to suit your own project.</p>
+<p>Configure the <a href="#Docs-SiteWideDocSettings">site-wide documentation settings</a> in <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/build.gradle"><code>build.gradle</code></a>, such as the <code>site-name</code>, to suit your own project.</p>
 </li>
 <li>
-<p>Replace the URL in the attribute <code>repoURL</code> in <a href="https://github.com/CS2103-AY1819S1-T10-2/main/docs/DeveloperGuide.adoc"><code>DeveloperGuide.adoc</code></a> and <a href="https://github.com/CS2103-AY1819S1-T10-2/main/docs/UserGuide.adoc"><code>UserGuide.adoc</code></a> with the URL of your fork.</p>
+<p>Replace the URL in the attribute <code>repoURL</code> in <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/docs/DeveloperGuide.adoc"><code>DeveloperGuide.adoc</code></a> and <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/docs/UserGuide.adoc"><code>UserGuide.adoc</code></a> with the URL of your fork.</p>
 </li>
 </ol>
 </div>
@@ -317,13 +321,13 @@ Having both Travis and AppVeyor ensures your App works on both Unix-based platfo
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-The <code>.pptx</code> files used to create diagrams in this document can be found in the <a href="https://github.com/CS2103-AY1819S1-T10-2/main/docs/diagrams/">diagrams</a> folder. To update a diagram, modify the diagram in the pptx file, select the objects of the diagram, and choose <code>Save as picture</code>.
+The <code>.pptx</code> files used to create diagrams in this document can be found in the <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/docs/diagrams/">diagrams</a> folder. To update a diagram, modify the diagram in the pptx file, select the objects of the diagram, and choose <code>Save as picture</code>.
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p><code>Main</code> has only one class called <a href="https://github.com/CS2103-AY1819S1-T10-2/main/src/main/java/seedu/address/MainApp.java"><code>MainApp</code></a>. It is responsible for,</p>
+<p><code>Main</code> has only one class called <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/main/java/seedu/address/MainApp.java"><code>MainApp</code></a>. It is responsible for,</p>
 </div>
 <div class="ulist">
 <ul>
@@ -391,13 +395,13 @@ The <code>.pptx</code> files used to create diagrams in this document can be fou
 </div>
 <h4 id="events-driven-nature-of-the-design" class="discrete">Events-Driven nature of the design</h4>
 <div class="paragraph">
-<p>The <em>Sequence Diagram</em> below shows how the components interact for the scenario where the user issues the command <code>delete 1</code>.</p>
+<p>The <em>Sequence Diagram</em> below shows how the components interact for the scenario where the user issues the command <code>delete-patient n/John Doe</code>.</p>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="images/SDforDeletePerson.png" alt="SDforDeletePerson" width="800">
 </div>
-<div class="title">Figure 3. Component interactions for <code>delete 1</code> command (part 1)</div>
+<div class="title">Figure 3. Component interactions for <code>delete-patient n/John Doe</code> command (part 1)</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -418,7 +422,7 @@ Note how the <code>Model</code> simply raises a <code>AddressBookChangedEvent</c
 <div class="content">
 <img src="images/SDforDeletePersonEventHandling.png" alt="SDforDeletePersonEventHandling" width="800">
 </div>
-<div class="title">Figure 4. Component interactions for <code>delete 1</code> command (part 2)</div>
+<div class="title">Figure 4. Component interactions for <code>delete-patient n/John Doe</code> command (part 2)</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -445,13 +449,13 @@ Note how the event is propagated through the <code>EventsCenter</code> to the <c
 <div class="title">Figure 5. Structure of the UI Component</div>
 </div>
 <div class="paragraph">
-<p><strong>API</strong> : <a href="https://github.com/CS2103-AY1819S1-T10-2/main/src/main/java/seedu/address/ui/Ui.java"><code>Ui.java</code></a></p>
+<p><strong>API</strong> : <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/main/java/seedu/address/ui/Ui.java"><code>Ui.java</code></a></p>
 </div>
 <div class="paragraph">
-<p>The UI consists of a <code>MainWindow</code> that is made up of parts e.g.<code>CommandBox</code>, <code>ResultDisplay</code>, <code>PersonListPanel</code>, <code>StatusBarFooter</code>, <code>BrowserPanel</code> etc. All these, including the <code>MainWindow</code>, inherit from the abstract <code>UiPart</code> class.</p>
+<p>The UI consists of a <code>MainWindow</code> that is made up of parts e.g.<code>CommandBox</code>, <code>ResultDisplay</code>, <code>PersonListPanel</code>, <code>StatusBarFooter</code>, <code>InformationPanel</code> etc. All these, including the <code>MainWindow</code>, inherit from the abstract <code>UiPart</code> class.</p>
 </div>
 <div class="paragraph">
-<p>The <code>UI</code> component uses JavaFx UI framework. The layout of these UI parts are defined in matching <code>.fxml</code> files that are in the <code>src/main/resources/view</code> folder. For example, the layout of the <a href="https://github.com/CS2103-AY1819S1-T10-2/main/src/main/java/seedu/address/ui/MainWindow.java"><code>MainWindow</code></a> is specified in <a href="https://github.com/CS2103-AY1819S1-T10-2/main/src/main/resources/view/MainWindow.fxml"><code>MainWindow.fxml</code></a></p>
+<p>The <code>UI</code> component uses JavaFx UI framework. The layout of these UI parts are defined in matching <code>.fxml</code> files that are in the <code>src/main/resources/view</code> folder. For example, the layout of the <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/main/java/seedu/address/ui/MainWindow.java"><code>MainWindow</code></a> is specified in <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/main/resources/view/MainWindow.fxml"><code>MainWindow.fxml</code></a></p>
 </div>
 <div class="paragraph">
 <p>The <code>UI</code> component,</p>
@@ -480,7 +484,7 @@ Note how the event is propagated through the <code>EventsCenter</code> to the <c
 </div>
 <div class="paragraph">
 <p><strong>API</strong> :
-<a href="https://github.com/CS2103-AY1819S1-T10-2/main/src/main/java/seedu/address/logic/Logic.java"><code>Logic.java</code></a></p>
+<a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/main/java/seedu/address/logic/Logic.java"><code>Logic.java</code></a></p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -499,13 +503,13 @@ Note how the event is propagated through the <code>EventsCenter</code> to the <c
 </ol>
 </div>
 <div class="paragraph">
-<p>Given below is the Sequence Diagram for interactions within the <code>Logic</code> component for the <code>execute("delete 1")</code> API call.</p>
+<p>Given below is the Sequence Diagram for interactions within the <code>Logic</code> component for the <code>execute("delete-patient n/John Doe")</code> API call.</p>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="images/DeletePersonSdForLogic.png" alt="DeletePersonSdForLogic" width="800">
 </div>
-<div class="title">Figure 7. Interactions Inside the Logic Component for the <code>delete 1</code> Command</div>
+<div class="title">Figure 7. Interactions Inside the Logic Component for the <code>delete-patient n/John Doe</code> Command</div>
 </div>
 </div>
 <div class="sect2">
@@ -517,7 +521,7 @@ Note how the event is propagated through the <code>EventsCenter</code> to the <c
 <div class="title">Figure 8. Structure of the Model Component</div>
 </div>
 <div class="paragraph">
-<p><strong>API</strong> : <a href="https://github.com/CS2103-AY1819S1-T10-2/main/src/main/java/seedu/address/model/Model.java"><code>Model.java</code></a></p>
+<p><strong>API</strong> : <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/main/java/seedu/address/model/Model.java"><code>Model.java</code></a></p>
 </div>
 <div class="paragraph">
 <p>The <code>Model</code>,</p>
@@ -548,7 +552,7 @@ Note how the event is propagated through the <code>EventsCenter</code> to the <c
 <div class="title">Figure 9. Structure of the Storage Component</div>
 </div>
 <div class="paragraph">
-<p><strong>API</strong> : <a href="https://github.com/CS2103-AY1819S1-T10-2/main/src/main/java/seedu/address/storage/Storage.java"><code>Storage.java</code></a></p>
+<p><strong>API</strong> : <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/main/java/seedu/address/storage/Storage.java"><code>Storage.java</code></a></p>
 </div>
 <div class="paragraph">
 <p>The <code>Storage</code> component,</p>
@@ -559,7 +563,7 @@ Note how the event is propagated through the <code>EventsCenter</code> to the <c
 <p>can save <code>UserPref</code> objects in json format and read it back.</p>
 </li>
 <li>
-<p>can save the Health Book data in xml format and read it back.</p>
+<p>can save the HealthBook data in xml format and read it back.</p>
 </li>
 </ul>
 </div>
@@ -579,75 +583,9 @@ Note how the event is propagated through the <code>EventsCenter</code> to the <c
 <p>This section describes some noteworthy details on how certain features are implemented.</p>
 </div>
 <div class="sect2">
-<h3 id="delete-patient-and-doctor-feature"><a class="link" href="#delete-patient-and-doctor-feature">3.1. Delete Patient and Doctor Feature</a></h3>
+<h3 id="register-patient-feature"><a class="link" href="#register-patient-feature">3.1. Register Patient Feature</a></h3>
 <div class="sect3">
 <h4 id="current-implementation"><a class="link" href="#current-implementation">3.1.1. Current Implementation</a></h4>
-<div class="paragraph">
-<p>The delete patient and doctor features are facilitated by <code>DeletePatientCommand</code> and <code>DeleteDoctorCommand</code>. Both extends
-<code>DeleteCommand</code> such that it is able to delete a specific class of <code>Person</code> (i.e. <code>Patient</code> or <code>Doctor</code>) instead. Additionally,
-instead of deletion by index, deletion by name is used in this implementation.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/DeletePatientSequenceDiagram.png" alt="DeletePatientSequenceDiagram" width="600">
-</div>
-<div class="title">Figure 10. Delete Patient Sequence Diagram</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/DeleteDoctorSequenceDiagram.png" alt="DeleteDoctorSequenceDiagram" width="600">
-</div>
-<div class="title">Figure 11. Delete Doctor Sequence Diagram</div>
-</div>
-<div class="paragraph">
-<p>Step 1. The user types in <code>delete-patient</code> or <code>delete-doctor</code> in the command box followed by the parameters <code>n/John Doe p/12345678</code></p>
-</div>
-<div class="paragraph">
-<p>Step 2. Upon hitting enter, the <code>Patient</code> or <code>Doctor</code> will be removed from the system</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="design-considerations"><a class="link" href="#design-considerations">3.1.2. Design Considerations</a></h4>
-<div class="sect4">
-<h5 id="aspect-algorithm-to-find-code-patient-code-or-code-doctor-code-to-delete"><a class="link" href="#aspect-algorithm-to-find-code-patient-code-or-code-doctor-code-to-delete">Aspect: Algorithm to find <code>Patient</code> or <code>Doctor</code> to delete</a></h5>
-<div class="ulist">
-<ul>
-<li>
-<p>Alternative 1 (current choice):  Loop through <code>model.getFilteredPersonList()</code> to find <code>Patient</code> or <code>Doctor</code> to delete</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Pros: Easy to implement</p>
-</li>
-<li>
-<p>Cons: If size of list grows unusually large (unusual because of our target audience), it may take awhile to retrieve the
-<code>Patient</code> or <code>Doctor</code></p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Alternative 2: Use a Map that maps name to <code>Patient</code> or <code>Doctor</code></p>
-<div class="ulist">
-<ul>
-<li>
-<p>Pros: Fast retrieval</p>
-</li>
-<li>
-<p>Cons: Will have to change a lot of lines of code</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="register-patient-feature"><a class="link" href="#register-patient-feature">3.2. Register Patient Feature</a></h3>
-<div class="sect3">
-<h4 id="current-implementation-2"><a class="link" href="#current-implementation-2">3.2.1. Current Implementation</a></h4>
 <div class="paragraph">
 <p>The register patient are facilitated by <code>RegisterPatientCommand</code> and <code>RegisterPatientCommandParser</code>. This command extends
 the <code>AddCommand</code> and <code>AddCommandParser</code> such that it is able to create a <code>Patient</code> object. The Patient object is
@@ -657,7 +595,7 @@ automatically tagged as <code>Patient</code>.</p>
 <div class="content">
 <img src="images/RegisterPatientSequenceDiagram.png" alt="RegisterPatientSequenceDiagram" width="600">
 </div>
-<div class="title">Figure 12. Register Patient Sequence Diagram</div>
+<div class="title">Figure 10. Register Patient Sequence Diagram</div>
 </div>
 <div class="paragraph">
 <p>Patient model contains a PriorityQueue of upcoming appointment and ArrayList of past appointments. We implemented
@@ -697,7 +635,7 @@ created as a patient as determined by their tag.
 </div>
 </div>
 <div class="sect3">
-<h4 id="design-considerations-2"><a class="link" href="#design-considerations-2">3.2.2. Design Considerations</a></h4>
+<h4 id="design-considerations"><a class="link" href="#design-considerations">3.1.2. Design Considerations</a></h4>
 <div class="sect4">
 <h5 id="aspect-data-structure-of-upcoming-and-past-appointments"><a class="link" href="#aspect-data-structure-of-upcoming-and-past-appointments">Aspect: Data Structure of Upcoming and Past Appointments</a></h5>
 <div class="ulist">
@@ -717,9 +655,9 @@ Stack.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="register-doctor-feature"><a class="link" href="#register-doctor-feature">3.3. Register Doctor Feature</a></h3>
+<h3 id="register-doctor-feature"><a class="link" href="#register-doctor-feature">3.2. Register Doctor Feature</a></h3>
 <div class="sect3">
-<h4 id="current-implementation-3"><a class="link" href="#current-implementation-3">3.3.1. Current Implementation</a></h4>
+<h4 id="current-implementation-2"><a class="link" href="#current-implementation-2">3.2.1. Current Implementation</a></h4>
 <div class="paragraph">
 <p>The register doctor are facilitated by <code>RegisterDoctorCommand</code> and <code>RegisterDoctorCommandParser</code>. This command extends
 the <code>AddCommand</code> and <code>AddCommandParser</code> such that it is able to create a <code>Doctor</code> object. The Doctor object is
@@ -729,7 +667,7 @@ automatically tagged as <code>Doctor</code>.</p>
 <div class="content">
 <img src="images/RegisterDoctorSequenceDiagram.png" alt="RegisterDoctorSequenceDiagram" width="600">
 </div>
-<div class="title">Figure 13. Register Patient Sequence Diagram</div>
+<div class="title">Figure 11. Register Patient Sequence Diagram</div>
 </div>
 <div class="paragraph">
 <p>Step 1. The user types in <code>register-doctor</code> in the command box followed by the parameters <code>n/John Doe p/91234567 e/test@test.com a/123 Clementi Road</code></p>
@@ -753,7 +691,7 @@ Command Exception will be thrown if any of the information is missing or invalid
 <div class="content">
 <img src="images/GoogleLoginPage.png" alt="GoogleLoginPage" width="600">
 </div>
-<div class="title">Figure 14. Google Login Page</div>
+<div class="title">Figure 12. Google Login Page</div>
 </div>
 <div class="paragraph">
 <p>Step 3. Simultaneously, the <code>Doctor</code> will be created and added to the storage of the system. In the case that the user
@@ -787,7 +725,7 @@ created as a doctor as determined by their tag.
 </div>
 </div>
 <div class="sect3">
-<h4 id="design-considerations-3"><a class="link" href="#design-considerations-3">3.3.2. Design Considerations</a></h4>
+<h4 id="design-considerations-2"><a class="link" href="#design-considerations-2">3.2.2. Design Considerations</a></h4>
 <div class="sect4">
 <h5 id="aspect-presenting-google-calendar-login-to-doctors"><a class="link" href="#aspect-presenting-google-calendar-login-to-doctors">Aspect: Presenting Google Calendar Login to Doctors</a></h5>
 <div class="ulist">
@@ -810,16 +748,16 @@ login for the login but user might miss the login compared to having a popped up
 <div class="ulist">
 <ul>
 <li>
-<p>Alternative 2 (Alternative Choice): Doctor object will not be created and application will not respond if login is
-unsuccessful. From the integration used for Google OAuth, it is mandatory for user to login before any process can
-continue. This function as our features is complimentary for our application as HealthBook will  work at its best with
-the google calendar login.</p>
-</li>
-<li>
 <p>Alternative 1 (Current Choice): Allow doctor to still be created with or without the Google Login. Since the Google
 Calendar acts as an add-on, it should not interfere with the main function of the HealthBook. As such, we implemented
 register-doctor to have Google Login as optional. However, subsequent calls of Calendar related functions will still
 prompt the user to login.</p>
+</li>
+<li>
+<p>Alternative 2 (Alternative Choice): Doctor object will not be created and application will not respond if login is
+unsuccessful. From the integration used for Google OAuth, it is mandatory for user to login before any process can
+continue. This function as our features is complimentary for our application as HealthBook will  work at its best with
+the google calendar login.</p>
 </li>
 </ul>
 </div>
@@ -827,32 +765,247 @@ prompt the user to login.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="remark-feature"><a class="link" href="#remark-feature">3.4. Remark Feature</a></h3>
+<h3 id="delete-patient-and-doctor-feature"><a class="link" href="#delete-patient-and-doctor-feature">3.3. Delete Patient and Doctor Feature</a></h3>
 <div class="sect3">
-<h4 id="current-implementation-4"><a class="link" href="#current-implementation-4">3.4.1. Current Implementation</a></h4>
+<h4 id="current-implementation-3"><a class="link" href="#current-implementation-3">3.3.1. Current Implementation</a></h4>
 <div class="paragraph">
-<p>Remark command allows user to input any information into Patient object with no restrictions. This command can
-only be called after patient is created.</p>
+<p>The delete patient and doctor features are facilitated by <code>DeletePatientCommand</code> and <code>DeleteDoctorCommand</code>. Both extends
+<code>DeleteCommand</code> such that it is able to delete a specific subclass of <code>Person</code> (i.e. <code>Patient</code> or <code>Doctor</code>) instead. Additionally,
+instead of deletion by index, deletion by name is used in this implementation.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/RemarkSequenceDiagram.png" alt="RemarkSequenceDiagram" width="600">
+<img src="images/DeletePatientSequenceDiagram.png" alt="DeletePatientSequenceDiagram" width="600">
 </div>
-<div class="title">Figure 15. Remark Command Sequence Diagram</div>
+<div class="title">Figure 13. Delete Patient Sequence Diagram</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/DeleteDoctorSequenceDiagram.png" alt="DeleteDoctorSequenceDiagram" width="600">
+</div>
+<div class="title">Figure 14. Delete Doctor Sequence Diagram</div>
 </div>
 <div class="paragraph">
-<p>Step 1. The user types in <code>remark</code> in the command box followed by the parameters <code>appointment_id r/some remark</code></p>
+<p>Step 1. The user types in <code>delete-patient</code> or <code>delete-doctor</code> in the command box followed by the parameters <code>n/John Doe p/12345678</code></p>
 </div>
 <div class="paragraph">
-<p>Step 2. Upon hitting enter, the new remark will be visible in the Doctor/Patient&#8217;s contact. If input was empty, the
-previous remark will be deleted.</p>
+<p>Step 2. Upon hitting enter, the <code>Patient</code> or <code>Doctor</code> will be removed from the system</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="design-considerations-3"><a class="link" href="#design-considerations-3">3.3.2. Design Considerations</a></h4>
+<div class="sect4">
+<h5 id="aspect-algorithm-to-find-code-patient-code-or-code-doctor-code-to-delete"><a class="link" href="#aspect-algorithm-to-find-code-patient-code-or-code-doctor-code-to-delete">Aspect: Algorithm to find <code>Patient</code> or <code>Doctor</code> to delete</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Alternative 1 (Current choice):  Loop through <code>model.getFilteredPersonList()</code> to find <code>Patient</code> or <code>Doctor</code> to delete</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Easy to implement</p>
+</li>
+<li>
+<p>Cons: If size of list grows unusually large (unusual because of our target audience), it may take awhile to retrieve the
+<code>Patient</code> or <code>Doctor</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Alternative 2: Use a Map that maps name to <code>Patient</code> or <code>Doctor</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Fast retrieval</p>
+</li>
+<li>
+<p>Cons: Will have to change a lot of lines of code</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="add-medical-history-feature"><a class="link" href="#add-medical-history-feature">3.5. Add Medical History Feature</a></h3>
+<h3 id="view-patient-and-doctor-feature"><a class="link" href="#view-patient-and-doctor-feature">3.4. View Patient and Doctor Feature</a></h3>
+<div class="sect3">
+<h4 id="current-implementation-4"><a class="link" href="#current-implementation-4">3.4.1. Current Implementation</a></h4>
+<div class="paragraph">
+<p>The view patient and doctor features are facilitated by <code>ViewPatientCommand</code> and <code>ViewDoctorCommand</code>. This feature shows information
+of the person corresponding to the name specified.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/ViewPatientSequenceDiagram.png" alt="ViewPatientSequenceDiagram" width="600">
+</div>
+<div class="title">Figure 15. View Patient Sequence Diagram</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/ViewDoctorSequenceDiagram.png" alt="ViewDoctorSequenceDiagram" width="600">
+</div>
+<div class="title">Figure 16. View Doctor Sequence Diagram</div>
+</div>
+<div class="paragraph">
+<p>Step 1. The user types in <code>view-patient</code> or <code>view-doctor</code> in the command box followed by the parameters <code>n/John Doe</code></p>
+</div>
+<div class="paragraph">
+<p>Step 2. Upon hitting enter, information of <code>Patient</code> or <code>Doctor</code> will be reflected on the main information panel</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="filter-patient-and-filter-doctor-feature"><a class="link" href="#filter-patient-and-filter-doctor-feature">3.5. Filter Patient and Filter Doctor Feature</a></h3>
 <div class="sect3">
 <h4 id="current-implementation-5"><a class="link" href="#current-implementation-5">3.5.1. Current Implementation</a></h4>
+<div class="paragraph">
+<p>This feature help to filter all patients/doctors in HealthBook</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/FilterPatientSequenceDiagram.png" alt="FilterPatientSequenceDiagram" width="600">
+</div>
+<div class="title">Figure 17. Filter Patient Sequence Diagram</div>
+</div>
+<div class="paragraph">
+<p>Step 1. The user types <code>filter-patient</code> or <code>filter-doctor</code> in the command box</p>
+</div>
+<div class="paragraph">
+<p>Step 2. Upon hitting enter, all persons who are tagged as <code>Patient</code> or <code>Doctor</code> would appear on the panel</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="add-appointment-feature"><a class="link" href="#add-appointment-feature">3.6. Add Appointment Feature</a></h3>
+<div class="sect3">
+<h4 id="current-implementation-6"><a class="link" href="#current-implementation-6">3.6.1. Current Implementation</a></h4>
+<div class="paragraph">
+<p>The add appointment features are facilitated by <code>AddAppointmentCommand</code>. This feature allows user to add appointments in the HealthBook
+which will be added to the respective <code>Patient</code> and <code>Doctor</code> of the <code>Appointment</code> as well.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/AddAppointmentSequenceDiagram.png" alt="AddAppointmentSequenceDiagram" width="600">
+</div>
+<div class="title">Figure 18. Add Appointment Sequence Diagram</div>
+</div>
+<div class="paragraph">
+<p>Step 1. The user types in <code>add-appointment</code> in the command box followed by the parameters <code>np/John Doe nd/Mary Jane d/2018-10-17 15:00</code></p>
+</div>
+<div class="paragraph">
+<p>Step 2. Upon hitting enter, the <code>Appointment</code> will be added to the HealthBook, the <code>Patient</code>, and the <code>Doctor</code> and his/her Google calendar</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="delete-appointment-feature"><a class="link" href="#delete-appointment-feature">3.7. Delete Appointment Feature</a></h3>
+<div class="sect3">
+<h4 id="current-implementation-7"><a class="link" href="#current-implementation-7">3.7.1. Current Implementation</a></h4>
+<div class="paragraph">
+<p>The delete appointment features are facilitated by <code>DeleteAppointmentCommand</code>. This feature allows user to delete appointments in the HealthBook
+which will be deleted from the respective <code>Patient</code> and <code>Doctor</code> of the <code>Appointment</code> as well.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/DeleteAppointmentSequenceDiagram.png" alt="DeleteAppointmentSequenceDiagram" width="600">
+</div>
+<div class="title">Figure 19. Delete Appointment Sequence Diagram</div>
+</div>
+<div class="paragraph">
+<p>Step 1. The user types in <code>delete-appointment</code> in the command box followed by the appointment id <code>10000</code></p>
+</div>
+<div class="paragraph">
+<p>Step 2. Upon hitting enter, the <code>Appointment</code> will be removed from the HealthBook, the <code>Patient</code>, and the <code>Doctor</code> and his/her Google calendar</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="complete-appointment-feature"><a class="link" href="#complete-appointment-feature">3.8. Complete Appointment Feature</a></h3>
+<div class="sect3">
+<h4 id="current-implementation-8"><a class="link" href="#current-implementation-8">3.8.1. Current Implementation</a></h4>
+<div class="paragraph">
+<p>The complete appointment features are facilitated by <code>CompleteAppointmentCommand</code>. This feature allows user to complete existing appointments
+in the HealthBook which change the status of the <code>Appointment</code> from <code>UPCOMING</code> to <code>COMPLETED</code>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/CompleteAppointmentSequenceDiagram.png" alt="CompleteAppointmentSequenceDiagram" width="600">
+</div>
+<div class="title">Figure 20. Complete Appointment Sequence Diagram</div>
+</div>
+<div class="paragraph">
+<p>Step 1. The user types in <code>complete-appointment</code> in the command box followed by the appointment id <code>10000</code></p>
+</div>
+<div class="paragraph">
+<p>Step 2. Upon hitting enter, the status in the <code>Appointment</code> will be changed from <code>UPCOMING</code> to <code>COMPLETED</code></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="add-prescription-feature"><a class="link" href="#add-prescription-feature">3.9. Add Prescription Feature</a></h3>
+<div class="sect3">
+<h4 id="current-implementation-9"><a class="link" href="#current-implementation-9">3.9.1. Current Implementation</a></h4>
+<div class="paragraph">
+<p>The add prescription feature is facilitated by <code>AddPrescriptionCommand</code> and <code>AddPrescriptionCommandParser</code>.
+This command is implemented such that it is able to add a <code>Prescription</code> object for a specific <code>Appointment</code> specified by appointment id.</p>
+</div>
+<div class="paragraph">
+<p>Step 1. The user types <code>add-prescription</code> in the command box followed by the parameters <code>APPOINTMENT_ID pn/MEDICINE_NAME pd/DOSAGE pc/CONSUMPTION_PER_DAY</code>.</p>
+</div>
+<div class="paragraph">
+<p>Step 2. Upon hitting enter, the <code>Prescription</code> will be created and added to the <code>Appointment</code>.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Exception will be thrown if a medicine of the same name already exists in appointment regardless of dosage and consumption per day.<br>
+Exception will be thrown if medicine that the patient is allergic to is added to the appointment.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="delete-prescription-feature"><a class="link" href="#delete-prescription-feature">3.10. Delete Prescription Feature</a></h3>
+<div class="sect3">
+<h4 id="current-implementation-10"><a class="link" href="#current-implementation-10">3.10.1. Current Implementation</a></h4>
+<div class="paragraph">
+<p>The delete prescription is facilitated by <code>DeletePrescriptionCommand</code> and <code>DeletePrescriptionCommandParser</code>.
+This command is implemented such that it is able to delete a <code>Prescription object for a specific `Appointment</code> specified by appointment id.</p>
+</div>
+<div class="paragraph">
+<p>Step 1. The user types <code>delete-prescription</code> in the command box followed by the parameters <code>APPOINTMENT_ID pn/MEDICINE_NAME</code>.</p>
+</div>
+<div class="paragraph">
+<p>Step 2. Upon hitting enter, the <code>Prescription</code> will be deleted from the <code>Appointment</code>.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Exception will be thrown if medicine to be deleted does not exist in appointment.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="add-medical-history-feature"><a class="link" href="#add-medical-history-feature">3.11. Add Medical History Feature</a></h3>
+<div class="sect3">
+<h4 id="current-implementation-11"><a class="link" href="#current-implementation-11">3.11.1. Current Implementation</a></h4>
 <div class="paragraph">
 <p>The add medical history feature is facilitated by <code>AddMedicalHistoryCommand</code> and <code>AddMedicalHistoryCommandParser</code>. This
 command is implemented such that it is able to add <code>allergies</code> AND/OR <code>conditions</code> to <code>MedicalHistory</code> object for a specific
@@ -862,7 +1015,7 @@ command is implemented such that it is able to add <code>allergies</code> AND/OR
 <div class="content">
 <img src="images/AddMedicalHistorySequenceDiagram.png" alt="AddMedicalHistorySequenceDiagram" width="600">
 </div>
-<div class="title">Figure 16. Add Medical History Sequence Diagram</div>
+<div class="title">Figure 21. Add Medical History Sequence Diagram</div>
 </div>
 <div class="paragraph">
 <p>Step 1. The user types in <code>add-medical-history</code> in the command box followed by the parameter <code>n/John Doe al/penicillin,milk
@@ -899,7 +1052,7 @@ Exception will be thrown if inputs for both field are blank.
 </div>
 </div>
 <div class="sect3">
-<h4 id="design-consideration"><a class="link" href="#design-consideration">3.5.2. Design Consideration</a></h4>
+<h4 id="design-consideration"><a class="link" href="#design-consideration">3.11.2. Design Consideration</a></h4>
 <div class="sect4">
 <h5 id="aspect-the-way-to-model-medicalhistory"><a class="link" href="#aspect-the-way-to-model-medicalhistory">Aspect: The way to model MedicalHistory</a></h5>
 <div class="ulist">
@@ -917,9 +1070,9 @@ Exception will be thrown if inputs for both field are blank.
 </div>
 </div>
 <div class="sect2">
-<h3 id="delete-medical-history-feature"><a class="link" href="#delete-medical-history-feature">3.6. Delete Medical History Feature</a></h3>
+<h3 id="delete-medical-history-feature"><a class="link" href="#delete-medical-history-feature">3.12. Delete Medical History Feature</a></h3>
 <div class="sect3">
-<h4 id="current-implementation-6"><a class="link" href="#current-implementation-6">3.6.1. Current Implementation</a></h4>
+<h4 id="current-implementation-12"><a class="link" href="#current-implementation-12">3.12.1. Current Implementation</a></h4>
 <div class="paragraph">
 <p>The delete medical history feature is facilitated by <code>DeleteMedicalHistoryCommand</code> and
 <code>DeleteMedicalHistoryCommandParser</code>. This command is implemented such that it is able to delete <code>allergy</code> AND/OR
@@ -929,7 +1082,7 @@ Exception will be thrown if inputs for both field are blank.
 <div class="content">
 <img src="images/DeleteMedicalHistorySequenceDiagram.png" alt="DeleteMedicalHistorySequenceDiagram" width="600">
 </div>
-<div class="title">Figure 17. Delete Medical History Sequence Diagram</div>
+<div class="title">Figure 22. Delete Medical History Sequence Diagram</div>
 </div>
 <div class="paragraph">
 <p>Step 1. The user types in <code>delete-medical-history</code> in the command box followed by the parameter <code>n/John Doe
@@ -981,92 +1134,37 @@ Exception will be thrown if given input is not in the original medical history.
 </div>
 </div>
 <div class="sect2">
-<h3 id="filter-patient-and-filter-doctor-feature"><a class="link" href="#filter-patient-and-filter-doctor-feature">3.7. Filter Patient and Filter Doctor Feature</a></h3>
-<div class="sect4">
-<h5 id="current-implementation-7"><a class="link" href="#current-implementation-7">Current Implementation</a></h5>
+<h3 id="remark-feature"><a class="link" href="#remark-feature">3.13. Remark Feature</a></h3>
+<div class="sect3">
+<h4 id="current-implementation-13"><a class="link" href="#current-implementation-13">3.13.1. Current Implementation</a></h4>
 <div class="paragraph">
-<p>This feature help to filter all patients/doctors in health book</p>
+<p>Remark command allows user to input any information into Patient object with no restrictions. This command can
+only be called after patient is created.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/FilterPatientSequenceDiagram.png" alt="FilterPatientSequenceDiagram" width="600">
+<img src="images/RemarkSequenceDiagram.png" alt="RemarkSequenceDiagram" width="600">
 </div>
-<div class="title">Figure 18. Filter Patient Sequence Diagram</div>
-</div>
-<div class="paragraph">
-<p>Step 1. The user types <code>filter-patient</code> or <code>filter-doctor</code> in the command box</p>
+<div class="title">Figure 23. Remark Command Sequence Diagram</div>
 </div>
 <div class="paragraph">
-<p>Step 2. Upon hitting enter, all persons who are tagged as "Patient" or "Doctor" would appear on the panel</p>
+<p>Step 1. The user types in <code>remark</code> in the command box followed by the parameters <code>appointment_id r/some remark</code></p>
+</div>
+<div class="paragraph">
+<p>Step 2. Upon hitting enter, the new remark will be visible in the Doctor/Patient&#8217;s contact. If input was empty, the
+previous remark will be deleted.</p>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="add-prescription-feature"><a class="link" href="#add-prescription-feature">3.8. Add Prescription Feature</a></h3>
-<div class="sect3">
-<h4 id="current-implementation-8"><a class="link" href="#current-implementation-8">3.8.1. Current Implementation</a></h4>
-<div class="paragraph">
-<p>The add prescription feature is facilitated by <code>AddPrescriptionCommand</code> and <code>AddPrescriptionCommandParser</code>.
-This command is implemented such that it is able to add a <code>Prescription</code> object for a specific <code>Appointment</code> specified by appointment id.</p>
-</div>
-<div class="paragraph">
-<p>Step 1. The user types <code>add-prescription</code> in the command box followed by the parameters <code>APPOINTMENT_ID pn/MEDICINE_NAME pd/DOSAGE pc/CONSUMPTION_PER_DAY</code>.</p>
-</div>
-<div class="paragraph">
-<p>Step 2. Upon hitting enter, the <code>Prescription</code> will be created and added to the <code>Appointment</code>.</p>
-</div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
-</td>
-<td class="content">
-Exception will be thrown if a medicine of the same name already exists in appointment regardless of dosage and consumption per day.<br>
-Exception will be thrown if medicine that the patient is allergic to is added to the appointment.
-</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="delete-prescription-feature"><a class="link" href="#delete-prescription-feature">3.9. Delete Prescription Feature</a></h3>
-<div class="sect3">
-<h4 id="current-implementation-9"><a class="link" href="#current-implementation-9">3.9.1. Current Implementation</a></h4>
-<div class="paragraph">
-<p>The delete prescription is facilitated by <code>DeletePrescriptionCommand</code> and <code>DeletePrescriptionCommandParser</code>.
-This command is implemented such that it is able to delete a <code>Prescription object for a specific `Appointment</code> specified by appointment id.</p>
-</div>
-<div class="paragraph">
-<p>Step 1. The user types <code>delete-prescription</code> in the command box followed by the parameters <code>APPOINTMENT_ID pn/MEDICINE_NAME</code>.</p>
-</div>
-<div class="paragraph">
-<p>Step 2. Upon hitting enter, the <code>Prescription</code> will be deleted from the <code>Appointment</code>.</p>
-</div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
-</td>
-<td class="content">
-Exception will be thrown if medicine to be deleted does not exist in appointment.
-</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="logging"><a class="link" href="#logging">3.10. Logging</a></h3>
+<h3 id="logging"><a class="link" href="#logging">3.14. Logging</a></h3>
 <div class="paragraph">
 <p>We are using <code>java.util.logging</code> package for logging. The <code>LogsCenter</code> class is used to manage the logging levels and logging destinations.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>The logging level can be controlled using the <code>logLevel</code> setting in the configuration file (See <a href="#Implementation-Configuration">Section 3.11, &#8220;Configuration&#8221;</a>)</p>
+<p>The logging level can be controlled using the <code>logLevel</code> setting in the configuration file (See <a href="#Implementation-Configuration">Section 3.15, &#8220;Configuration&#8221;</a>)</p>
 </li>
 <li>
 <p>The <code>Logger</code> for a class can be obtained using <code>LogsCenter.getLogger(Class)</code> which will log messages according to the specified logging level</p>
@@ -1097,7 +1195,7 @@ Exception will be thrown if medicine to be deleted does not exist in appointment
 </div>
 </div>
 <div class="sect2">
-<h3 id="Implementation-Configuration"><a class="link" href="#Implementation-Configuration">3.11. Configuration</a></h3>
+<h3 id="Implementation-Configuration"><a class="link" href="#Implementation-Configuration">3.15. Configuration</a></h3>
 <div class="paragraph">
 <p>Certain properties of the application can be controlled (e.g App name, logging level) through the configuration file (default: <code>config.json</code>).</p>
 </div>
@@ -1163,13 +1261,13 @@ Alternatively, you can download the AsciiDoc plugin for IntelliJ, which allows y
 <div class="content">
 <img src="images/chrome_save_as_pdf.png" alt="chrome save as pdf" width="300">
 </div>
-<div class="title">Figure 19. Saving documentation as PDF files in Chrome</div>
+<div class="title">Figure 24. Saving documentation as PDF files in Chrome</div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="Docs-SiteWideDocSettings"><a class="link" href="#Docs-SiteWideDocSettings">4.4. Site-wide Documentation Settings</a></h3>
 <div class="paragraph">
-<p>The <a href="https://github.com/CS2103-AY1819S1-T10-2/main/build.gradle"><code>build.gradle</code></a> file specifies some project-specific <a href="https://asciidoctor.org/docs/user-manual/#attributes">asciidoc attributes</a> which affects how all documentation files within this project are rendered.</p>
+<p>The <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/build.gradle"><code>build.gradle</code></a> file specifies some project-specific <a href="https://asciidoctor.org/docs/user-manual/#attributes">asciidoc attributes</a> which affects how all documentation files within this project are rendered.</p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -1285,11 +1383,11 @@ One of: <code>UserGuide</code>, <code>DeveloperGuide</code>, <code>LearningOutco
 <div class="sect2">
 <h3 id="site-template"><a class="link" href="#site-template">4.6. Site Template</a></h3>
 <div class="paragraph">
-<p>The files in <a href="https://github.com/CS2103-AY1819S1-T10-2/main/docs/stylesheets"><code>docs/stylesheets</code></a> are the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS stylesheets</a> of the site.
+<p>The files in <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/docs/stylesheets"><code>docs/stylesheets</code></a> are the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS stylesheets</a> of the site.
 You can modify them to change some properties of the site&#8217;s design.</p>
 </div>
 <div class="paragraph">
-<p>The files in <a href="https://github.com/CS2103-AY1819S1-T10-2/main/docs/templates"><code>docs/templates</code></a> controls the rendering of <code>.adoc</code> files into HTML5.
+<p>The files in <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/docs/templates"><code>docs/templates</code></a> controls the rendering of <code>.adoc</code> files into HTML5.
 These template files are written in a mixture of <a href="https://www.ruby-lang.org">Ruby</a> and <a href="http://slim-lang.com">Slim</a>.</p>
 </div>
 <div class="admonitionblock warning">
@@ -1300,7 +1398,7 @@ These template files are written in a mixture of <a href="https://www.ruby-lang.
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Modifying the template files in <a href="https://github.com/CS2103-AY1819S1-T10-2/main/docs/templates"><code>docs/templates</code></a> requires some knowledge and experience with Ruby and Asciidoctor&#8217;s API.
+<p>Modifying the template files in <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/docs/templates"><code>docs/templates</code></a> requires some knowledge and experience with Ruby and Asciidoctor&#8217;s API.
 You should only modify them if you need greater control over the site&#8217;s layout than what stylesheets can provide.
 The SE-EDU team does not provide support for modified template files.</p>
 </div>
@@ -1471,7 +1569,7 @@ e.g. <code>seedu.address.logic.LogicManagerTest</code></p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Update the version number in <a href="https://github.com/CS2103-AY1819S1-T10-2/main/src/main/java/seedu/address/MainApp.java"><code>MainApp.java</code></a>.</p>
+<p>Update the version number in <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/main/java/seedu/address/MainApp.java"><code>MainApp.java</code></a>.</p>
 </li>
 <li>
 <p>Generate a JAR file <a href="UsingGradle.html#creating-the-jar-file">using Gradle</a>.</p>
@@ -1545,10 +1643,10 @@ Do take a look at <a href="#Design-Logic">Section 2.3, &#8220;Logic component&#8
 <div class="ulist">
 <ul>
 <li>
-<p>Just like we store each individual command word constant <code>COMMAND_WORD</code> inside <code>*Command.java</code> (e.g.  <a href="https://github.com/CS2103-AY1819S1-T10-2/main/src/main/java/seedu/address/logic/commands/FindCommand.java"><code>FindCommand#COMMAND_WORD</code></a>, <a href="https://github.com/CS2103-AY1819S1-T10-2/main/src/main/java/seedu/address/logic/commands/DeleteCommand.java"><code>DeleteCommand#COMMAND_WORD</code></a>), you need a new constant for aliases as well (e.g. <code>FindCommand#COMMAND_ALIAS</code>).</p>
+<p>Just like we store each individual command word constant <code>COMMAND_WORD</code> inside <code>*Command.java</code> (e.g.  <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/main/java/seedu/address/logic/commands/FindCommand.java"><code>FindCommand#COMMAND_WORD</code></a>, <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/main/java/seedu/address/logic/commands/DeleteCommand.java"><code>DeleteCommand#COMMAND_WORD</code></a>), you need a new constant for aliases as well (e.g. <code>FindCommand#COMMAND_ALIAS</code>).</p>
 </li>
 <li>
-<p><a href="https://github.com/CS2103-AY1819S1-T10-2/main/src/main/java/seedu/address/logic/parser/AddressBookParser.java"><code>AddressBookParser</code></a> is responsible for analyzing command words.</p>
+<p><a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/main/java/seedu/address/logic/parser/AddressBookParser.java"><code>AddressBookParser</code></a> is responsible for analyzing command words.</p>
 </li>
 </ul>
 </div>
@@ -1558,7 +1656,7 @@ Do take a look at <a href="#Design-Logic">Section 2.3, &#8220;Logic component&#8
 <div class="ulist">
 <ul>
 <li>
-<p>Modify the switch statement in <a href="https://github.com/CS2103-AY1819S1-T10-2/main/src/main/java/seedu/address/logic/parser/AddressBookParser.java"><code>AddressBookParser#parseCommand(String)</code></a> such that both the proper command word and alias can be used to execute the same intended command.</p>
+<p>Modify the switch statement in <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/main/java/seedu/address/logic/parser/AddressBookParser.java"><code>AddressBookParser#parseCommand(String)</code></a> such that both the proper command word and alias can be used to execute the same intended command.</p>
 </li>
 <li>
 <p>Add new tests for each of the aliases that you have added.</p>
@@ -1608,13 +1706,13 @@ Do take a look at <a href="#Design-Model">Section 2.4, &#8220;Model component&#8
 <div class="ulist">
 <ul>
 <li>
-<p>The <a href="https://github.com/CS2103-AY1819S1-T10-2/main/src/main/java/seedu/address/model/Model.java"><code>Model</code></a> and the <a href="https://github.com/CS2103-AY1819S1-T10-2/main/src/main/java/seedu/address/model/AddressBook.java"><code>AddressBook</code></a> API need to be updated.</p>
+<p>The <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/main/java/seedu/address/model/Model.java"><code>Model</code></a> and the <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/main/java/seedu/address/model/AddressBook.java"><code>AddressBook</code></a> API need to be updated.</p>
 </li>
 <li>
 <p>Think about how you can use SLAP to design the method. Where should we place the main logic of deleting tags?</p>
 </li>
 <li>
-<p>Find out which of the existing API methods in  <a href="https://github.com/CS2103-AY1819S1-T10-2/main/src/main/java/seedu/address/model/AddressBook.java"><code>AddressBook</code></a> and <a href="https://github.com/CS2103-AY1819S1-T10-2/main/src/main/java/seedu/address/model/person/Person.java"><code>Person</code></a> classes can be used to implement the tag removal logic. <a href="https://github.com/CS2103-AY1819S1-T10-2/main/src/main/java/seedu/address/model/AddressBook.java"><code>AddressBook</code></a> allows you to update a person, and <a href="https://github.com/CS2103-AY1819S1-T10-2/main/src/main/java/seedu/address/model/person/Person.java"><code>Person</code></a> allows you to update the tags.</p>
+<p>Find out which of the existing API methods in  <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/main/java/seedu/address/model/AddressBook.java"><code>AddressBook</code></a> and <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/main/java/seedu/address/model/person/Person.java"><code>Person</code></a> classes can be used to implement the tag removal logic. <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/main/java/seedu/address/model/AddressBook.java"><code>AddressBook</code></a> allows you to update a person, and <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/main/java/seedu/address/model/person/Person.java"><code>Person</code></a> allows you to update the tags.</p>
 </li>
 </ul>
 </div>
@@ -1624,10 +1722,10 @@ Do take a look at <a href="#Design-Model">Section 2.4, &#8220;Model component&#8
 <div class="ulist">
 <ul>
 <li>
-<p>Implement a <code>removeTag(Tag)</code> method in <a href="https://github.com/CS2103-AY1819S1-T10-2/main/src/main/java/seedu/address/model/AddressBook.java"><code>AddressBook</code></a>. Loop through each person, and remove the <code>tag</code> from each person.</p>
+<p>Implement a <code>removeTag(Tag)</code> method in <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/main/java/seedu/address/model/AddressBook.java"><code>AddressBook</code></a>. Loop through each person, and remove the <code>tag</code> from each person.</p>
 </li>
 <li>
-<p>Add a new API method <code>deleteTag(Tag)</code> in <a href="https://github.com/CS2103-AY1819S1-T10-2/main/src/main/java/seedu/address/model/ModelManager.java"><code>ModelManager</code></a>. Your <a href="https://github.com/CS2103-AY1819S1-T10-2/main/src/main/java/seedu/address/model/ModelManager.java"><code>ModelManager</code></a> should call <code>AddressBook#removeTag(Tag)</code>.</p>
+<p>Add a new API method <code>deleteTag(Tag)</code> in <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/main/java/seedu/address/model/ModelManager.java"><code>ModelManager</code></a>. Your <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/main/java/seedu/address/model/ModelManager.java"><code>ModelManager</code></a> should call <code>AddressBook#removeTag(Tag)</code>.</p>
 </li>
 <li>
 <p>Add new tests for each of the new public methods that you have added.</p>
@@ -1690,13 +1788,13 @@ Do take a look at <a href="#Design-Ui">Section 2.2, &#8220;UI component&#8221;</
 <div class="ulist">
 <ul>
 <li>
-<p>The tag labels are created inside <a href="https://github.com/CS2103-AY1819S1-T10-2/main/src/main/java/seedu/address/ui/PersonCard.java">the <code>PersonCard</code> constructor</a> (<code>new Label(tag.tagName)</code>). <a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/control/Label.html">JavaFX&#8217;s <code>Label</code> class</a> allows you to modify the style of each Label, such as changing its color.</p>
+<p>The tag labels are created inside <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/main/java/seedu/address/ui/PersonCard.java">the <code>PersonCard</code> constructor</a> (<code>new Label(tag.tagName)</code>). <a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/control/Label.html">JavaFX&#8217;s <code>Label</code> class</a> allows you to modify the style of each Label, such as changing its color.</p>
 </li>
 <li>
 <p>Use the .css attribute <code>-fx-background-color</code> to add a color.</p>
 </li>
 <li>
-<p>You may wish to modify <a href="https://github.com/CS2103-AY1819S1-T10-2/main/src/main/resources/view/DarkTheme.css"><code>DarkTheme.css</code></a> to include some pre-defined colors using css, especially if you have experience with web-based css.</p>
+<p>You may wish to modify <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/main/resources/view/DarkTheme.css"><code>DarkTheme.css</code></a> to include some pre-defined colors using css, especially if you have experience with web-based css.</p>
 </li>
 </ul>
 </div>
@@ -1727,7 +1825,7 @@ Do take a look at <a href="#Design-Ui">Section 2.2, &#8220;UI component&#8221;</
 </div>
 </li>
 <li>
-<p>Modify <a href="https://github.com/CS2103-AY1819S1-T10-2/main/src/main/java/seedu/address/commons/events/ui/NewResultAvailableEvent.java"><code>NewResultAvailableEvent</code></a> such that <a href="https://github.com/CS2103-AY1819S1-T10-2/main/src/main/java/seedu/address/ui/ResultDisplay.java"><code>ResultDisplay</code></a> can show a different style on error (currently it shows the same regardless of errors).</p>
+<p>Modify <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/main/java/seedu/address/commons/events/ui/NewResultAvailableEvent.java"><code>NewResultAvailableEvent</code></a> such that <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/main/java/seedu/address/ui/ResultDisplay.java"><code>ResultDisplay</code></a> can show a different style on error (currently it shows the same regardless of errors).</p>
 <div class="paragraph">
 <p><strong>Before</strong></p>
 </div>
@@ -1753,10 +1851,10 @@ Do take a look at <a href="#Design-Ui">Section 2.2, &#8220;UI component&#8221;</
 <div class="ulist">
 <ul>
 <li>
-<p><a href="https://github.com/CS2103-AY1819S1-T10-2/main/src/main/java/seedu/address/commons/events/ui/NewResultAvailableEvent.java"><code>NewResultAvailableEvent</code></a> is raised by <a href="https://github.com/CS2103-AY1819S1-T10-2/main/src/main/java/seedu/address/ui/CommandBox.java"><code>CommandBox</code></a> which also knows whether the result is a success or failure, and is caught by <a href="https://github.com/CS2103-AY1819S1-T10-2/main/src/main/java/seedu/address/ui/ResultDisplay.java"><code>ResultDisplay</code></a> which is where we want to change the style to.</p>
+<p><a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/main/java/seedu/address/commons/events/ui/NewResultAvailableEvent.java"><code>NewResultAvailableEvent</code></a> is raised by <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/main/java/seedu/address/ui/CommandBox.java"><code>CommandBox</code></a> which also knows whether the result is a success or failure, and is caught by <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/main/java/seedu/address/ui/ResultDisplay.java"><code>ResultDisplay</code></a> which is where we want to change the style to.</p>
 </li>
 <li>
-<p>Refer to <a href="https://github.com/CS2103-AY1819S1-T10-2/main/src/main/java/seedu/address/ui/CommandBox.java"><code>CommandBox</code></a> for an example on how to display an error.</p>
+<p>Refer to <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/main/java/seedu/address/ui/CommandBox.java"><code>CommandBox</code></a> for an example on how to display an error.</p>
 </li>
 </ul>
 </div>
@@ -1766,10 +1864,10 @@ Do take a look at <a href="#Design-Ui">Section 2.2, &#8220;UI component&#8221;</
 <div class="ulist">
 <ul>
 <li>
-<p>Modify <a href="https://github.com/CS2103-AY1819S1-T10-2/main/src/main/java/seedu/address/commons/events/ui/NewResultAvailableEvent.java"><code>NewResultAvailableEvent</code></a> 's constructor so that users of the event can indicate whether an error has occurred.</p>
+<p>Modify <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/main/java/seedu/address/commons/events/ui/NewResultAvailableEvent.java"><code>NewResultAvailableEvent</code></a> 's constructor so that users of the event can indicate whether an error has occurred.</p>
 </li>
 <li>
-<p>Modify <a href="https://github.com/CS2103-AY1819S1-T10-2/main/src/main/java/seedu/address/ui/ResultDisplay.java"><code>ResultDisplay#handleNewResultAvailableEvent(NewResultAvailableEvent)</code></a> to react to this event appropriately.</p>
+<p>Modify <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/main/java/seedu/address/ui/ResultDisplay.java"><code>ResultDisplay#handleNewResultAvailableEvent(NewResultAvailableEvent)</code></a> to react to this event appropriately.</p>
 </li>
 <li>
 <p>You can write two different kinds of tests to ensure that the functionality works:</p>
@@ -1779,7 +1877,7 @@ Do take a look at <a href="#Design-Ui">Section 2.2, &#8220;UI component&#8221;</
 <p>The unit tests for <code>ResultDisplay</code> can be modified to include verification of the color.</p>
 </li>
 <li>
-<p>The system tests <a href="https://github.com/CS2103-AY1819S1-T10-2/main/src/test/java/systemtests/AddressBookSystemTest.java"><code>AddressBookSystemTest#assertCommandBoxShowsDefaultStyle() and AddressBookSystemTest#assertCommandBoxShowsErrorStyle()</code></a> to include verification for <code>ResultDisplay</code> as well.</p>
+<p>The system tests <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/test/java/systemtests/AddressBookSystemTest.java"><code>AddressBookSystemTest#assertCommandBoxShowsDefaultStyle() and AddressBookSystemTest#assertCommandBoxShowsErrorStyle()</code></a> to include verification for <code>ResultDisplay</code> as well.</p>
 </li>
 </ul>
 </div>
@@ -1803,7 +1901,7 @@ Do take a look at <a href="#Design-Ui">Section 2.2, &#8220;UI component&#8221;</
 </div>
 </li>
 <li>
-<p>Modify the <a href="https://github.com/CS2103-AY1819S1-T10-2/main/src/main/java/seedu/address/ui/StatusBarFooter.java"><code>StatusBarFooter</code></a> to show the total number of people in the address book.</p>
+<p>Modify the <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/main/java/seedu/address/ui/StatusBarFooter.java"><code>StatusBarFooter</code></a> to show the total number of people in the address book.</p>
 <div class="paragraph">
 <p><strong>Before</strong></p>
 </div>
@@ -1829,10 +1927,10 @@ Do take a look at <a href="#Design-Ui">Section 2.2, &#8220;UI component&#8221;</
 <div class="ulist">
 <ul>
 <li>
-<p><a href="https://github.com/CS2103-AY1819S1-T10-2/main/src/main/resources/view/StatusBarFooter.fxml"><code>StatusBarFooter.fxml</code></a> will need a new <code>StatusBar</code>. Be sure to set the <code>GridPane.columnIndex</code> properly for each <code>StatusBar</code> to avoid misalignment!</p>
+<p><a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/main/resources/view/StatusBarFooter.fxml"><code>StatusBarFooter.fxml</code></a> will need a new <code>StatusBar</code>. Be sure to set the <code>GridPane.columnIndex</code> properly for each <code>StatusBar</code> to avoid misalignment!</p>
 </li>
 <li>
-<p><a href="https://github.com/CS2103-AY1819S1-T10-2/main/src/main/java/seedu/address/ui/StatusBarFooter.java"><code>StatusBarFooter</code></a> needs to initialize the status bar on application start, and to update it accordingly whenever the address book is updated.</p>
+<p><a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/main/java/seedu/address/ui/StatusBarFooter.java"><code>StatusBarFooter</code></a> needs to initialize the status bar on application start, and to update it accordingly whenever the address book is updated.</p>
 </li>
 </ul>
 </div>
@@ -1842,16 +1940,16 @@ Do take a look at <a href="#Design-Ui">Section 2.2, &#8220;UI component&#8221;</
 <div class="ulist">
 <ul>
 <li>
-<p>Modify the constructor of <a href="https://github.com/CS2103-AY1819S1-T10-2/main/src/main/java/seedu/address/ui/StatusBarFooter.java"><code>StatusBarFooter</code></a> to take in the number of persons when the application just started.</p>
+<p>Modify the constructor of <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/main/java/seedu/address/ui/StatusBarFooter.java"><code>StatusBarFooter</code></a> to take in the number of persons when the application just started.</p>
 </li>
 <li>
-<p>Use <a href="https://github.com/CS2103-AY1819S1-T10-2/main/src/main/java/seedu/address/ui/StatusBarFooter.java"><code>StatusBarFooter#handleAddressBookChangedEvent(AddressBookChangedEvent)</code></a> to update the number of persons whenever there are new changes to the addressbook.</p>
+<p>Use <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/main/java/seedu/address/ui/StatusBarFooter.java"><code>StatusBarFooter#handleAddressBookChangedEvent(AddressBookChangedEvent)</code></a> to update the number of persons whenever there are new changes to the addressbook.</p>
 </li>
 <li>
-<p>For tests, modify <a href="https://github.com/CS2103-AY1819S1-T10-2/main/src/test/java/guitests/guihandles/StatusBarFooterHandle.java"><code>StatusBarFooterHandle</code></a> by adding a state-saving functionality for the total number of people status, just like what we did for save location and sync status.</p>
+<p>For tests, modify <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/test/java/guitests/guihandles/StatusBarFooterHandle.java"><code>StatusBarFooterHandle</code></a> by adding a state-saving functionality for the total number of people status, just like what we did for save location and sync status.</p>
 </li>
 <li>
-<p>For system tests, modify <a href="https://github.com/CS2103-AY1819S1-T10-2/main/src/test/java/systemtests/AddressBookSystemTest.java"><code>AddressBookSystemTest</code></a> to also verify the new total number of persons status bar.</p>
+<p>For system tests, modify <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/test/java/systemtests/AddressBookSystemTest.java"><code>AddressBookSystemTest</code></a> to also verify the new total number of persons status bar.</p>
 </li>
 <li>
 <p>See this <a href="https://github.com/se-edu/addressbook-level4/pull/803">PR</a> for the full solution.</p>
@@ -1895,10 +1993,10 @@ Do take a look at <a href="#Design-Storage">Section 2.5, &#8220;Storage componen
 <div class="ulist">
 <ul>
 <li>
-<p>Add the API method in <a href="https://github.com/CS2103-AY1819S1-T10-2/main/src/main/java/seedu/address/storage/AddressBookStorage.java"><code>AddressBookStorage</code></a> interface.</p>
+<p>Add the API method in <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/main/java/seedu/address/storage/AddressBookStorage.java"><code>AddressBookStorage</code></a> interface.</p>
 </li>
 <li>
-<p>Implement the logic in <a href="https://github.com/CS2103-AY1819S1-T10-2/main/src/main/java/seedu/address/storage/StorageManager.java"><code>StorageManager</code></a> and <a href="https://github.com/CS2103-AY1819S1-T10-2/main/src/main/java/seedu/address/storage/XmlAddressBookStorage.java"><code>XmlAddressBookStorage</code></a> class.</p>
+<p>Implement the logic in <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/main/java/seedu/address/storage/StorageManager.java"><code>StorageManager</code></a> and <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/main/java/seedu/address/storage/XmlAddressBookStorage.java"><code>XmlAddressBookStorage</code></a> class.</p>
 </li>
 </ul>
 </div>
@@ -1964,10 +2062,10 @@ Removes the remark for the first person.</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Add a <code>RemarkCommand</code> that extends <a href="https://github.com/CS2103-AY1819S1-T10-2/main/src/main/java/seedu/address/logic/commands/Command.java"><code>Command</code></a>. Upon execution, it should just throw an <code>Exception</code>.</p>
+<p>Add a <code>RemarkCommand</code> that extends <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/main/java/seedu/address/logic/commands/Command.java"><code>Command</code></a>. Upon execution, it should just throw an <code>Exception</code>.</p>
 </li>
 <li>
-<p>Modify <a href="https://github.com/CS2103-AY1819S1-T10-2/main/src/main/java/seedu/address/logic/parser/AddressBookParser.java"><code>AddressBookParser</code></a> to accept a <code>RemarkCommand</code>.</p>
+<p>Modify <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/main/java/seedu/address/logic/parser/AddressBookParser.java"><code>AddressBookParser</code></a> to accept a <code>RemarkCommand</code>.</p>
 </li>
 </ol>
 </div>
@@ -1980,7 +2078,7 @@ Removes the remark for the first person.</p>
 <p>Add <code>RemarkCommandTest</code> that tests that <code>execute()</code> throws an Exception.</p>
 </li>
 <li>
-<p>Add new test method to <a href="https://github.com/CS2103-AY1819S1-T10-2/main/src/test/java/seedu/address/logic/parser/AddressBookParserTest.java"><code>AddressBookParserTest</code></a>, which tests that typing "remark" returns an instance of <code>RemarkCommand</code>.</p>
+<p>Add new test method to <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/test/java/seedu/address/logic/parser/AddressBookParserTest.java"><code>AddressBookParserTest</code></a>, which tests that typing "remark" returns an instance of <code>RemarkCommand</code>.</p>
 </li>
 </ol>
 </div>
@@ -2002,7 +2100,7 @@ Removes the remark for the first person.</p>
 <p>Add <code>RemarkCommandParser</code> that knows how to parse two arguments, one index and one with prefix 'r/'.</p>
 </li>
 <li>
-<p>Modify <a href="https://github.com/CS2103-AY1819S1-T10-2/main/src/main/java/seedu/address/logic/parser/AddressBookParser.java"><code>AddressBookParser</code></a> to use the newly implemented <code>RemarkCommandParser</code>.</p>
+<p>Modify <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/main/java/seedu/address/logic/parser/AddressBookParser.java"><code>AddressBookParser</code></a> to use the newly implemented <code>RemarkCommandParser</code>.</p>
 </li>
 </ol>
 </div>
@@ -2019,7 +2117,7 @@ Removes the remark for the first person.</p>
 for <code>RemarkCommandParser</code>.</p>
 </li>
 <li>
-<p>Modify <a href="https://github.com/CS2103-AY1819S1-T10-2/main/src/test/java/seedu/address/logic/parser/AddressBookParserTest.java"><code>AddressBookParserTest</code></a> to test that the correct command is generated according to the user input.</p>
+<p>Modify <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/test/java/seedu/address/logic/parser/AddressBookParserTest.java"><code>AddressBookParserTest</code></a> to test that the correct command is generated according to the user input.</p>
 </li>
 </ol>
 </div>
@@ -2027,7 +2125,7 @@ for <code>RemarkCommandParser</code>.</p>
 <div class="sect4">
 <h5 id="step-3-ui-add-a-placeholder-for-remark-in-code-personcard-code"><a class="link" href="#step-3-ui-add-a-placeholder-for-remark-in-code-personcard-code">[Step 3] Ui: Add a placeholder for remark in <code>PersonCard</code></a></h5>
 <div class="paragraph">
-<p>Let&#8217;s add a placeholder on all our <a href="https://github.com/CS2103-AY1819S1-T10-2/main/src/main/java/seedu/address/ui/PersonCard.java"><code>PersonCard</code></a> s to display a remark for each person later.</p>
+<p>Let&#8217;s add a placeholder on all our <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/main/java/seedu/address/ui/PersonCard.java"><code>PersonCard</code></a> s to display a remark for each person later.</p>
 </div>
 <div class="paragraph">
 <p><strong>Main:</strong></p>
@@ -2035,10 +2133,10 @@ for <code>RemarkCommandParser</code>.</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Add a <code>Label</code> with any random text inside <a href="https://github.com/CS2103-AY1819S1-T10-2/main/src/main/resources/view/PersonListCard.fxml"><code>PersonListCard.fxml</code></a>.</p>
+<p>Add a <code>Label</code> with any random text inside <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/main/resources/view/PersonListCard.fxml"><code>PersonListCard.fxml</code></a>.</p>
 </li>
 <li>
-<p>Add FXML annotation in <a href="https://github.com/CS2103-AY1819S1-T10-2/main/src/main/java/seedu/address/ui/PersonCard.java"><code>PersonCard</code></a> to tie the variable to the actual label.</p>
+<p>Add FXML annotation in <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/main/java/seedu/address/ui/PersonCard.java"><code>PersonCard</code></a> to tie the variable to the actual label.</p>
 </li>
 </ol>
 </div>
@@ -2048,7 +2146,7 @@ for <code>RemarkCommandParser</code>.</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Modify <a href="https://github.com/CS2103-AY1819S1-T10-2/main/src/test/java/guitests/guihandles/PersonCardHandle.java"><code>PersonCardHandle</code></a> so that future tests can read the contents of the remark label.</p>
+<p>Modify <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/test/java/guitests/guihandles/PersonCardHandle.java"><code>PersonCardHandle</code></a> so that future tests can read the contents of the remark label.</p>
 </li>
 </ol>
 </div>
@@ -2056,7 +2154,7 @@ for <code>RemarkCommandParser</code>.</p>
 <div class="sect4">
 <h5 id="step-4-model-add-code-remark-code-class"><a class="link" href="#step-4-model-add-code-remark-code-class">[Step 4] Model: Add <code>Remark</code> class</a></h5>
 <div class="paragraph">
-<p>We have to properly encapsulate the remark in our <a href="https://github.com/CS2103-AY1819S1-T10-2/main/src/main/java/seedu/address/model/person/Person.java"><code>Person</code></a> class. Instead of just using a <code>String</code>, let&#8217;s follow the conventional class structure that the codebase already uses by adding a <code>Remark</code> class.</p>
+<p>We have to properly encapsulate the remark in our <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/main/java/seedu/address/model/person/Person.java"><code>Person</code></a> class. Instead of just using a <code>String</code>, let&#8217;s follow the conventional class structure that the codebase already uses by adding a <code>Remark</code> class.</p>
 </div>
 <div class="paragraph">
 <p><strong>Main:</strong></p>
@@ -2064,7 +2162,7 @@ for <code>RemarkCommandParser</code>.</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Add <code>Remark</code> to model component (you can copy from <a href="https://github.com/CS2103-AY1819S1-T10-2/main/src/main/java/seedu/address/model/person/Address.java"><code>Address</code></a>, remove the regex and change the names accordingly).</p>
+<p>Add <code>Remark</code> to model component (you can copy from <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/main/java/seedu/address/model/person/Address.java"><code>Address</code></a>, remove the regex and change the names accordingly).</p>
 </li>
 <li>
 <p>Modify <code>RemarkCommand</code> to now take in a <code>Remark</code> instead of a <code>String</code>.</p>
@@ -2085,7 +2183,7 @@ for <code>RemarkCommandParser</code>.</p>
 <div class="sect4">
 <h5 id="step-5-model-modify-code-person-code-to-support-a-code-remark-code-field"><a class="link" href="#step-5-model-modify-code-person-code-to-support-a-code-remark-code-field">[Step 5] Model: Modify <code>Person</code> to support a <code>Remark</code> field</a></h5>
 <div class="paragraph">
-<p>Now we have the <code>Remark</code> class, we need to actually use it inside <a href="https://github.com/CS2103-AY1819S1-T10-2/main/src/main/java/seedu/address/model/person/Person.java"><code>Person</code></a>.</p>
+<p>Now we have the <code>Remark</code> class, we need to actually use it inside <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/main/java/seedu/address/model/person/Person.java"><code>Person</code></a>.</p>
 </div>
 <div class="paragraph">
 <p><strong>Main:</strong></p>
@@ -2093,13 +2191,13 @@ for <code>RemarkCommandParser</code>.</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Add <code>getRemark()</code> in <a href="https://github.com/CS2103-AY1819S1-T10-2/main/src/main/java/seedu/address/model/person/Person.java"><code>Person</code></a>.</p>
+<p>Add <code>getRemark()</code> in <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/main/java/seedu/address/model/person/Person.java"><code>Person</code></a>.</p>
 </li>
 <li>
 <p>You may assume that the user will not be able to use the <code>add</code> and <code>edit</code> commands to modify the remarks field (i.e. the person will be created without a remark).</p>
 </li>
 <li>
-<p>Modify <a href="https://github.com/CS2103-AY1819S1-T10-2/main/src/main/java/seedu/address/model/util/SampleDataUtil.java/"><code>SampleDataUtil</code></a> to add remarks for the sample data (delete your <code>addressBook.xml</code> so that the application will load the sample data when you launch it.)</p>
+<p>Modify <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/main/java/seedu/address/model/util/SampleDataUtil.java/"><code>SampleDataUtil</code></a> to add remarks for the sample data (delete your <code>addressBook.xml</code> so that the application will load the sample data when you launch it.)</p>
 </li>
 </ol>
 </div>
@@ -2107,7 +2205,7 @@ for <code>RemarkCommandParser</code>.</p>
 <div class="sect4">
 <h5 id="step-6-storage-add-code-remark-code-field-to-code-xmladaptedperson-code-class"><a class="link" href="#step-6-storage-add-code-remark-code-field-to-code-xmladaptedperson-code-class">[Step 6] Storage: Add <code>Remark</code> field to <code>XmlAdaptedPerson</code> class</a></h5>
 <div class="paragraph">
-<p>We now have <code>Remark</code> s for <code>Person</code> s, but they will be gone when we exit the application. Let&#8217;s modify <a href="https://github.com/CS2103-AY1819S1-T10-2/main/src/main/java/seedu/address/storage/XmlAdaptedPerson.java"><code>XmlAdaptedPerson</code></a> to include a <code>Remark</code> field so that it will be saved.</p>
+<p>We now have <code>Remark</code> s for <code>Person</code> s, but they will be gone when we exit the application. Let&#8217;s modify <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/main/java/seedu/address/storage/XmlAdaptedPerson.java"><code>XmlAdaptedPerson</code></a> to include a <code>Remark</code> field so that it will be saved.</p>
 </div>
 <div class="paragraph">
 <p><strong>Main:</strong></p>
@@ -2133,7 +2231,7 @@ for <code>RemarkCommandParser</code>.</p>
 <div class="sect4">
 <h5 id="step-6b-test-add-withremark-for-code-personbuilder-code"><a class="link" href="#step-6b-test-add-withremark-for-code-personbuilder-code">[Step 6b] Test: Add withRemark() for <code>PersonBuilder</code></a></h5>
 <div class="paragraph">
-<p>Since <code>Person</code> can now have a <code>Remark</code>, we should add a helper method to <a href="https://github.com/CS2103-AY1819S1-T10-2/main/src/test/java/seedu/address/testutil/PersonBuilder.java"><code>PersonBuilder</code></a>, so that users are able to create remarks when building a <a href="https://github.com/CS2103-AY1819S1-T10-2/main/src/main/java/seedu/address/model/person/Person.java"><code>Person</code></a>.</p>
+<p>Since <code>Person</code> can now have a <code>Remark</code>, we should add a helper method to <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/test/java/seedu/address/testutil/PersonBuilder.java"><code>PersonBuilder</code></a>, so that users are able to create remarks when building a <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/main/java/seedu/address/model/person/Person.java"><code>Person</code></a>.</p>
 </div>
 <div class="paragraph">
 <p><strong>Tests:</strong></p>
@@ -2141,10 +2239,10 @@ for <code>RemarkCommandParser</code>.</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Add a new method <code>withRemark()</code> for <a href="https://github.com/CS2103-AY1819S1-T10-2/main/src/test/java/seedu/address/testutil/PersonBuilder.java"><code>PersonBuilder</code></a>. This method will create a new <code>Remark</code> for the person that it is currently building.</p>
+<p>Add a new method <code>withRemark()</code> for <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/test/java/seedu/address/testutil/PersonBuilder.java"><code>PersonBuilder</code></a>. This method will create a new <code>Remark</code> for the person that it is currently building.</p>
 </li>
 <li>
-<p>Try and use the method on any sample <code>Person</code> in <a href="https://github.com/CS2103-AY1819S1-T10-2/main/src/test/java/seedu/address/testutil/TypicalPersons.java"><code>TypicalPersons</code></a>.</p>
+<p>Try and use the method on any sample <code>Person</code> in <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/test/java/seedu/address/testutil/TypicalPersons.java"><code>TypicalPersons</code></a>.</p>
 </li>
 </ol>
 </div>
@@ -2152,7 +2250,7 @@ for <code>RemarkCommandParser</code>.</p>
 <div class="sect4">
 <h5 id="step-7-ui-connect-code-remark-code-field-to-code-personcard-code"><a class="link" href="#step-7-ui-connect-code-remark-code-field-to-code-personcard-code">[Step 7] Ui: Connect <code>Remark</code> field to <code>PersonCard</code></a></h5>
 <div class="paragraph">
-<p>Our remark label in <a href="https://github.com/CS2103-AY1819S1-T10-2/main/src/main/java/seedu/address/ui/PersonCard.java"><code>PersonCard</code></a> is still a placeholder. Let&#8217;s bring it to life by binding it with the actual <code>remark</code> field.</p>
+<p>Our remark label in <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/main/java/seedu/address/ui/PersonCard.java"><code>PersonCard</code></a> is still a placeholder. Let&#8217;s bring it to life by binding it with the actual <code>remark</code> field.</p>
 </div>
 <div class="paragraph">
 <p><strong>Main:</strong></p>
@@ -2160,7 +2258,7 @@ for <code>RemarkCommandParser</code>.</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Modify <a href="https://github.com/CS2103-AY1819S1-T10-2/main/src/main/java/seedu/address/ui/PersonCard.java"><code>PersonCard</code></a>'s constructor to bind the <code>Remark</code> field to the <code>Person</code> 's remark.</p>
+<p>Modify <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/main/java/seedu/address/ui/PersonCard.java"><code>PersonCard</code></a>'s constructor to bind the <code>Remark</code> field to the <code>Person</code> 's remark.</p>
 </li>
 </ol>
 </div>
@@ -2170,7 +2268,7 @@ for <code>RemarkCommandParser</code>.</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Modify <a href="https://github.com/CS2103-AY1819S1-T10-2/main/src/test/java/seedu/address/ui/testutil/GuiTestAssert.java"><code>GuiTestAssert#assertCardDisplaysPerson(&#8230;&#8203;)</code></a> so that it will compare the now-functioning remark label.</p>
+<p>Modify <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/test/java/seedu/address/ui/testutil/GuiTestAssert.java"><code>GuiTestAssert#assertCardDisplaysPerson(&#8230;&#8203;)</code></a> so that it will compare the now-functioning remark label.</p>
 </li>
 </ol>
 </div>
@@ -2610,4 +2708,4 @@ Expected: Similar to previous.</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-11 07:06:35 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-11 08:43:20 UTC</div></div></div></body></html>
