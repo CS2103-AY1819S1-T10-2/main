@@ -739,12 +739,15 @@ e.g <code>remark n/John Doe p/84729292 r/Has chronic heart disease</code></p>
 <p><strong>Clear</strong> : <code>clear</code></p>
 </li>
 <li>
-<p><strong>Exit</strong> : <code>exit</code>
-=== Deleting a doctor: <code>delete-doctor</code>
-Deletes a doctor from the HealthBook by name and phone.<br>
-Format: <code>delete-doctor n/NAME [p/PHONE]</code></p>
+<p><strong>Exit</strong> : <code>exit</code></p>
 </li>
 </ul>
+</div>
+<div class="sect2">
+<h3 id="deleting-a-doctor-code-delete-doctor-code-2"><a class="link" href="#deleting-a-doctor-code-delete-doctor-code-2">Deleting a doctor: <code>delete-doctor</code></a></h3>
+<div class="paragraph">
+<p>Deletes a doctor from the HealthBook by name and phone.<br>
+Format: <code>delete-doctor n/NAME [p/PHONE]</code></p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -770,6 +773,7 @@ Parameter <code>p/PHONE</code> is only needed when there are duplicate names in 
 <p><code>delete-doctor n/Mary Jane p/94726274</code></p>
 </li>
 </ul>
+</div>
 </div>
 <div class="sect2">
 <h3 id="viewing-a-patient-code-view-patient-code-2"><a class="link" href="#viewing-a-patient-code-view-patient-code-2">Viewing a patient: <code>view-patient</code></a></h3>
@@ -1294,13 +1298,16 @@ e.g <code>remark n/John Doe p/84729292 r/Has chronic heart disease</code></p>
 <p><strong>Clear</strong> : <code>clear</code></p>
 </li>
 <li>
-<p><strong>Exit</strong> : <code>exit</code>
-=== Viewing a patient: <code>view-patient</code>
-Views a landing page of a patient on the HealthBook. This will display all information of the patient onto the HealthBook
-including their medical history, upcoming appointment and their past appointments.<br>
-Format: <code>view-patient n/NAME [p/PHONE]</code></p>
+<p><strong>Exit</strong> : <code>exit</code></p>
 </li>
 </ul>
+</div>
+<div class="sect2">
+<h3 id="viewing-a-patient-code-view-patient-code-3"><a class="link" href="#viewing-a-patient-code-view-patient-code-3">Viewing a patient: <code>view-patient</code></a></h3>
+<div class="paragraph">
+<p>Views a landing page of a patient on the HealthBook. This will display all information of the patient onto the HealthBook
+including their medical history, upcoming appointment and their past appointments.<br>
+Format: <code>view-patient n/NAME [p/PHONE]</code></p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1343,6 +1350,7 @@ Parameter <code>p/PHONE</code> is only needed when there are duplicate names in 
 <p><code>view-patient n/Jane Doe p/93726273</code></p>
 </li>
 </ul>
+</div>
 </div>
 <div class="sect2">
 <h3 id="viewing-a-doctor-code-view-doctor-code-3"><a class="link" href="#viewing-a-doctor-code-view-doctor-code-3">Viewing a doctor: <code>view-doctor</code></a></h3>
@@ -1817,12 +1825,15 @@ e.g <code>remark n/John Doe p/84729292 r/Has chronic heart disease</code></p>
 <p><strong>Clear</strong> : <code>clear</code></p>
 </li>
 <li>
-<p><strong>Exit</strong> : <code>exit</code>
-=== Viewing a doctor: <code>view-doctor</code>
-Views a landing page of a doctor on the HealthBook. This will display the doctor&#8217;s upcoming appointments.<br>
-Format: <code>view-doctor n/NAME [p/PHONE]</code></p>
+<p><strong>Exit</strong> : <code>exit</code></p>
 </li>
 </ul>
+</div>
+<div class="sect2">
+<h3 id="viewing-a-doctor-code-view-doctor-code-4"><a class="link" href="#viewing-a-doctor-code-view-doctor-code-4">Viewing a doctor: <code>view-doctor</code></a></h3>
+<div class="paragraph">
+<p>Views a landing page of a doctor on the HealthBook. This will display the doctor&#8217;s upcoming appointments.<br>
+Format: <code>view-doctor n/NAME [p/PHONE]</code></p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1865,6 +1876,7 @@ Parameter <code>p/PHONE</code> is only needed when there are duplicate names in 
 <p><code>view-doctor n/Mary Jane</code></p>
 </li>
 </ul>
+</div>
 </div>
 <div class="sect2">
 <h3 id="listing-all-patients-and-doctors-code-list-code-4"><a class="link" href="#listing-all-patients-and-doctors-code-list-code-4">Listing all patients and doctors : <code>list</code></a></h3>
@@ -2290,12 +2302,15 @@ e.g <code>remark n/John Doe p/84729292 r/Has chronic heart disease</code></p>
 <p><strong>Clear</strong> : <code>clear</code></p>
 </li>
 <li>
-<p><strong>Exit</strong> : <code>exit</code>
-=== Booking an appointment: <code>add-appointment</code>
-Book a doctor&#8217;s appointment for the patient. An ID of this appointment will be generated.<br>
-Format: <code>add-appointment np/PATIENT_NAME [pp/PATIENT_PHONE] nd/DOCTOR_NAME [pd/DOCTOR_PHONE] d/DATE_TIME</code></p>
+<p><strong>Exit</strong> : <code>exit</code></p>
 </li>
 </ul>
+</div>
+<div class="sect2">
+<h3 id="booking-an-appointment-code-add-appointment-code-5"><a class="link" href="#booking-an-appointment-code-add-appointment-code-5">Booking an appointment: <code>add-appointment</code></a></h3>
+<div class="paragraph">
+<p>Book a doctor&#8217;s appointment for the patient. An ID of this appointment will be generated.<br>
+Format: <code>add-appointment np/PATIENT_NAME [pp/PATIENT_PHONE] nd/DOCTOR_NAME [pd/DOCTOR_PHONE] d/DATE_TIME</code></p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -2332,6 +2347,7 @@ Parameter <code>p/PHONE</code> is only needed when there are duplicate names in 
 <p><code>add-appointment np/John Doe nd/Mary Jane d/2018-10-17 15:00</code></p>
 </li>
 </ul>
+</div>
 </div>
 <div class="sect2">
 <h3 id="deleting-an-appointment-code-delete-appointment-code-5"><a class="link" href="#deleting-an-appointment-code-delete-appointment-code-5">Deleting an appointment <code>delete-appointment</code></a></h3>
@@ -2693,12 +2709,15 @@ e.g <code>remark n/John Doe p/84729292 r/Has chronic heart disease</code></p>
 <p><strong>Clear</strong> : <code>clear</code></p>
 </li>
 <li>
-<p><strong>Exit</strong> : <code>exit</code>
-=== Deleting an appointment <code>delete-appointment</code>
-Delete a doctor&#8217;s appointment for the patient by its ID.<br>
-Format: <code>delete-appointment APPOINTMENT_ID</code></p>
+<p><strong>Exit</strong> : <code>exit</code></p>
 </li>
 </ul>
+</div>
+<div class="sect2">
+<h3 id="deleting-an-appointment-code-delete-appointment-code-6"><a class="link" href="#deleting-an-appointment-code-delete-appointment-code-6">Deleting an appointment <code>delete-appointment</code></a></h3>
+<div class="paragraph">
+<p>Delete a doctor&#8217;s appointment for the patient by its ID.<br>
+Format: <code>delete-appointment APPOINTMENT_ID</code></p>
 </div>
 <div class="paragraph">
 <p>Examples:</p>
@@ -2709,6 +2728,7 @@ Format: <code>delete-appointment APPOINTMENT_ID</code></p>
 <p><code>delete-appointment 10001</code></p>
 </li>
 </ul>
+</div>
 </div>
 <div class="sect2">
 <h3 id="completing-an-appointment-code-complete-appointment-code-6"><a class="link" href="#completing-an-appointment-code-complete-appointment-code-6">Completing an appointment <code>complete-appointment</code></a></h3>
@@ -3053,13 +3073,15 @@ e.g <code>remark n/John Doe p/84729292 r/Has chronic heart disease</code></p>
 <p><strong>Clear</strong> : <code>clear</code></p>
 </li>
 <li>
-<p><strong>Exit</strong> : <code>exit</code>
-=== Tab to autocomplete commands</p>
+<p><strong>Exit</strong> : <code>exit</code></p>
 </li>
 </ul>
 </div>
+<div class="sect2">
+<h3 id="tab-to-autocomplete-commands-7"><a class="link" href="#tab-to-autocomplete-commands-7">Tab to autocomplete commands</a></h3>
 <div class="paragraph">
 <p>In the command box, user can type the first few characters of the command and tab to autocomplete it.</p>
+</div>
 </div>
 <div class="sect2">
 <h3 id="remind-patient-on-their-upcoming-appointment-code-coming-soon-in-v2-0-code-7"><a class="link" href="#remind-patient-on-their-upcoming-appointment-code-coming-soon-in-v2-0-code-7">Remind patient on their upcoming appointment <code>[coming soon in v2.0]</code></a></h3>
@@ -3183,4 +3205,4 @@ e.g <code>remark n/John Doe p/84729292 r/Has chronic heart disease</code></p>
 </tbody>
 </table>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-11 06:15:19 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-11 06:16:23 UTC</div></div></div></body></html>
