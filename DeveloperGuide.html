@@ -365,6 +365,9 @@ The <code>.pptx</code> files used to create diagrams in this document can be fou
 <p><a href="#Design-Logic"><strong><code>Logic</code></strong></a>: The command executor.</p>
 </li>
 <li>
+<p><a href="#Design-Calendar"><strong><code>Calendar</code></strong></a>: The command executor.</p>
+</li>
+<li>
 <p><a href="#Design-Model"><strong><code>Model</code></strong></a>: Holds the data of the App in-memory.</p>
 </li>
 <li>
@@ -753,7 +756,7 @@ does not login to google, subsequent access to the HealthBook will be denied.</p
 </td>
 <td class="content">
 Login to Google Calendar is MANDATORY for registration of doctor. This is to facilitate the features that allows doctor
-to interact with the address book. If no login is done, the HealthBook will not proceed.
+to interact with the HealthBook. If no login is done, the HealthBook will not proceed.
 </td>
 </tr>
 </table>
@@ -1988,7 +1991,7 @@ Do take a look at <a href="#Design-Ui">Section 2.2, &#8220;UI component&#8221;</
 </div>
 </li>
 <li>
-<p>Modify the <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/main/java/seedu/address/ui/StatusBarFooter.java"><code>StatusBarFooter</code></a> to show the total number of people in the address book.</p>
+<p>Modify the <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/main/java/seedu/address/ui/StatusBarFooter.java"><code>StatusBarFooter</code></a> to show the total number of people in the HealthBook.</p>
 <div class="paragraph">
 <p><strong>Before</strong></p>
 </div>
@@ -2017,7 +2020,7 @@ Do take a look at <a href="#Design-Ui">Section 2.2, &#8220;UI component&#8221;</
 <p><a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/main/resources/view/StatusBarFooter.fxml"><code>StatusBarFooter.fxml</code></a> will need a new <code>StatusBar</code>. Be sure to set the <code>GridPane.columnIndex</code> properly for each <code>StatusBar</code> to avoid misalignment!</p>
 </li>
 <li>
-<p><a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/main/java/seedu/address/ui/StatusBarFooter.java"><code>StatusBarFooter</code></a> needs to initialize the status bar on application start, and to update it accordingly whenever the address book is updated.</p>
+<p><a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/main/java/seedu/address/ui/StatusBarFooter.java"><code>StatusBarFooter</code></a> needs to initialize the status bar on application start, and to update it accordingly whenever the HealthBook is updated.</p>
 </li>
 </ul>
 </div>
@@ -2795,4 +2798,4 @@ Expected: Similar to previous.</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-12 12:59:13 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-12 13:28:11 UTC</div></div></div></body></html>
