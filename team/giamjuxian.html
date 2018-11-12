@@ -10,8 +10,9 @@
 <h2 id="overview"><a class="link" href="#overview">Overview</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>HealthBook is for clinic receptionist who <strong>prefer to use a desktop app for managing doctors and patients information and appointments</strong>.
-It is <strong>optimized for receptionist who prefer to work with a Command Line Interface</strong> (CLI) while still having the benefits of a Graphical User Interface (GUI).</p>
+<p>HealthBook is for clinic receptionist who <strong>prefer to use a desktop app for managing doctors and patients information and
+appointments</strong>. It is <strong>optimized for receptionist who prefer to work with a Command Line Interface</strong> (CLI) while still
+having the benefits of a Graphical User Interface (GUI).</p>
 </div>
 </div>
 </div>
@@ -21,20 +22,44 @@ It is <strong>optimized for receptionist who prefer to work with a Command Line 
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Major enhancement</strong>: added the ability to add and delete appointments</p>
+<p><strong>Major enhancement</strong>: Added the command to register both doctors and patients</p>
 <div class="ulist">
 <ul>
 <li>
-<p>What it does: This allows the user to add new appointments and remove existing appointments that are done in the HealthBook.</p>
+<p>What it does: This allows the user to register new doctors and patients.</p>
 </li>
 <li>
-<p>Justification: This feature enables the user to keep track of the upcoming and past appointments in the HealthBook, and updates the doctors' calendars at the same time.</p>
+<p>Justification: This feature enables the user to add new doctors and patients into the HealthBook so that further
+commands can be called on them.</p>
 </li>
 <li>
-<p>Highlights: This enhancement is the primary purpose of the HealthBook. It required an in-depth analysis of design alternatives. The implementation too was challenging as it required integration with Google calendar commands.</p>
+<p>Highlights: This enhancement is required for all other commands of the HealthBook to work. It required an in-depth considerations
+of the data structure to store the information of patients and doctors. The implementation required a good understanding of
+what was already implemented in the previous versions and what is required for further implementations of subsequent commands
+and usage.</p>
+</li>
+</ul>
+</div>
 </li>
 <li>
-<p>Credits: <a href="http://github.com/giamjuxian">giamjuxian</a> for the Google calendar integration</p>
+<p><strong>Major enhancement</strong>: Integrated Google Calendar into HealthBook</p>
+<div class="ulist">
+<ul>
+<li>
+<p>What it does: This allows information on appointments to be presented to doctors in their Google calendar when appointments
+are added or deleted. They will be able to review the patient they are seeing as well as time of the appointment easily.</p>
+</li>
+<li>
+<p>Justification: This feature allows doctors to receive information about their upcoming appointments in a decentralized
+manner. Receptionists can use this integration to pass information to doctors that may not be in the clinic at that point in time.</p>
+</li>
+<li>
+<p>Highlights: This enhancement is required for good understand of both integration of Google&#8217;s API and other commands of
+the HealthBook. It required a extensive understanding of integration in Java and the Google&#8217;s API that is available to use.
+In addition, this implementation required a good analysis of how the Google Calendar can compliment the features in the HealthBook.</p>
+</li>
+<li>
+<p>** Credits: Google&#8217;s API</p>
 </li>
 </ul>
 </div>
