@@ -1,0 +1,1139 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Asciidoctor 1.5.6.1"><title>Flora Fong - Project Portfolio</title><link rel="stylesheet" href="../stylesheets/gh-pages.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="../stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="seedu-header"><nav class="navbar navbar-lg navbar-light bg-lighter"><div class="container"><a class="navbar-brand" href="https://se-edu.github.io/"><img src="../images/SeEduLogo.png" alt="SE-EDU"></a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level1">AB-1</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level2">AB-2</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level3">AB-3</a></li><li class="nav-item"><a class="nav-link active" href="../index.html">AB-4</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/collate">Collate</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/se-book">Book</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/learningresources">Resources</a></li></ul></div></nav></div><div id="site-header"><nav class="navbar navbar-light bg-light"><div class="container"><a class="navbar-brand" href="../index.html">AddressBook-Level4</a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="../UserGuide.html">User Guide</a></li><li class="nav-item"><a class="nav-link" href="../DeveloperGuide.html">Developer Guide</a></li><li class="nav-item"><a class="nav-link" href="../LearningOutcomes.html">LOs</a></li><li class="nav-item"><a class="nav-link active" href="../AboutUs.html">About Us</a></li><li class="nav-item"><a class="nav-link" href="../ContactUs.html">Contact Us</a></li><li class="navitem"><a class="nav-link" href="https://github.com/se-edu/addressbook-level4"><span class="fa fa-github fa-lg" aria-hidden="true"></span>&nbsp;View on GitHub</a></li></ul></div></nav></div><div id="header"><h1>Flora Fong - Project Portfolio</h1></div><div id="content"><div class="sect1">
+<h2 id="project-healthbook"><a class="link" href="#project-healthbook">PROJECT: HealthBook</a></h2>
+<div class="sectionbody">
+<hr>
+</div>
+</div>
+<div class="sect1">
+<h2 id="overview"><a class="link" href="#overview">Overview</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>HealthBook is for clinic receptionist who <strong>prefer to use a desktop app for managing doctors and patients information and appointments</strong>.
+It is <strong>optimized for receptionist who prefer to work with a Command Line Interface</strong> (CLI) while still having the benefits of a Graphical User Interface (GUI).</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="summary-of-contributions"><a class="link" href="#summary-of-contributions">Summary of contributions</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Major enhancement</strong>: added <strong>the ability to add/delete a prescription of an appointment</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>What it does: allows the user (receptionist) to add/delete a prescription to add more relevant details to the appointment.</p>
+</li>
+<li>
+<p>Justification: This allows the receptionist to keep a record of the prescription related to the appointment to have more information about the visit and patient&#8217;s conditions.
+It will also be useful in the event where patients forgets/is unsure about the prescription and this can be easily accessed.</p>
+</li>
+<li>
+<p>Highlights: This enhancement value adds to the HealthBook and is one of the major features of a medical appointment.
+It required an in-depth analysis of design alternatives. The implementation too was challenging as it required creating of new models and interaction with all components of the code.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Minor enhancement</strong>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Added remark command that adds an unconstrained information snippet to each contact for each person&#8217;s place card for a quick view of the person&#8217;s details.</p>
+</li>
+<li>
+<p>Made parameters non-case sensitive for all commands i.e <code>view-patient n/john doe</code> will view the patient <code>John Doe</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Code contributed</strong>: <a href="https://nus-cs2103-ay1819s1.github.io/cs2103-dashboard/#=undefined&amp;search=florafong97">Functional code</a></p>
+</li>
+<li>
+<p><strong>Other contributions</strong>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Implementation of new features:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Added <code>remark</code> command (Pull requests <a href="https://github.com/CS2103-AY1819S1-T10-2/main/pull/10">#10</a>)</p>
+</li>
+<li>
+<p>Added <code>add-prescription</code> command (Pull requests <a href="https://github.com/CS2103-AY1819S1-T10-2/main/pull/30">#30</a>)</p>
+</li>
+<li>
+<p>Added <code>delete-prescription</code> command (Pull requests <a href="https://github.com/CS2103-AY1819S1-T10-2/main/pull/55">#50</a>)</p>
+</li>
+<li>
+<p>Wrote test cases for new commands (Pull requests <a href="https://github.com/CS2103-AY1819S1-T10-2/main/pull/10">#10</a>, <a href="https://github.com/CS2103-AY1819S1-T10-2/main/pull/55">#55</a>, <a href="https://github.com/CS2103-AY1819S1-T10-2/main/pull/82">#82</a>, <a href="https://github.com/CS2103-AY1819S1-T10-2/main/pull/130">#30</a>)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Enhancements to existing features:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Removed case-sensitivity for parameters for all commands (Pull requests <a href="https://github.com/CS2103-AY1819S1-T10-2/main/pull/125">#125</a>)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Documentation:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Updated User Guide</p>
+</li>
+<li>
+<p>Updated Developers guide (Pull requests <a href="https://github.com/CS2103-AY1819S1-T10-2/main/pull/21">#21</a>, <a href="https://github.com/CS2103-AY1819S1-T10-2/main/pull/165">#165</a>)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Community:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Reported bugs and suggestions for other teams in the module (Example <a href="https://github.com/CS2103-AY1819S1-W12-4/main/issues/127">1</a>, <a href="https://github.com/CS2103-AY1819S1-W12-4/main/issues/135">2</a>, <a href="https://github.com/CS2103-AY1819S1-W12-4/main/issues/138">3</a>)</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><em>{you can add/remove categories in the list above}</em></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="contributions-to-the-user-guide"><a class="link" href="#contributions-to-the-user-guide">Contributions to the User Guide</a></h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Given below are sections I contributed to the User Guide. They showcase my ability to write documentation targeting end-users.</em></p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect2">
+<h3 id="adding-remark-to-patient-code-remark-code"><a class="link" href="#adding-remark-to-patient-code-remark-code">Adding remark to patient : <code>remark</code></a></h3>
+<div class="paragraph">
+<p>Adds a remark to the patient/doctor&#8217;s information. Input will override current remark. If input is empty, previous remark will be deleted.<br>
+Format: <code>remark n/NAME [p/PHONE] r/REMARK</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Parameter <code>p/PHONE</code> is only needed when there are duplicate names in HealthBook, so phone number is needed to differentiate them.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>remark n/John Doe r/Has chronic heart disease</code></p>
+</li>
+<li>
+<p><code>remark n/Amanda Jane p/84739294 r/</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="adding-prescriptions-to-a-patient-s-appointment-code-add-prescription-code"><a class="link" href="#adding-prescriptions-to-a-patient-s-appointment-code-add-prescription-code">Adding prescriptions to a patient&#8217;s appointment: <code>add-prescription</code></a></h3>
+<div class="paragraph">
+<p>Adds a prescription to the patient&#8217;s appointment with details of medicine name, dosage and number of times to consume
+in a day.<br>
+Format: <code>add-prescription APPOINTMENT_ID pn/MEDICINE_NAME pd/DOSAGE pc/CONSUMPTION_PER_DAY</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>add-prescription 10001 pn/Paracetamol pd/2 pc/3</code></p>
+</li>
+</ul>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Each prescription is tied to an appointment.</p>
+</li>
+<li>
+<p>There cannot be a duplicate of drug name for that particular appointment.</p>
+</li>
+<li>
+<p>Drug that patient is allergic to cannot be added</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+After adding the prescription, all commands that requires the prescription&#8217;s medicine name are non-case sensitive.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="deleting-prescriptions-of-a-patient-s-appointment-code-delete-prescription-code"><a class="link" href="#deleting-prescriptions-of-a-patient-s-appointment-code-delete-prescription-code">Deleting prescriptions of a patient&#8217;s appointment: <code>delete-prescription</code></a></h3>
+<div class="paragraph">
+<p>Delete a prescription of the patient&#8217;s appointment by appointment ID and medicine name.<br>
+Format: <code>delete-prescription APPOINTMENT_ID pn/MEDICINE_NAME</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>delete-prescription 10001 pn/Paracetamol</code></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="contributions-to-the-developer-guide"><a class="link" href="#contributions-to-the-developer-guide">Contributions to the Developer Guide</a></h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Given below are sections I contributed to the Developer Guide. They showcase my ability to write technical documentation and the technical depth of my contributions to the project.</em></p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect2">
+<h3 id="remark-feature"><a class="link" href="#remark-feature">Remark Feature</a></h3>
+<div class="sect3">
+<h4 id="current-implementation"><a class="link" href="#current-implementation">Current Implementation</a></h4>
+<div class="paragraph">
+<p>Remark command allows user to input any information into a Person object with no restrictions.
+If an input is empty, the previous existing remark is deleted. This command can only be called after person is created.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/RemarkCommandSequenceDiagram.png" alt="RemarkCommandSequenceDiagram" width="600">
+</div>
+<div class="title">Figure 1. Remark Command Sequence Diagram</div>
+</div>
+<div class="paragraph">
+<p>Step 1. The user types in <code>remark</code> in the command box followed by the parameters <code>appointment_id r/some remark</code></p>
+</div>
+<div class="paragraph">
+<p>Step 2. Upon hitting enter, the new remark will be visible in the Doctor/Patient&#8217;s contact. If input was empty, the
+previous remark will be deleted.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="add-prescription-feature"><a class="link" href="#add-prescription-feature">Add Prescription Feature</a></h3>
+<div class="sect3">
+<h4 id="current-implementation-2"><a class="link" href="#current-implementation-2">Current Implementation</a></h4>
+<div class="paragraph">
+<p>The add prescription feature is facilitated by <code>AddPrescriptionCommand</code> and <code>AddPrescriptionCommandParser</code>
+This command is implemented such that it is able to add a <code>Prescription</code> object for a specific <code>Appointment</code> specified by appointment id.</p>
+</div>
+<div class="paragraph">
+<p>Since <code>Appointment</code> currently only stores <code>Doctor</code> and <code>Patient</code> as <code>String</code>, thus appointment with the updated prescription will be updated for both
+<code>Doctor</code> and <code>Patient</code> only if the appointment is upcoming and only updated for <code>Patient</code> if the appointment is completed.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/AddPrescriptionSequenceDiagram.png" alt="AddPrescriptionSequenceDiagram" width="600">
+</div>
+<div class="title">Figure 2. Add Prescription Sequence Diagram</div>
+</div>
+<div class="paragraph">
+<p>Step 1. The user types <code>add-prescription</code> in the command box followed by the parameters <code>APPOINTMENT_ID pn/MEDICINE_NAME pd/DOSAGE pc/CONSUMPTION_PER_DAY</code>.</p>
+</div>
+<div class="paragraph">
+<p>Step 2. Upon hitting enter, the <code>Prescription</code> will be created and added to the <code>Appointment</code>.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Exception will be thrown if a medicine of the same name already exists in appointment regardless of dosage and consumption per day.<br>
+Exception will be thrown if medicine that the patient is allergic to is added to the appointment.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Prescription can be added to both upcoming and completed appointments
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="design-considerations"><a class="link" href="#design-considerations">Design considerations</a></h4>
+<div class="sect4">
+<h5 id="aspect-how-to-model-prescription"><a class="link" href="#aspect-how-to-model-prescription">Aspect: How to model Prescription</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Alternative 1 (Current choice) : prescription is modelled by a <code>Prescription</code> object with 3 attributes <code>medicineName</code> ,
+<code>dosage</code> and <code>consumptionPerDay</code></p>
+</li>
+<li>
+<p>Alternative 2 : <code>Prescription</code> object stores attributes <code>medicineName</code> as a <code>String</code> and <code>dosage</code>, <code>consumptionPerDay</code> as <code>int</code>.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="delete-prescription-feature"><a class="link" href="#delete-prescription-feature">Delete Prescription Feature</a></h3>
+<div class="sect3">
+<h4 id="current-implementation-3"><a class="link" href="#current-implementation-3">Current Implementation</a></h4>
+<div class="paragraph">
+<p>The delete prescription is facilitated by <code>DeletePrescriptionCommand</code> and <code>DeletePrescriptionCommandParser</code>.
+This command is implemented such that it is able to delete a <code>Prescription object for a specific `Appointment</code> specified by appointment id.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/DeletePrescriptionSequenceDiagram.png" alt="DeletePrescriptionSequenceDiagram" width="600">
+</div>
+<div class="title">Figure 3. Delete Prescription Sequence Diagram</div>
+</div>
+<div class="paragraph">
+<p>Step 1. The user types <code>delete-prescription</code> in the command box followed by the parameters <code>APPOINTMENT_ID pn/MEDICINE_NAME</code>.</p>
+</div>
+<div class="paragraph">
+<p>Step 2. Upon hitting enter, the <code>Prescription</code> will be deleted from the <code>Appointment</code>.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Exception will be thrown if medicine to be deleted does not exist in appointment.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Prescription can be deleted from both upcoming and completed appointments
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="use-cases"><a class="link" href="#use-cases">Appendix A: Use Cases</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>(For all use cases below, the <strong>System</strong> is the <code>HealthBook</code> and the <strong>Actor</strong> is the <code>receptionist</code>, unless specified otherwise)</p>
+</div>
+<h3 id="use-case-register-doctor" class="discrete">Use case: Register Doctor</h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User requests to register a Doctor into the HealthBook</p>
+</li>
+<li>
+<p>User enters relevant details specified by command</p>
+</li>
+<li>
+<p>HealthBook brings user to google log in page</p>
+</li>
+<li>
+<p>User enters google login details</p>
+</li>
+<li>
+<p>User closes google page and reopens HealthBook</p>
+</li>
+<li>
+<p>HealthBook registers the doctor.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="paragraph">
+<p>2a. User enters wrong format for command.</p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>2a1. Healthbook shows an error message.</p>
+<div class="paragraph">
+<p>Use case resumes at step 2</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>2b. User enters a duplicate persons.</p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>2b1. Healthbook shows an error message.</p>
+<div class="paragraph">
+<p>Use case resumes at step 2</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>3a. User closes google page without logging in.</p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>3a1. Healthbook will become unresponsive</p>
+</li>
+<li>
+<p>3a2. User closes and reopens Healthbook</p>
+<div class="paragraph">
+<p>Use case restarts from step 1</p>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="use-case-register-patient" class="discrete">Use case: Register Patient</h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User requests to register a Patient into the HealthBook</p>
+</li>
+<li>
+<p>User enters relevant details specified by command</p>
+</li>
+<li>
+<p>HealthBook registers the patient.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="paragraph">
+<p>2a. User enters wrong format for command.</p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>2a1. Healthbook shows an error message.</p>
+<div class="paragraph">
+<p>Use case resumes at step 2</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>2b. User enters a duplicate persons.</p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>2b1. Healthbook shows an error message.</p>
+<div class="paragraph">
+<p>Use case resumes at step 2</p>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="use-case-delete-doctor-patient" class="discrete">Use case: Delete Doctor/Patient</h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User requests to list persons</p>
+</li>
+<li>
+<p>HealthBook shows a list of persons</p>
+</li>
+<li>
+<p>User requests to delete a specific person in the list</p>
+</li>
+<li>
+<p>HealthBook deletes the person</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>2a.   The list is empty.</p>
+<div class="paragraph">
+<p>Use case ends</p>
+</div>
+</li>
+<li>
+<p>3a.   User enters a name that belongs to multiple contacts with different phone numbers</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>3a1. Healthbook shows an error message that prompts user to enter phone parameter.</p>
+<div class="paragraph">
+<p>Use case resumes at step 2</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>3b.   User enters an invalid name and/or phone</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>3b1. Healthbook shows an error message.</p>
+<div class="paragraph">
+<p>Use case resumes at step 2</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="use-case-view-person" class="discrete">Use case: View person</h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User requests to list persons</p>
+</li>
+<li>
+<p>HealthBook shows a list of persons</p>
+</li>
+<li>
+<p>User requests to view a specific person in list</p>
+</li>
+<li>
+<p>HealthBook shows the person</p>
+<div class="paragraph">
+<p>Use case ends</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>2a.   The list is empty.</p>
+<div class="paragraph">
+<p>Use case ends</p>
+</div>
+</li>
+<li>
+<p>3a.   User enters a name that belongs to multiple contacts with different phone numbers</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>3a1. Healthbook shows an error message that prompts user to enter phone parameter.</p>
+<div class="paragraph">
+<p>Use case resumes at step 2</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>3b.   User enters an invalid name and/or phone</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>3b1. Healthbook shows an error message.</p>
+<div class="paragraph">
+<p>Use case resumes at step 2</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="use-case-list-persons" class="discrete">Use case: List persons</h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User requests to list persons</p>
+</li>
+<li>
+<p>HealthBook shows list of persons.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<h3 id="use-case-filter-doctor-patient" class="discrete">Use case: Filter Doctor/Patient</h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User requests to filter doctors/patients</p>
+</li>
+<li>
+<p>HealthBook shows list of doctors/patients</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<h3 id="use-case-add-appointment" class="discrete">Use case: Add Appointment</h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User requests to list persons</p>
+</li>
+<li>
+<p>HealthBook shows a list of persons</p>
+</li>
+<li>
+<p>User requests to add an appointment to the HealthBook for a specific Doctor and Patient</p>
+</li>
+<li>
+<p>HealthBook adds the person</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>3a.   The given Doctor and/or Patient name is has a duplicate contact with a different phone number.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>3a1. HealthBook shows an error and prompts user to input a phone number to differentiate.</p>
+<div class="paragraph">
+<p>Use case resumes at step 2</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>3b.   User enters an invalid name and/or phone</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>3b1. Healthbook shows an error message.</p>
+<div class="paragraph">
+<p>Use case resumes at step 2</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="use-case-delete-appointment" class="discrete">Use case: Delete Appointment</h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User requests to list persons</p>
+</li>
+<li>
+<p>AddressBook shows a list of persons</p>
+</li>
+<li>
+<p>User requests to delete an appointment in the HealthBook for a specific appointmentId</p>
+</li>
+<li>
+<p>HealthBook deletes the appointment</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>3a.   The given Id is invalid.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>3a1. HealthBook shows an error message.</p>
+<div class="paragraph">
+<p>Use case resumes at step 2.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="use-case-complete-appointment" class="discrete">Use case: Complete Appointment</h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User requests to list persons</p>
+</li>
+<li>
+<p>HealthBook shows a list of persons</p>
+</li>
+<li>
+<p>User requests to complete a specific appointment in the list</p>
+</li>
+<li>
+<p>HealthBook completes the appointment</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>2a. The list is empty.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>3a.   The given Id is invalid.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>3a1. HealthBook shows an error message.</p>
+<div class="paragraph">
+<p>Use case resumes at step 2.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="use-case-add-prescription" class="discrete">Use case: Add Prescription</h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User requests to list persons</p>
+</li>
+<li>
+<p>HealthBook shows a list of persons</p>
+</li>
+<li>
+<p>User requests to add a specific prescription to a specific appointment in the list</p>
+</li>
+<li>
+<p>HealthBook adds the prescription</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>3a.   The given Id is invalid.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>3a1. HealthBook shows an error message.</p>
+<div class="paragraph">
+<p>Use case resumes at step 2.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>3b. The given prescription&#8217;s medicine name already exists in HealthBook</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>3b1. HealthBook shows an error message.</p>
+<div class="paragraph">
+<p>Use case resumes at step 2.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>3c. The given patient is allergic to the given prescription&#8217;s medicine name.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>3c1. HealthBook shows an error message.</p>
+<div class="paragraph">
+<p>Use case resumes at step 2.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="use-case-delete-prescription" class="discrete">Use case: Delete Prescription</h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User requests to list persons</p>
+</li>
+<li>
+<p>HealthBook shows a list of persons</p>
+</li>
+<li>
+<p>User requests to delete a specific prescription from a specific appointment</p>
+</li>
+<li>
+<p>HealthBook deletes the prescription</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>2a. The list is empty.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+<li>
+<p>3a. The given id is invalid.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>3a1. HealthBook shows an error message.</p>
+<div class="paragraph">
+<p>Use case resumes at step 2.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>3b. The given prescription is invalid.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>3b1. HealthBook shows an error message.</p>
+<div class="paragraph">
+<p>Use case resumes at step 2.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="use-case-add-medical-history" class="discrete">Use case: Add Medical History</h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User requests to list persons/filter-patients</p>
+</li>
+<li>
+<p>HealthBook shows a list of persons/patients</p>
+</li>
+<li>
+<p>User requests to add medical history to a specific person in the list</p>
+</li>
+<li>
+<p>HealthBook adds the medical history of the patient.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>3a.   The given Patient name has a duplicate contact with a different phone number.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>3a1. HealthBook shows an error and prompts user to input a phone number to differentiate.</p>
+<div class="paragraph">
+<p>Use case resumes at step 2.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>3b.   User enters an invalid name and/or phone</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>3b1. Healthbook shows an error message.</p>
+<div class="paragraph">
+<p>Use case resumes at step 2.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>3c.   User enters a duplicate allergy/condition</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>3c1. HealthBook shows an error message.</p>
+<div class="paragraph">
+<p>Use case resumes at step 2.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="use-case-delete-medical-history" class="discrete">Use case: Delete Medical History</h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User requests to list persons/filter-patients</p>
+</li>
+<li>
+<p>HealthBook shows a list of persons/patients</p>
+</li>
+<li>
+<p>User requests to delete medical history of a specific person in the list</p>
+</li>
+<li>
+<p>HealthBook deletes the medical history of the patient.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>3a.   The given Patient name has a duplicate contact with a different phone number.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>3a1. HealthBook shows an error and prompts user to input a phone number to differentiate.</p>
+<div class="paragraph">
+<p>Use case resumes at step 2.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>3b.   User enters an invalid name and/or phone</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>3b1. Healthbook shows an error message.</p>
+<div class="paragraph">
+<p>Use case resumes at step 2.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>3c.   User enters an invalid allergy/ condition</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>3c1. HealthBook shows an error message.</p>
+<div class="paragraph">
+<p>Use case resumes at step 2.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="use-case-remark-person" class="discrete">Use case: Remark person</h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User requests to list persons</p>
+</li>
+<li>
+<p>HealthBook shows a list of persons</p>
+</li>
+<li>
+<p>User requests to add/delete a remark to a specific person in the list</p>
+</li>
+<li>
+<p>HealthBook adds/deletes the remark.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>3a.   The given Person name has a duplicate contact with a different phone number.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>3a1. HealthBook shows an error and prompts user to input a phone number to differentiate.</p>
+<div class="paragraph">
+<p>Use case resumes at step 2.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>3b.   User enters an invalid name and/or phone</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>3b1. Healthbook shows an error message.</p>
+<div class="paragraph">
+<p>Use case resumes at step 2.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-12 14:46:16 UTC</div></div></div></body></html>

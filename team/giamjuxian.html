@@ -83,22 +83,6 @@ In addition, this implementation required a good analysis of how the Google Cale
 </div>
 </li>
 <li>
-<p><strong>Minor enhancement</strong>:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Implemented patient and doctor models into HealthBook</p>
-</li>
-<li>
-<p>Modified storage of patient and doctor so that their information can be extracted and saved accordingly.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><strong>Code contributed</strong>: <a href="https://nus-cs2103-ay1819s1.github.io/cs2103-dashboard/#=undefined&amp;search=giamjuxian" class="bare">https://nus-cs2103-ay1819s1.github.io/cs2103-dashboard/#=undefined&amp;search=giamjuxian</a> [Functional code]</p>
-</li>
-<li>
 <p><strong>Other contributions</strong>:</p>
 <div class="ulist">
 <ul>
@@ -121,7 +105,7 @@ In addition, this implementation required a good analysis of how the Google Cale
 <ul>
 <li>
 <p>Added <code>register-patient</code> and <code>register-doctor</code> commands
-(Pull requests <a href="https://github.com/CS2103-AY1819S1-T10-2/main/pull/29">#29</a>)</p>
+(Pull requests <a href="https://github.com/CS2103-AY1819S1-T10-2/main/pull/15">#15</a>)</p>
 </li>
 <li>
 <p>Added <code>complete-appointment</code> command
@@ -138,7 +122,8 @@ In addition, this implementation required a good analysis of how the Google Cale
 </li>
 <li>
 <p>Wrote test cases for new commands
-(Pull requests <a href="https://github.com/CS2103-AY1819S1-T10-2/main/pull/56">#56</a>)</p>
+(Pull requests <a href="https://github.com/CS2103-AY1819S1-T10-2/main/pull/56">#56</a>,
+<a href="https://github.com/CS2103-AY1819S1-T10-2/main/pull/59">#59</a>)</p>
 </li>
 <li>
 <p>Wrote test cases for changes in models
@@ -173,7 +158,7 @@ In addition, this implementation required a good analysis of how the Google Cale
 <li>
 <p>Updated User Guide
 (Pull requests <a href="https://github.com/CS2103-AY1819S1-T10-2/main/pull/131">#131</a>,
-<a href="https://github.com/CS2103-AY1819S1-T10-2/main/pull/80">#80</a>)</p>
+<a href="https://github.com/CS2103-AY1819S1-T10-2/main/pull/5">#5</a>)</p>
 </li>
 <li>
 <p>Updated Developer Guide
@@ -235,6 +220,18 @@ Format: <code>register-patient n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS</code></p
 </li>
 </ul>
 </div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+After registering the patient, all commands that requires the patient&#8217;s name are non-case sensitive for convenience.
+</td>
+</tr>
+</table>
+</div>
 </div>
 <div class="sect2">
 <h3 id="registering-a-doctor-code-register-doctor-code"><a class="link" href="#registering-a-doctor-code-register-doctor-code">Registering a doctor: <code>register-doctor</code></a></h3>
@@ -265,6 +262,18 @@ Please ensure login is done before proceeding back to the HealthBook.
 </li>
 </ul>
 </div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+After registering the doctor, all commands that requires the doctor&#8217;s name are non-case sensitive.
+</td>
+</tr>
+</table>
+</div>
 </div>
 </div>
 </div>
@@ -282,50 +291,12 @@ Please ensure login is done before proceeding back to the HealthBook.
 </tbody>
 </table>
 <div class="sect2">
-<h3 id="Design-Logic"><a class="link" href="#Design-Logic">Logic component</a></h3>
-<div id="fig-LogicClassDiagram" class="imageblock">
-<div class="content">
-<img src="../images/LogicComponentClassDiagram.png" alt="LogicComponentClassDiagram" width="800">
-</div>
-<div class="title">Figure 1. Structure of the Logic Component</div>
-</div>
-<div class="paragraph">
-<p><strong>API</strong> :
-<a href="{repoURL}/src/main/java/seedu/address/logic/Logic.java"><code>Logic.java</code></a></p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p><code>Logic</code> uses the <code>HealthBookParser</code> class to parse the user command.</p>
-</li>
-<li>
-<p>This results in a <code>Command</code> object which is executed by the <code>LogicManager</code>.</p>
-</li>
-<li>
-<p>The command execution can affect the <code>Model</code> (e.g. adding a person) and/or raise events.</p>
-</li>
-<li>
-<p>The result of the command execution is encapsulated as a <code>CommandResult</code> object which is passed back to the <code>Ui</code>.</p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p>Given below is the Sequence Diagram for interactions within the <code>Logic</code> component for the <code>execute("delete-patient n/John Doe")</code> API call.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/DeletePersonSdForLogic.png" alt="DeletePersonSdForLogic" width="800">
-</div>
-<div class="title">Figure 2. Interactions Inside the Logic Component for the <code>delete-patient n/John Doe</code> Command</div>
-</div>
-</div>
-<div class="sect2">
 <h3 id="Design-Calendar"><a class="link" href="#Design-Calendar">Calendar component</a></h3>
 <div id="fig-CalendarClassDiagram" class="imageblock">
 <div class="content">
 <img src="../images/CalendarComponentClassDiagram.png" alt="CalendarComponentClassDiagram" width="300">
 </div>
-<div class="title">Figure 3. Structure of the Calendar Component</div>
+<div class="title">Figure 1. Structure of the Calendar Component</div>
 </div>
 <div class="paragraph">
 <p><strong>API</strong> :
@@ -351,7 +322,7 @@ Please ensure login is done before proceeding back to the HealthBook.
 <div class="content">
 <img src="../images/ModelComponentClassDiagram.png" alt="ModelComponentClassDiagram" width="800">
 </div>
-<div class="title">Figure 4. Structure of the Model Component</div>
+<div class="title">Figure 2. Structure of the Model Component</div>
 </div>
 <div class="paragraph">
 <p><strong>API</strong> : <a href="{repoURL}/src/main/java/seedu/address/model/Model.java"><code>Model.java</code></a></p>
@@ -382,7 +353,7 @@ Please ensure login is done before proceeding back to the HealthBook.
 <div class="content">
 <img src="../images/StorageComponentClassDiagram.png" alt="StorageComponentClassDiagram" width="800">
 </div>
-<div class="title">Figure 5. Structure of the Storage Component</div>
+<div class="title">Figure 3. Structure of the Storage Component</div>
 </div>
 <div class="paragraph">
 <p><strong>API</strong> : <a href="{repoURL}/src/main/java/seedu/address/storage/Storage.java"><code>Storage.java</code></a></p>
@@ -414,7 +385,7 @@ automatically tagged as <code>Patient</code>.</p>
 <div class="content">
 <img src="../images/RegisterPatientSequenceDiagram.png" alt="RegisterPatientSequenceDiagram" width="600">
 </div>
-<div class="title">Figure 6. Register Patient Sequence Diagram</div>
+<div class="title">Figure 4. Register Patient Sequence Diagram</div>
 </div>
 <div class="paragraph">
 <p>Patient model contains a List of upcoming appointment and ArrayList of past appointments. We implemented
@@ -507,7 +478,7 @@ automatically tagged as <code>Doctor</code>.</p>
 <div class="content">
 <img src="../images/RegisterDoctorSequenceDiagram.png" alt="RegisterDoctorSequenceDiagram" width="600">
 </div>
-<div class="title">Figure 7. Register Doctor Sequence Diagram</div>
+<div class="title">Figure 5. Register Doctor Sequence Diagram</div>
 </div>
 <div class="paragraph">
 <p>Step 1. The user types in <code>register-doctor</code> in the command box followed by the parameters <code>n/John Doe p/91234567 e/test@test.com a/123 Clementi Road</code></p>
@@ -531,7 +502,7 @@ Command Exception will be thrown if any of the information is missing or invalid
 <div class="content">
 <img src="../images/GoogleLoginPage.png" alt="GoogleLoginPage" width="600">
 </div>
-<div class="title">Figure 8. Google Login Page</div>
+<div class="title">Figure 6. Google Login Page</div>
 </div>
 <div class="paragraph">
 <p>Step 3. Simultaneously, the <code>Doctor</code> will be created and added to the storage of the system. In the case that the user
@@ -643,4 +614,4 @@ prompt the user to login.</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-12 14:00:00 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-12 14:46:16 UTC</div></div></div></body></html>

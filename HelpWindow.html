@@ -36,8 +36,9 @@
 <li><a href="#exiting-the-program-code-exit-code">3.21. Exiting the program : <code>exit</code></a></li>
 <li><a href="#saving-the-data">3.22. Saving the data</a></li>
 <li><a href="#tab-to-autocomplete-commands">3.23. Tab to autocomplete commands</a></li>
-<li><a href="#remind-patient-on-their-upcoming-appointment-code-coming-soon-in-v2-0-code">3.24. Remind patient on their upcoming appointment <code>[coming soon in v2.0]</code></a></li>
-<li><a href="#remind-all-patient-on-their-upcoming-appointment-code-coming-soon-in-v2-0-code">3.25. Remind all patient on their upcoming appointment <code>[coming soon in v2.0]</code></a></li>
+<li><a href="#non-case-sensitive-parameters">3.24. Non case sensitive parameters</a></li>
+<li><a href="#remind-patient-on-their-upcoming-appointment-code-coming-soon-in-v2-0-code">3.25. Remind patient on their upcoming appointment <code>[coming soon in v2.0]</code></a></li>
+<li><a href="#remind-all-patient-on-their-upcoming-appointment-code-coming-soon-in-v2-0-code">3.26. Remind all patient on their upcoming appointment <code>[coming soon in v2.0]</code></a></li>
 </ul>
 </li>
 <li><a href="#faq">4. FAQ</a></li>
@@ -153,6 +154,18 @@ Format: <code>register-patient n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS</code></p
 </li>
 </ul>
 </div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+After registering the patient, all commands that requires the patient&#8217;s name are non-case sensitive for convenience.
+</td>
+</tr>
+</table>
+</div>
 </div>
 <div class="sect2">
 <h3 id="registering-a-doctor-code-register-doctor-code"><a class="link" href="#registering-a-doctor-code-register-doctor-code">3.3. Registering a doctor: <code>register-doctor</code></a></h3>
@@ -182,6 +195,18 @@ Please ensure login is done before proceeding back to the HealthBook.
 <p><code>register-doctor n/Mary Jane p/98765432 e/maryj@example.com a/John street, block 123, #01-01</code></p>
 </li>
 </ul>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+After registering the doctor, all commands that requires the doctor&#8217;s name are non-case sensitive.
+</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect2">
@@ -516,6 +541,18 @@ Format: <code>add-prescription APPOINTMENT_ID pn/MEDICINE_NAME pd/DOSAGE pc/CONS
 </div>
 </div>
 </div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+After adding the prescription, all commands that requires the prescription&#8217;s medicine name are non-case sensitive.
+</td>
+</tr>
+</table>
+</div>
 </div>
 <div class="sect2">
 <h3 id="deleting-prescriptions-of-a-patient-s-appointment-code-delete-prescription-code"><a class="link" href="#deleting-prescriptions-of-a-patient-s-appointment-code-delete-prescription-code">3.15. Deleting prescriptions of a patient&#8217;s appointment: <code>delete-prescription</code></a></h3>
@@ -579,14 +616,23 @@ Allergies and conditions should only contain alphanumeric characters and spaces,
 <p>Duplicated allergy or condition is not allowed.</p>
 </li>
 <li>
-<p>Allergy and condition is NOT case sensitive (<code>EGG</code> and <code>egg</code> are treated as the same).</p>
-</li>
-<li>
 <p>Allergies and conditions should only contain alphanumeric characters and spaces, and they should not be blank.</p>
 </li>
 </ul>
 </div>
 </div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+After adding the condition/allergy, all commands that requires the allergy/condition are non-case sensitive.
+</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect2">
@@ -713,14 +759,20 @@ There is no need to save manually.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="remind-patient-on-their-upcoming-appointment-code-coming-soon-in-v2-0-code"><a class="link" href="#remind-patient-on-their-upcoming-appointment-code-coming-soon-in-v2-0-code">3.24. Remind patient on their upcoming appointment <code>[coming soon in v2.0]</code></a></h3>
+<h3 id="non-case-sensitive-parameters"><a class="link" href="#non-case-sensitive-parameters">3.24. Non case sensitive parameters</a></h3>
+<div class="paragraph">
+<p>All alphanumeric parameters for commands are not case sensitive except for <code>Address</code> and <code>Email</code>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="remind-patient-on-their-upcoming-appointment-code-coming-soon-in-v2-0-code"><a class="link" href="#remind-patient-on-their-upcoming-appointment-code-coming-soon-in-v2-0-code">3.25. Remind patient on their upcoming appointment <code>[coming soon in v2.0]</code></a></h3>
 <div class="paragraph">
 <p>Remind a patient on their upcoming appointment. This will send a message to the patient via an external platform to inform
 them about their appointment.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="remind-all-patient-on-their-upcoming-appointment-code-coming-soon-in-v2-0-code"><a class="link" href="#remind-all-patient-on-their-upcoming-appointment-code-coming-soon-in-v2-0-code">3.25. Remind all patient on their upcoming appointment <code>[coming soon in v2.0]</code></a></h3>
+<h3 id="remind-all-patient-on-their-upcoming-appointment-code-coming-soon-in-v2-0-code"><a class="link" href="#remind-all-patient-on-their-upcoming-appointment-code-coming-soon-in-v2-0-code">3.26. Remind all patient on their upcoming appointment <code>[coming soon in v2.0]</code></a></h3>
 <div class="paragraph">
 <p>Remind all patient will upcoming appointment this week. This will send a message to the patient via an external platform to
 inform them about their upcoming appointment.</p>
@@ -819,4 +871,4 @@ e.g <code>remark n/John Doe p/84729292 r/Has chronic heart disease</code></p>
 </ul>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-12 14:00:00 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-12 14:46:16 UTC</div></div></div></body></html>
