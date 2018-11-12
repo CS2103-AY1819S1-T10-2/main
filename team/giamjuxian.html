@@ -225,18 +225,6 @@ In addition, this implementation required a good analysis of how the Google Cale
 <p>Registers a patient to the HealthBook. Patient is automatically tagged as a "Patient".<br>
 Format: <code>register-patient n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS</code></p>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Patient and doctors should be mutually exclusive. Doctors cannot be patients and likewise, patients cannot be doctors.
-</td>
-</tr>
-</table>
-</div>
 <div class="paragraph">
 <p>Examples:</p>
 </div>
@@ -253,18 +241,6 @@ Patient and doctors should be mutually exclusive. Doctors cannot be patients and
 <div class="paragraph">
 <p>Registers a doctor to the HealthBook. Doctor is automatically tagged as a "Doctor".<br>
 Format: <code>register-doctor n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS</code></p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Patient and doctors should be mutually exclusive. Doctors cannot be patients and likewise, patients cannot be doctors.
-</td>
-</tr>
-</table>
 </div>
 <div class="admonitionblock warning">
 <table>
@@ -441,7 +417,8 @@ automatically tagged as <code>Patient</code>.</p>
 <div class="title">Figure 6. Register Patient Sequence Diagram</div>
 </div>
 <div class="paragraph">
-<p>Patient model contains a List of upcoming appointment and List of past appointments.</p>
+<p>Patient model contains a PriorityQueue of upcoming appointment and ArrayList of past appointments. We implemented
+the patient model in this way to allow ease of addition of new upcoming appointment to the patient.</p>
 </div>
 <div class="paragraph">
 <p>Step 1. The user types in <code>register-patient</code> in the command box followed by the parameters <code>n/John Doe p/91234567
@@ -469,22 +446,8 @@ Command Exception will be thrown if any of the information is missing or invalid
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>Patient is saved in the storage as person. However, when we retrieve the patient object from storage, it will be
-created as a patient as determined by their tag.</p>
-</li>
-<li>
-<p>Patient and Doctor must be mutually exclusive. Patient cannot be a instance of Doctor. This will result in
-duplicate person exception</p>
-</li>
-<li>
-<p>Patient is identified as a duplicate person if both their name and their number is the same. This allows patient with
-the same name or same number to exist.</p>
-</li>
-</ul>
-</div>
+Patient is saved in the storage as person. However, when we retrieve the patient object from storage, it will be
+created as a patient as determined by their tag.
 </td>
 </tr>
 </table>
@@ -497,14 +460,13 @@ the same name or same number to exist.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Alternative 1 (Current Choice): Upcoming Appointments stored within a List and Past Appointments stored within an
-List. This allows easy traversal and iteration of the appointments. This is also to allow the data structure to match with the
- model and storage component more easily.</p>
+<p>Alternative 1 (Current Choice): Upcoming Appointments stored within a PriorityQueue and Past Appointments stored within an
+ArrayList. This allows the appointments to be added in a non-chronological order. Past appointments can also be iterated
+through easily when required.</p>
 </li>
 <li>
-<p>Alternative 2 (Previous Implementation): Upcoming Appointments stored within a PriorityQueue and Past Appointments stored within a
-ArrayList. This allows the appointments to be added in a chronological order but it resulted in several instances of
-data required to be converted when added to storage.</p>
+<p>Alternative 2 (Previous Implementation): Upcoming Appointments stored within a Queue and Past Appointments stored within a
+Stack.</p>
 </li>
 </ul>
 </div>
@@ -574,22 +536,8 @@ to interact with the address book. If no login is done, the HealthBook will not 
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>Doctor is saved in the storage as person. However, when we retrieve the doctor object from storage, it will be
-created as a doctor as determined by their tag.</p>
-</li>
-<li>
-<p>Patient and Doctor must be mutually exclusive. Doctor cannot be a instance of Patient. This will result in
-duplicate person exception.</p>
-</li>
-<li>
-<p>Doctor is identified as a duplicate person if both their name and their number is the same. This allows doctor with
-the same name or same number to exist.</p>
-</li>
-</ul>
-</div>
+Doctor is saved in the storage as person. However, when we retrieve the doctor object from storage, it will be
+created as a doctor as determined by their tag.
 </td>
 </tr>
 </table>
@@ -619,35 +567,16 @@ login for the login but user might miss the login compared to having a popped up
 <div class="ulist">
 <ul>
 <li>
-<p>Alternative 1 (Current Choice): Doctor object will not be created and application will not respond if login is
-unsuccessful. Due to the integration of Google OAuth, it is mandatory for user to login before any process can
-continue. This is mandatory as our features is complimentary for our application as HealthBook will work at its best with
+<p>Alternative 1 (Current Choice): Allow doctor to still be created with or without the Google Login. Since the Google
+Calendar acts as an add-on, it should not interfere with the main function of the HealthBook. As such, we implemented
+register-doctor to have Google Login as optional. However, subsequent calls of Calendar related functions will still
+prompt the user to login.</p>
+</li>
+<li>
+<p>Alternative 2 (Alternative Choice): Doctor object will not be created and application will not respond if login is
+unsuccessful. From the integration used for Google OAuth, it is mandatory for user to login before any process can
+continue. This function as our features is complimentary for our application as HealthBook will  work at its best with
 the google calendar login.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Pros: Easy to implement</p>
-</li>
-<li>
-<p>Cons: Program is unable to continue if google login is not completed.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Alternative 2 (Alternative Choice): Allow doctor to still be created with or without the Google Login. We implemented
-register-doctor to have Google Login as optional.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Pros: Flexible access to Google Calendar</p>
-</li>
-<li>
-<p>Cons: Hard to implement. Have to recreate an Google OAuth system that does not require the program to wait for
-verification code.</p>
-</li>
-</ul>
-</div>
 </li>
 </ul>
 </div>
@@ -655,4 +584,4 @@ verification code.</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-12 11:54:34 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-12 12:17:13 UTC</div></div></div></body></html>
