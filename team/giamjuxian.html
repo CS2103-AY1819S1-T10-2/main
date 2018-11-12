@@ -285,7 +285,7 @@ Please ensure login is done before proceeding back to the HealthBook.
 <h3 id="Design-Logic"><a class="link" href="#Design-Logic">Logic component</a></h3>
 <div id="fig-LogicClassDiagram" class="imageblock">
 <div class="content">
-<img src="../images/LogicClassDiagram.png" alt="LogicClassDiagram" width="800">
+<img src="../images/LogicComponentClassDiagram.png" alt="LogicComponentClassDiagram" width="800">
 </div>
 <div class="title">Figure 1. Structure of the Logic Component</div>
 </div>
@@ -417,7 +417,7 @@ automatically tagged as <code>Patient</code>.</p>
 <div class="title">Figure 6. Register Patient Sequence Diagram</div>
 </div>
 <div class="paragraph">
-<p>Patient model contains a PriorityQueue of upcoming appointment and ArrayList of past appointments. We implemented
+<p>Patient model contains a List of upcoming appointment and ArrayList of past appointments. We implemented
 the patient model in this way to allow ease of addition of new upcoming appointment to the patient.</p>
 </div>
 <div class="paragraph">
@@ -460,13 +460,34 @@ created as a patient as determined by their tag.
 <div class="ulist">
 <ul>
 <li>
-<p>Alternative 1 (Current Choice): Upcoming Appointments stored within a PriorityQueue and Past Appointments stored within an
-ArrayList. This allows the appointments to be added in a non-chronological order. Past appointments can also be iterated
-through easily when required.</p>
+<p>Alternative 1 (Current Choice): Upcoming Appointments stored within a List and Past Appointments stored within a
+List. This allows the appointments to be compatible with the Observable List. Sorted list of appointments is no crucial
+to the implementation of the HealthBook. Hence, we chose to implement the data structure as a list instead.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Compatible and easily to implement with model and storage</p>
 </li>
 <li>
-<p>Alternative 2 (Previous Implementation): Upcoming Appointments stored within a Queue and Past Appointments stored within a
-Stack.</p>
+<p>Cons: List is not filtered</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Alternative 2 (Alternative Choice): Upcoming Appointments stored within a PriorityQueue and Past Appointments stored within an
+ArrayList. This allows the appointments to be added in a non-chronological order. Past appointments can also be iterated
+through easily when required.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Appointments can be added in a non chronological order.</p>
+</li>
+<li>
+<p>Cons: Need to do parsing before passing to model and storage. Hard to manage.</p>
+</li>
+</ul>
+</div>
 </li>
 </ul>
 </div>
@@ -550,14 +571,33 @@ created as a doctor as determined by their tag.
 <div class="ulist">
 <ul>
 <li>
-<p>Alternative 1 (Current Choice): Implement Google Calendar login with a popped up browser. This allow the data transfer
-for the Google login to be simplified. No additional parsing will be required. In addition, the pop up of the browser
+<p>Alternative 1 (Current Choice): Implement Google Calendar login with a popped up browser.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Data transfer for the Google login to be simplified. No additional parsing will be required. In addition, the pop up of the browser
 will capture the users attention, decreasing the chance of user missing this login procedure.</p>
+</li>
+<li>
+<p>Cons: Temporarily exits the application.</p>
+</li>
+</ul>
+</div>
 </li>
 <li>
 <p>Alternative 2 (Alternative Choice): Implement Google Calendar login with the browser panel instead.
 Instead of having an additional browser, we load the login page into the Browser Panel. This will facilitate a seamless
 login for the login but user might miss the login compared to having a popped up browser.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Stays within the application.</p>
+</li>
+<li>
+<p>Cons: User may miss the login which is mandatory, causing the application to not respond.</p>
+</li>
+</ul>
+</div>
 </li>
 </ul>
 </div>
@@ -567,16 +607,35 @@ login for the login but user might miss the login compared to having a popped up
 <div class="ulist">
 <ul>
 <li>
-<p>Alternative 1 (Current Choice): Allow doctor to still be created with or without the Google Login. Since the Google
-Calendar acts as an add-on, it should not interfere with the main function of the HealthBook. As such, we implemented
-register-doctor to have Google Login as optional. However, subsequent calls of Calendar related functions will still
-prompt the user to login.</p>
-</li>
-<li>
-<p>Alternative 2 (Alternative Choice): Doctor object will not be created and application will not respond if login is
+<p>Alternative 1 (Current Choice): Doctor object will not be created and application will not respond if login is
 unsuccessful. From the integration used for Google OAuth, it is mandatory for user to login before any process can
 continue. This function as our features is complimentary for our application as HealthBook will  work at its best with
 the google calendar login.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: No requirement to implement a new Google OAuth. Easy implementation.</p>
+</li>
+<li>
+<p>Cons: Application may not respond if login is not done.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Alternative 2 (Alternative Choice): Allow doctor to still be created with or without the Google Login. Implement
+register-doctor to have Google Login as optional. However, subsequent calls of Calendar related functions will still
+prompt the user to login.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Flexible login feature.</p>
+</li>
+<li>
+<p>Cons: Hard to implement. Need to recreate a Google OAuth system. Features of the HealthBook not utilized.</p>
+</li>
+</ul>
+</div>
 </li>
 </ul>
 </div>
@@ -584,4 +643,4 @@ the google calendar login.</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-12 12:43:06 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-12 12:59:13 UTC</div></div></div></body></html>
