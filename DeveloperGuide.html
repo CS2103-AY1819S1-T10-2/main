@@ -22,9 +22,10 @@
 <li><a href="#Design-Architecture">2.1. Architecture</a></li>
 <li><a href="#Design-Ui">2.2. UI component</a></li>
 <li><a href="#Design-Logic">2.3. Logic component</a></li>
-<li><a href="#Design-Model">2.4. Model component</a></li>
-<li><a href="#Design-Storage">2.5. Storage component</a></li>
-<li><a href="#Design-Commons">2.6. Common classes</a></li>
+<li><a href="#Design-Calendar">2.4. Calendar component</a></li>
+<li><a href="#Design-Model">2.5. Model component</a></li>
+<li><a href="#Design-Storage">2.6. Storage component</a></li>
+<li><a href="#Design-Commons">2.7. Common classes</a></li>
 </ul>
 </li>
 <li><a href="#implementation">3. Implementation</a>
@@ -307,7 +308,7 @@ Having both Travis and AppVeyor ensures your App works on both Unix-based platfo
 <h3 id="Design-Architecture"><a class="link" href="#Design-Architecture">2.1. Architecture</a></h3>
 <div class="imageblock">
 <div class="content">
-<img src="images/Architecture.png" alt="Architecture" width="600">
+<img src="images/ArchitectureDiagramWithGoogle.png" alt="ArchitectureDiagramWithGoogle" width="600">
 </div>
 <div class="title">Figure 1. Architecture Diagram</div>
 </div>
@@ -364,6 +365,9 @@ The <code>.pptx</code> files used to create diagrams in this document can be fou
 <p><a href="#Design-Logic"><strong><code>Logic</code></strong></a>: The command executor.</p>
 </li>
 <li>
+<p><a href="#Design-Calendar"><strong><code>Calendar</code></strong></a>: Google Calendar integration for App.</p>
+</li>
+<li>
 <p><a href="#Design-Model"><strong><code>Model</code></strong></a>: Holds the data of the App in-memory.</p>
 </li>
 <li>
@@ -372,7 +376,7 @@ The <code>.pptx</code> files used to create diagrams in this document can be fou
 </ul>
 </div>
 <div class="paragraph">
-<p>Each of the four components</p>
+<p>Each of the Five components</p>
 </div>
 <div class="ulist">
 <ul>
@@ -513,12 +517,38 @@ Note how the event is propagated through the <code>EventsCenter</code> to the <c
 </div>
 </div>
 <div class="sect2">
-<h3 id="Design-Model"><a class="link" href="#Design-Model">2.4. Model component</a></h3>
+<h3 id="Design-Calendar"><a class="link" href="#Design-Calendar">2.4. Calendar component</a></h3>
+<div id="fig-CalendarClassDiagram" class="imageblock">
+<div class="content">
+<img src="images/CalendarComponentClassDiagram.png" alt="CalendarComponentClassDiagram" width="800">
+</div>
+<div class="title">Figure 8. Structure of the Calendar Component</div>
+</div>
+<div class="paragraph">
+<p><strong>API</strong> :
+<a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/main/java/seedu/address/calendar/GoogleCalendar.java"><code>GoogleCalendar.java</code></a></p>
+</div>
+<div class="paragraph">
+<p>The <code>Calendar</code>,</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>uses Google Calendar API to access the users Google calendar to read and write information to their calendar.</p>
+</li>
+<li>
+<p>stores the OAuth of users google calendar data in tokens folder.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="Design-Model"><a class="link" href="#Design-Model">2.5. Model component</a></h3>
 <div class="imageblock">
 <div class="content">
 <img src="images/ModelComponentClassDiagram.png" alt="ModelComponentClassDiagram" width="800">
 </div>
-<div class="title">Figure 8. Structure of the Model Component</div>
+<div class="title">Figure 9. Structure of the Model Component</div>
 </div>
 <div class="paragraph">
 <p><strong>API</strong> : <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/main/java/seedu/address/model/Model.java"><code>Model.java</code></a></p>
@@ -544,12 +574,12 @@ Note how the event is propagated through the <code>EventsCenter</code> to the <c
 </div>
 </div>
 <div class="sect2">
-<h3 id="Design-Storage"><a class="link" href="#Design-Storage">2.5. Storage component</a></h3>
+<h3 id="Design-Storage"><a class="link" href="#Design-Storage">2.6. Storage component</a></h3>
 <div class="imageblock">
 <div class="content">
 <img src="images/StorageComponentClassDiagram.png" alt="StorageComponentClassDiagram" width="800">
 </div>
-<div class="title">Figure 9. Structure of the Storage Component</div>
+<div class="title">Figure 10. Structure of the Storage Component</div>
 </div>
 <div class="paragraph">
 <p><strong>API</strong> : <a href="https://github.com/CS2103-AY1819S1-T10-2/main/tree/master/src/main/java/seedu/address/storage/Storage.java"><code>Storage.java</code></a></p>
@@ -569,7 +599,7 @@ Note how the event is propagated through the <code>EventsCenter</code> to the <c
 </div>
 </div>
 <div class="sect2">
-<h3 id="Design-Commons"><a class="link" href="#Design-Commons">2.6. Common classes</a></h3>
+<h3 id="Design-Commons"><a class="link" href="#Design-Commons">2.7. Common classes</a></h3>
 <div class="paragraph">
 <p>Classes used by multiple components are in the <code>seedu.addressbook.commons</code> package.</p>
 </div>
@@ -595,11 +625,10 @@ automatically tagged as <code>Patient</code>.</p>
 <div class="content">
 <img src="images/RegisterPatientSequenceDiagram.png" alt="RegisterPatientSequenceDiagram" width="600">
 </div>
-<div class="title">Figure 10. Register Patient Sequence Diagram</div>
+<div class="title">Figure 11. Register Patient Sequence Diagram</div>
 </div>
 <div class="paragraph">
-<p>Patient model contains a PriorityQueue of upcoming appointment and ArrayList of past appointments. We implemented
-the patient model in this way to allow ease of addition of new upcoming appointment to the patient.</p>
+<p>Patient model contains a List of upcoming appointment and List of past appointments.</p>
 </div>
 <div class="paragraph">
 <p>Step 1. The user types in <code>register-patient</code> in the command box followed by the parameters <code>n/John Doe p/91234567
@@ -627,8 +656,22 @@ Command Exception will be thrown if any of the information is missing or invalid
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Patient is saved in the storage as person. However, when we retrieve the patient object from storage, it will be
-created as a patient as determined by their tag.
+<div class="ulist">
+<ul>
+<li>
+<p>Patient is saved in the storage as person. However, when we retrieve the patient object from storage, it will be
+created as a patient as determined by their tag.</p>
+</li>
+<li>
+<p>Patient and Doctor must be mutually exclusive. Patient cannot be a instance of Doctor. This will result in
+duplicate person exception</p>
+</li>
+<li>
+<p>Patient is identified as a duplicate person if both their name and their number is the same. This allows patient with
+the same name or same number to exist.</p>
+</li>
+</ul>
+</div>
 </td>
 </tr>
 </table>
@@ -641,13 +684,14 @@ created as a patient as determined by their tag.
 <div class="ulist">
 <ul>
 <li>
-<p>Alternative 1 (Current Choice): Upcoming Appointments stored within a PriorityQueue and Past Appointments stored within an
-ArrayList. This allows the appointments to be added in a non-chronological order. Past appointments can also be iterated
-through easily when required.</p>
+<p>Alternative 1 (Current Choice): Upcoming Appointments stored within a List and Past Appointments stored within an
+List. This allows easy traversal and iteration of the appointments. This is also to allow the data structure to match with the
+ model and storage component more easily.</p>
 </li>
 <li>
-<p>Alternative 2 (Previous Implementation): Upcoming Appointments stored within a Queue and Past Appointments stored within a
-Stack.</p>
+<p>Alternative 2 (Previous Implementation): Upcoming Appointments stored within a PriorityQueue and Past Appointments stored within a
+ArrayList. This allows the appointments to be added in a chronological order but it resulted in several instances of
+data required to be converted when added to storage.</p>
 </li>
 </ul>
 </div>
@@ -667,7 +711,7 @@ automatically tagged as <code>Doctor</code>.</p>
 <div class="content">
 <img src="images/RegisterDoctorSequenceDiagram.png" alt="RegisterDoctorSequenceDiagram" width="600">
 </div>
-<div class="title">Figure 11. Register Doctor Sequence Diagram</div>
+<div class="title">Figure 12. Register Doctor Sequence Diagram</div>
 </div>
 <div class="paragraph">
 <p>Step 1. The user types in <code>register-doctor</code> in the command box followed by the parameters <code>n/John Doe p/91234567 e/test@test.com a/123 Clementi Road</code></p>
@@ -691,7 +735,7 @@ Command Exception will be thrown if any of the information is missing or invalid
 <div class="content">
 <img src="images/GoogleLoginPage.png" alt="GoogleLoginPage" width="600">
 </div>
-<div class="title">Figure 12. Google Login Page</div>
+<div class="title">Figure 13. Google Login Page</div>
 </div>
 <div class="paragraph">
 <p>Step 3. Simultaneously, the <code>Doctor</code> will be created and added to the storage of the system. In the case that the user
@@ -717,8 +761,22 @@ to interact with the address book. If no login is done, the HealthBook will not 
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Doctor is saved in the storage as person. However, when we retrieve the doctor object from storage, it will be
-created as a doctor as determined by their tag.
+<div class="ulist">
+<ul>
+<li>
+<p>Doctor is saved in the storage as person. However, when we retrieve the doctor object from storage, it will be
+created as a doctor as determined by their tag.</p>
+</li>
+<li>
+<p>Patient and Doctor must be mutually exclusive. Doctor cannot be a instance of Patient. This will result in
+duplicate person exception.</p>
+</li>
+<li>
+<p>Doctor is identified as a duplicate person if both their name and their number is the same. This allows doctor with
+the same name or same number to exist.</p>
+</li>
+</ul>
+</div>
 </td>
 </tr>
 </table>
@@ -748,16 +806,35 @@ login for the login but user might miss the login compared to having a popped up
 <div class="ulist">
 <ul>
 <li>
-<p>Alternative 1 (Current Choice): Allow doctor to still be created with or without the Google Login. Since the Google
-Calendar acts as an add-on, it should not interfere with the main function of the HealthBook. As such, we implemented
-register-doctor to have Google Login as optional. However, subsequent calls of Calendar related functions will still
-prompt the user to login.</p>
+<p>Alternative 1 (Current Choice): Doctor object will not be created and application will not respond if login is
+unsuccessful. Due to the integration of Google OAuth, it is mandatory for user to login before any process can
+continue. This is mandatory as our features is complimentary for our application as HealthBook will work at its best with
+the google calendar login.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Easy to implement</p>
 </li>
 <li>
-<p>Alternative 2 (Alternative Choice): Doctor object will not be created and application will not respond if login is
-unsuccessful. From the integration used for Google OAuth, it is mandatory for user to login before any process can
-continue. This function as our features is complimentary for our application as HealthBook will  work at its best with
-the google calendar login.</p>
+<p>Cons: Program is unable to continue if google login is not completed.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Alternative 2 (Alternative Choice): Allow doctor to still be created with or without the Google Login. We implemented
+register-doctor to have Google Login as optional.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Flexible access to Google Calendar</p>
+</li>
+<li>
+<p>Cons: Hard to implement. Have to recreate an Google OAuth system that does not require the program to wait for
+verification code.</p>
+</li>
+</ul>
+</div>
 </li>
 </ul>
 </div>
@@ -777,13 +854,13 @@ instead of deletion by index, deletion by name is used in this implementation.</
 <div class="content">
 <img src="images/DeletePatientSequenceDiagram.png" alt="DeletePatientSequenceDiagram" width="600">
 </div>
-<div class="title">Figure 13. Delete Patient Sequence Diagram</div>
+<div class="title">Figure 14. Delete Patient Sequence Diagram</div>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="images/DeleteDoctorSequenceDiagram.png" alt="DeleteDoctorSequenceDiagram" width="600">
 </div>
-<div class="title">Figure 14. Delete Doctor Sequence Diagram</div>
+<div class="title">Figure 15. Delete Doctor Sequence Diagram</div>
 </div>
 <div class="paragraph">
 <p>Step 1. The user types in <code>delete-patient</code> or <code>delete-doctor</code> in the command box followed by the parameters <code>n/John Doe p/12345678</code></p>
@@ -842,13 +919,13 @@ of the person corresponding to the name specified.</p>
 <div class="content">
 <img src="images/ViewPatientSequenceDiagram.png" alt="ViewPatientSequenceDiagram" width="600">
 </div>
-<div class="title">Figure 15. View Patient Sequence Diagram</div>
+<div class="title">Figure 16. View Patient Sequence Diagram</div>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="images/ViewDoctorSequenceDiagram.png" alt="ViewDoctorSequenceDiagram" width="600">
 </div>
-<div class="title">Figure 16. View Doctor Sequence Diagram</div>
+<div class="title">Figure 17. View Doctor Sequence Diagram</div>
 </div>
 <div class="paragraph">
 <p>Step 1. The user types in <code>view-patient</code> or <code>view-doctor</code> in the command box followed by the parameters <code>n/John Doe</code></p>
@@ -869,7 +946,7 @@ of the person corresponding to the name specified.</p>
 <div class="content">
 <img src="images/FilterPatientSequenceDiagram.png" alt="FilterPatientSequenceDiagram" width="600">
 </div>
-<div class="title">Figure 17. Filter Patient Sequence Diagram</div>
+<div class="title">Figure 18. Filter Patient Sequence Diagram</div>
 </div>
 <div class="paragraph">
 <p>Step 1. The user types <code>filter-patient</code> or <code>filter-doctor</code> in the command box</p>
@@ -891,7 +968,7 @@ which will be added to the respective <code>Patient</code> and <code>Doctor</cod
 <div class="content">
 <img src="images/AddAppointmentSequenceDiagram.png" alt="AddAppointmentSequenceDiagram" width="600">
 </div>
-<div class="title">Figure 18. Add Appointment Sequence Diagram</div>
+<div class="title">Figure 19. Add Appointment Sequence Diagram</div>
 </div>
 <div class="paragraph">
 <p>Step 1. The user types in <code>add-appointment</code> in the command box followed by the parameters <code>np/John Doe nd/Mary Jane d/2018-10-17 15:00</code></p>
@@ -913,7 +990,7 @@ which will be deleted from the respective <code>Patient</code> and <code>Doctor<
 <div class="content">
 <img src="images/DeleteAppointmentSequenceDiagram.png" alt="DeleteAppointmentSequenceDiagram" width="600">
 </div>
-<div class="title">Figure 19. Delete Appointment Sequence Diagram</div>
+<div class="title">Figure 20. Delete Appointment Sequence Diagram</div>
 </div>
 <div class="paragraph">
 <p>Step 1. The user types in <code>delete-appointment</code> in the command box followed by the appointment id <code>10000</code></p>
@@ -935,7 +1012,7 @@ in the HealthBook which change the status of the <code>Appointment</code> from <
 <div class="content">
 <img src="images/CompleteAppointmentSequenceDiagram.png" alt="CompleteAppointmentSequenceDiagram" width="600">
 </div>
-<div class="title">Figure 20. Complete Appointment Sequence Diagram</div>
+<div class="title">Figure 21. Complete Appointment Sequence Diagram</div>
 </div>
 <div class="paragraph">
 <p>Step 1. The user types in <code>complete-appointment</code> in the command box followed by the appointment id <code>10000</code></p>
@@ -1015,7 +1092,7 @@ command is implemented such that it is able to add <code>Allergy</code> AND/OR <
 <div class="content">
 <img src="images/AddMedicalHistorySequenceDiagram.png" alt="AddMedicalHistorySequenceDiagram" width="600">
 </div>
-<div class="title">Figure 21. Add Medical History Sequence Diagram</div>
+<div class="title">Figure 22. Add Medical History Sequence Diagram</div>
 </div>
 <div class="paragraph">
 <p>Step 1. The user types in <code>add-medical-history</code> in the command box followed by the parameter <code>n/John Doe al/penicillin,milk
@@ -1082,7 +1159,7 @@ Exception will be thrown if inputs for both field are blank.
 <div class="content">
 <img src="images/DeleteMedicalHistorySequenceDiagram.png" alt="DeleteMedicalHistorySequenceDiagram" width="600">
 </div>
-<div class="title">Figure 22. Delete Medical History Sequence Diagram</div>
+<div class="title">Figure 23. Delete Medical History Sequence Diagram</div>
 </div>
 <div class="paragraph">
 <p>Step 1. The user types in <code>delete-medical-history</code> in the command box followed by the parameter <code>n/John Doe
@@ -1146,7 +1223,7 @@ only be called after patient is created.</p>
 <div class="content">
 <img src="images/RemarkSequenceDiagram.png" alt="RemarkSequenceDiagram" width="600">
 </div>
-<div class="title">Figure 23. Remark Command Sequence Diagram</div>
+<div class="title">Figure 24. Remark Command Sequence Diagram</div>
 </div>
 <div class="paragraph">
 <p>Step 1. The user types in <code>remark</code> in the command box followed by the parameters <code>appointment_id r/some remark</code></p>
@@ -1262,7 +1339,7 @@ Alternatively, you can download the AsciiDoc plugin for IntelliJ, which allows y
 <div class="content">
 <img src="images/chrome_save_as_pdf.png" alt="chrome save as pdf" width="300">
 </div>
-<div class="title">Figure 24. Saving documentation as PDF files in Chrome</div>
+<div class="title">Figure 25. Saving documentation as PDF files in Chrome</div>
 </div>
 </div>
 <div class="sect2">
@@ -1689,7 +1766,7 @@ Do take a look at <a href="#Design-Logic">Section 2.3, &#8220;Logic component&#8
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-Do take a look at <a href="#Design-Model">Section 2.4, &#8220;Model component&#8221;</a> before attempting to modify the <code>Model</code> component.
+Do take a look at <a href="#Design-Model">Section 2.5, &#8220;Model component&#8221;</a> before attempting to modify the <code>Model</code> component.
 </td>
 </tr>
 </table>
@@ -1976,7 +2053,7 @@ Do take a look at <a href="#Design-Ui">Section 2.2, &#8220;UI component&#8221;</
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-Do take a look at <a href="#Design-Storage">Section 2.5, &#8220;Storage component&#8221;</a> before attempting to modify the <code>Storage</code> component.
+Do take a look at <a href="#Design-Storage">Section 2.6, &#8220;Storage component&#8221;</a> before attempting to modify the <code>Storage</code> component.
 </td>
 </tr>
 </table>
@@ -2709,4 +2786,4 @@ Expected: Similar to previous.</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-12 08:44:10 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-12 10:11:28 UTC</div></div></div></body></html>
